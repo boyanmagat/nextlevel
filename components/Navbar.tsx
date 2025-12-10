@@ -3,6 +3,7 @@
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import Logo from './Logo';
 
 export default function Navbar() {
     return (
@@ -14,8 +15,11 @@ export default function Navbar() {
         >
             <div className="max-w-5xl mx-auto backdrop-blur-xl bg-white/10 border border-white/20 rounded-full px-6 py-3 flex justify-between items-center shadow-lg shadow-purple-500/10">
                 <div>
-                    <Link href="/" className="text-2xl font-bold tracking-tighter">
-                        NEXT<span className="text-pink-500">LEVEL</span>.
+                    <Link href="/" className="flex items-center gap-2 group">
+                        <Logo size={32} />
+                        <span className="text-xl font-bold tracking-tighter group-hover:text-pink-500 transition-colors">
+                            NEXT<span className="">LEVEL</span>.
+                        </span>
                     </Link>
                 </div>
                 <div className="hidden md:flex space-x-8">

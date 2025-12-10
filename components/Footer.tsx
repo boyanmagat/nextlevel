@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Logo from "./Logo";
 
 export default function Footer() {
     return (
@@ -6,6 +7,9 @@ export default function Footer() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
                     <div>
+                        <div className="mb-8">
+                            <Logo size={60} />
+                        </div>
                         <h2 className="text-5xl md:text-7xl font-bold tracking-tighter mb-8">
                             Let's build <br /> the <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500">unimaginable</span>.
                         </h2>
