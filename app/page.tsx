@@ -134,9 +134,18 @@ export default function Home() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {[
-            { title: "Headless Commerce", desc: "Blazing fast storefronts that convert." },
-            { title: "Immersive 3D", desc: "WebGL experiences that captivate." },
-            { title: "Content Systems", desc: "Sanity studios that editors actually love." }
+            {
+              title: "High-Performance Websites",
+              desc: "The best of both worlds. We architect blazing fast headless sites using Next.js & Sanity for complete control, or Headless WordPress for those who prefer a familiar CMS. SEO-ready and built to scale."
+            },
+            {
+              title: "Bespoke Software",
+              desc: "When off-the-shelf integration isn't enough. We engineer custom SaaS platforms, internal tools, and mobile apps tailored to your unique business logic. Automate workflows and own your data."
+            },
+            {
+              title: "Interactive Design Systems",
+              desc: "Consistency meets creativity. We build scalable Design Systems and UI kits that ensure your brand looks premium across every touchpoint. From Figma to code, we ensure pixel-perfect execution."
+            }
           ].map((item, i) => (
             <motion.div
               key={i}
@@ -172,7 +181,8 @@ export default function Home() {
                 {[
                   { title: "Next.js 16", desc: "Server Actions and PPR for instant interactions." },
                   { title: "Sanity.io", desc: "Structured content that treats your data as an API." },
-                  { title: "Vercel", desc: "Edge network delivery at the speed of light." }
+                  { title: "Vercel", desc: "Edge network delivery at the speed of light." },
+                  { title: "TypeScript", desc: "Type safety for scalable, bug-free implementations." }
                 ].map((tech, i) => (
                   <motion.li
                     key={tech.title}
@@ -190,6 +200,25 @@ export default function Home() {
                   </motion.li>
                 ))}
               </ul>
+
+              <div className="mt-8">
+                <Link href="/services" className="inline-flex items-center text-white font-bold group">
+                  <span className="border-b-2 border-pink-500 pb-1 group-hover:border-white transition-colors">Explore Stack Services</span>
+                  <span className="ml-2 group-hover:translate-x-2 transition-transform">→</span>
+                </Link>
+              </div>
+
+              <div className="mt-8 pt-8 border-t border-white/10">
+                <p className="text-gray-400 text-sm">
+                  <span className="text-pink-500 font-bold">Alternative:</span> Prefer a more traditional approach?
+                  We also offer <span className="text-white font-bold">Headless WordPress</span> solutions for teams that want to keep the familiar admin interface.
+                </p>
+                <div className="mt-4">
+                  <Link href="/services" className="text-sm text-gray-500 hover:text-white transition-colors inline-flex items-center">
+                    View WordPress Options <span className="ml-1">→</span>
+                  </Link>
+                </div>
+              </div>
             </motion.div>
             <div className="grid grid-cols-2 gap-4">
               {["NEXT", "SNTY", "TS", "VRCL"].map((tech, i) => (
@@ -210,100 +239,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* NEW: Process Section */}
-      <section className="py-24 px-4 md:px-8 max-w-7xl mx-auto">
-        <motion.h2
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center text-4xl md:text-5xl font-bold mb-16"
-        >
-          How We Build
-        </motion.h2>
-        <div className="relative">
-          {/* Connecting Line */}
-          <div className="absolute top-1/2 left-0 w-full h-1 bg-white/10 -translate-y-1/2 hidden md:block"></div>
-
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            {[
-              { step: "01", name: "Discovery", desc: "We map your goals to technical requirements." },
-              { step: "02", name: "Architect", desc: "Designing the content model and component systems." },
-              { step: "03", name: "Build", desc: "Rapid development with Next.js & Tailwind." },
-              { step: "04", name: "Launch", desc: "Automated testing and Vercel deployment." }
-            ].map((phase, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: i * 0.2 }}
-                viewport={{ once: true }}
-                whileHover={{ y: -10 }}
-                className="relative bg-black p-6 border border-white/10 rounded-xl z-10 hover:border-pink-500 transition-colors"
-              >
-                <div className="text-sm font-bold text-pink-500 mb-2">PHASE {phase.step}</div>
-                <h3 className="text-2xl font-bold mb-3">{phase.name}</h3>
-                <p className="text-gray-400 text-sm leading-relaxed">{phase.desc}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* NEW: Mastery / Certification */}
-      <section className="py-24 px-4 md:px-8 max-w-7xl mx-auto">
-        <div className="relative rounded-3xl overflow-hidden bg-gradient-to-br from-gray-900 to-black border border-white/10 p-8 md:p-16">
-          <div className="absolute top-0 right-0 w-64 h-64 bg-purple-600/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center relative z-10">
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-pink-500 font-bold tracking-widest uppercase mb-4 text-sm">Mastery</h2>
-              <h3 className="text-4xl md:text-5xl font-bold mb-6">Pixel Perfect <br /> Execution.</h3>
-              <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                We don't rely on guesswork. Our team is certified in the <span className="text-white font-bold">Epic Web "Pixel Perfect Figma to Tailwind"</span> workflow.
-              </p>
-              <ul className="space-y-4 mb-8">
-                {["1:1 Design to Code Accuracy", "Advanced Tailwind Architecture", "Responsive Precision"].map((item) => (
-                  <li key={item} className="flex items-center text-gray-400">
-                    <span className="w-1.5 h-1.5 bg-pink-500 rounded-full mr-3"></span>
-                    {item}
-                  </li>
-                ))}
-              </ul>
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm font-mono text-pink-400">
-                <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
-                Certified Expert
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8, rotate: 5 }}
-              whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
-              transition={{ type: "spring", bounce: 0.4 }}
-              viewport={{ once: true }}
-              className="relative aspect-square md:aspect-video bg-black/50 rounded-xl border border-white/10 flex items-center justify-center p-8 group hover:border-purple-500/50 transition-colors"
-            >
-              {/* Decorative UI elements mimicking Figma/Code */}
-              <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(68,51,122,0.1)_50%,transparent_75%,transparent_100%)] bg-[length:250%_250%,100%_100%] animate-[shimmer_3s_infinite]"></div>
-
-              <div className="text-center relative">
-                <div className="text-6xl md:text-8xl mb-4">💎</div>
-                <div className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-purple-500">
-                  PIXEL PERFECT
-                </div>
-                <div className="text-xs text-gray-500 mt-2 font-mono">FIGMA &rarr; TAILWIND</div>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-
-      </section>
-
-
 
       {/* NEW: Custom Software / Bespoke Solutions */}
       <section className="py-24 bg-white/5 border-y border-white/10">
@@ -404,13 +339,149 @@ export default function Home() {
         </div>
       </section>
 
+      {/* NEW: Process Section (Git Pipeline) */}
+      <section className="py-24 px-4 md:px-8 max-w-5xl mx-auto">
+        <motion.h2
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center text-4xl md:text-5xl font-bold mb-20"
+        >
+          The <span className="font-mono text-green-500">&lt;Pipeline /&gt;</span>
+        </motion.h2>
+
+        <div className="relative">
+          {/* Vertical Pipeline Line */}
+          <div className="absolute left-[30px] md:left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-blue-500 via-purple-500 to-pink-500 md:-translate-x-1/2 rounded-full"></div>
+
+          <div className="space-y-16">
+            {[
+              {
+                step: "git init discovery",
+                title: "Blueprint",
+                desc: "We map your goals to technical requirements. We don't start coding until we have a locked architecture.",
+                icon: "📄"
+              },
+              {
+                step: "git checkout -b build",
+                title: "Development",
+                desc: "Rapid component development using our internal libraries. Components are isolated, tested, and pixel-perfect.",
+                icon: "🏗️"
+              },
+              {
+                step: "git commit -m 'launch'",
+                title: "Deployment",
+                desc: "Automated CI/CD pipelines push to Vercel's edge network. Zero downtime, instant rollbacks, 100% uptime.",
+                icon: "🚀"
+              },
+              {
+                step: "git push origin growth",
+                title: "Scale",
+                desc: "Performance monitoring and iterative A/B testing. We use data to drive design decisions post-launch.",
+                icon: "📈"
+              }
+            ].map((phase, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: i * 0.1 }}
+                viewport={{ once: true }}
+                className={`relative flex flex-col md:flex-row gap-8 items-start md:items-center ${i % 2 === 0 ? 'md:flex-row-reverse' : ''}`}
+              >
+                {/* Node on Line */}
+                <div className="absolute left-0 md:left-1/2 md:-translate-x-1/2 w-[60px] h-[60px] rounded-full bg-black border-4 border-gray-900 flex items-center justify-center z-10">
+                  <div className="w-4 h-4 rounded-full bg-white animate-pulse"></div>
+                </div>
+
+                {/* Content Card */}
+                <div className="ml-[80px] md:ml-0 md:w-1/2 pl-0 md:px-12">
+                  <div className="bg-gray-900/50 border border-white/10 p-6 rounded-xl relative hover:border-blue-500 transition-colors">
+                    {/* Terminal Header */}
+                    <div className="font-mono text-xs text-green-400 mb-2 border-b border-white/5 pb-2 flex gap-2">
+                      <span className="text-gray-500">$</span> {phase.step}
+                    </div>
+                    <h3 className="text-2xl font-bold mb-2 flex items-center gap-3">
+                      <span>{phase.icon}</span> {phase.title}
+                    </h3>
+                    <p className="text-gray-400 leading-relaxed text-sm">
+                      {phase.desc}
+                    </p>
+                  </div>
+                </div>
+
+                {/* Empty spacer for opposite side */}
+                <div className="hidden md:block md:w-1/2"></div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* NEW: Mastery / Certification */}
+      <section className="py-24 px-4 md:px-8 max-w-7xl mx-auto">
+        <div className="relative rounded-3xl overflow-hidden bg-gradient-to-br from-gray-900 to-black border border-white/10 p-8 md:p-16">
+          <div className="absolute top-0 right-0 w-64 h-64 bg-purple-600/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center relative z-10">
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-pink-500 font-bold tracking-widest uppercase mb-4 text-sm">Mastery</h2>
+              <h3 className="text-4xl md:text-5xl font-bold mb-6">Pixel Perfect <br /> Execution.</h3>
+              <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+                We don't rely on guesswork. Our team is certified in the <span className="text-white font-bold">Epic Web "Pixel Perfect Figma to Tailwind"</span> workflow.
+              </p>
+              <ul className="space-y-4 mb-8">
+                {["1:1 Design to Code Accuracy", "Advanced Tailwind Architecture", "Responsive Precision"].map((item) => (
+                  <li key={item} className="flex items-center text-gray-400">
+                    <span className="w-1.5 h-1.5 bg-pink-500 rounded-full mr-3"></span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm font-mono text-pink-400">
+                <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+                Certified Expert
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8, rotate: 5 }}
+              whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
+              transition={{ type: "spring", bounce: 0.4 }}
+              viewport={{ once: true }}
+              className="relative aspect-square md:aspect-video bg-black/50 rounded-xl border border-white/10 flex items-center justify-center p-8 group hover:border-purple-500/50 transition-colors"
+            >
+              {/* Decorative UI elements mimicking Figma/Code */}
+              <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(68,51,122,0.1)_50%,transparent_75%,transparent_100%)] bg-[length:250%_250%,100%_100%] animate-[shimmer_3s_infinite]"></div>
+
+              <div className="text-center relative">
+                <div className="text-6xl md:text-8xl mb-4">💎</div>
+                <div className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-purple-500">
+                  PIXEL PERFECT
+                </div>
+                <div className="text-xs text-gray-500 mt-2 font-mono">FIGMA &rarr; TAILWIND</div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+
+      </section>
+
+
+
+
+
       {/* NEW: Team Section */}
-      <section className="py-24 px-4 md:px-8 max-w-7xl mx-auto border-t border-white/10 w-full">
+      <section className="py-24 px-4 md:px-8 max-w-5xl mx-auto border-t border-white/10 w-full">
         <h2 className="text-4xl font-bold mb-12">The Minds.</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 w-full">
           {[
-            { name: "Julien F.", role: "Co-Founder & Managing Director", stack: "Growth", image: "/team/julien_v3.png" },
-            { name: "Ivo N.", role: "Co-Founder & Tech Director", stack: "Next.js", image: "/team/ivo.png" }
+            { name: "Julien F.", role: "Managing Director", stack: "Growth", image: "/team/julien_v3.png" },
+            { name: "Ivo N.", role: "Tech Director", stack: "Next.js", image: "/team/ivo.png" }
           ].map((member, i) => (
             <motion.div
               key={i}
