@@ -94,6 +94,94 @@ export default function NextJsServicePage() {
                 </div>
             </section>
 
+            {/* Use Cases - What we can build */}
+            <section className="py-24 px-4 max-w-7xl mx-auto">
+                <div className="text-center mb-16">
+                    <h2 className="text-pink-500 font-bold tracking-widest uppercase mb-4 text-sm">Use Cases</h2>
+                    <h3 className="text-4xl md:text-6xl font-bold">What can we build?</h3>
+                </div>
+
+                <div className="space-y-24">
+                    {/* 1. Landing Pages */}
+                    <div className="flex flex-col md:flex-row gap-12 items-center">
+                        <div className="flex-1 order-2 md:order-1">
+                            <h4 className="text-3xl font-bold mb-4">High-Conversion Landing Pages</h4>
+                            <p className="text-gray-400 text-lg leading-relaxed mb-6">
+                                Stopped paying for Unbounce or Instapage? We build hard-coded marketing pages that load instantly.
+                                <br />
+                                <strong>Why this makes sense:</strong> 0.1s delay = 1% lost revenue. Our landing pages score 100/100 on Lighthouse, ensuring your ad spend isn't wasted on bounces.
+                            </p>
+                            <ul className="space-y-2">
+                                {["A/B Testing Ready", "Instant Analytics Integration", "Zero Layout Shift"].map(item => (
+                                    <li key={item} className="flex items-center text-pink-400">
+                                        <span className="w-1.5 h-1.5 bg-pink-400 rounded-full mr-3"></span> {item}
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                        <div className="flex-1 bg-white/5 border border-white/10 p-8 rounded-2xl order-1 md:order-2">
+                            <div className="bg-black/50 aspect-video rounded-xl border border-white/5 flex items-center justify-center">
+                                <span className="text-4xl">🚀</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* 2. Custom Forms */}
+                    <div className="flex flex-col md:flex-row gap-12 items-center">
+                        <div className="flex-1 bg-white/5 border border-white/10 p-8 rounded-2xl">
+                            <div className="bg-black/50 aspect-video rounded-xl border border-white/5 flex items-center justify-center">
+                                <span className="text-4xl">📝</span>
+                            </div>
+                        </div>
+                        <div className="flex-1">
+                            <h4 className="text-3xl font-bold mb-4">Complex React Forms</h4>
+                            <p className="text-gray-400 text-lg leading-relaxed mb-6">
+                                Typeform is great, but sometimes you need real logic. Multi-step wizards, file uploads, conditional branching, and direct integration with your CRM (HubSpot, Salesforce).
+                            </p>
+                            <ul className="space-y-2">
+                                {["Zod Schema Validation", "Save Progress Locally", "GDPR Compliant"].map(item => (
+                                    <li key={item} className="flex items-center text-blue-400">
+                                        <span className="w-1.5 h-1.5 bg-blue-400 rounded-full mr-3"></span> {item}
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    </div>
+
+                    {/* 3. Pure Code MVP */}
+                    <div className="flex flex-col md:flex-row gap-12 items-center">
+                        <div className="flex-1 order-2 md:order-1">
+                            <h4 className="text-3xl font-bold mb-4">Pure Code (No CMS) MVP</h4>
+                            <p className="text-gray-400 text-lg leading-relaxed mb-6">
+                                Just starting out? You don't need a CMS yet. We build a "Pure Website" where content is hard-coded but structured.
+                                <br />
+                                <strong>The Benefit:</strong> Extremely fast to build, zero maintenance costs, hack-proof. When you're ready, we can plug in a CMS later without a rewrite.
+                            </p>
+                        </div>
+                        <div className="flex-1 bg-white/5 border border-white/10 p-8 rounded-2xl order-1 md:order-2">
+                            <div className="bg-black/50 aspect-video rounded-xl border border-white/5 flex items-center justify-center">
+                                <span className="text-4xl">💎</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* 4. Dashboards (Bonus) */}
+                    <div className="flex flex-col md:flex-row gap-12 items-center">
+                        <div className="flex-1 bg-white/5 border border-white/10 p-8 rounded-2xl">
+                            <div className="bg-black/50 aspect-video rounded-xl border border-white/5 flex items-center justify-center">
+                                <span className="text-4xl">📊</span>
+                            </div>
+                        </div>
+                        <div className="flex-1">
+                            <h4 className="text-3xl font-bold mb-4">SaaS Dashboards</h4>
+                            <p className="text-gray-400 text-lg leading-relaxed mb-6">
+                                Need to show data to your users? We build interactive, client-side dashboards using SWR or React Query. Real-time charts, data tables, and user management.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             {/* Services List */}
             <section className="py-24 px-4 max-w-7xl mx-auto w-full">
                 <div className="flex flex-col md:flex-row gap-16">
