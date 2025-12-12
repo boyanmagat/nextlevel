@@ -1,9 +1,20 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
 
 export default function Logo({ className = "", size = 40 }: { className?: string; size?: number }) {
     const strokeWidth = 4;
+
+    const [key, setKey] = useState(0);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setKey(prev => prev + 1);
+        }, 10000); // Restart every 10 seconds
+
+        return () => clearInterval(interval);
+    }, []);
 
     return (
         <div className={`relative flex items-center justify-center ${className}`} style={{ width: size, height: size }}>
@@ -31,6 +42,7 @@ export default function Logo({ className = "", size = 40 }: { className?: string
 
                 {/* N Shape - Single Continuous Path */}
                 <motion.path
+                    key={key}
                     d="M12 42 V12 L38 42 V12"
                     stroke="url(#neonGradient)"
                     strokeWidth={strokeWidth}
