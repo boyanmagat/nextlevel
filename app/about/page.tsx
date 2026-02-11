@@ -7,7 +7,7 @@ export default function AboutPage() {
     return (
         <div className="flex flex-col min-h-screen pt-24">
             {/* Hero */}
-            <section className="px-4 mb-32">
+            <section className="px-4 pb-24 relative">
                 <div className="max-w-7xl mx-auto">
                     <motion.h1
                         initial={{ opacity: 0, y: 50 }}
@@ -25,6 +25,40 @@ export default function AboutPage() {
                     >
                         We are a team of obsessesive engineers and designers. We believe the web has lost its soul to generic templates and bloated frameworks. We're here to bring it back.
                     </motion.p>
+                </div>
+
+                {/* Scroll Indicator / Visual Connection */}
+                <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-px h-24 bg-gradient-to-b from-transparent via-pink-500 to-transparent opacity-50"></div>
+            </section>
+
+            {/* We Are Solvers */}
+            <section className="relative px-4 py-32 bg-gradient-to-b from-zinc-900/40 to-black text-center text-white border-t border-white/5">
+                {/* Decorative background element */}
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-px bg-gradient-to-r from-transparent via-pink-500/50 to-transparent"></div>
+
+                <div className="max-w-4xl mx-auto relative z-10">
+                    <motion.h2
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        className="text-4xl md:text-6xl font-black mb-12 tracking-tighter"
+                    >
+                        WE ARE <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-500">SOLVERS</span>.
+                    </motion.h2>
+                    <motion.div
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.2 }}
+                        className="text-xl md:text-2xl text-gray-300 leading-relaxed font-light space-y-8 text-left md:text-center"
+                    >
+                        <p>
+                            We’ve spent 15 years in this reality, and we know the problem intimately. There are endless tools that do endless things, but when you have a specific need, the available options are almost always... "almost" right. <span className="text-white font-bold">But "almost" never truly cuts it.</span>
+                        </p>
+                        <p>
+                            We know the fatigue of settling—of bending your workflow to fit a tool rather than the other way around. But we also know the feeling of finally having something that just <em>works</em>. That’s the feeling we build for our clients. We don't just build websites; we solve the gap between what is available and what you actually need.
+                        </p>
+                    </motion.div>
                 </div>
             </section>
 
@@ -51,30 +85,37 @@ export default function AboutPage() {
             </section>
 
             {/* Team */}
-            <section className="px-4 py-32 max-w-7xl mx-auto">
+            <section className="py-24 px-4 md:px-8 max-w-5xl mx-auto border-t border-white/10 w-full">
                 <h2 className="text-4xl font-bold mb-16">The Minds.</h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-12 w-full">
                     {[
-                        { name: "Julien F.", role: "Managing Director", image: "/team/julien_v3.png" },
-                        { name: "Ivo N.", role: "Tech Director", image: "/team/ivo.png" },
-                        { name: "Sarah K.", role: "Head of Design", image: "/team/julien_v3.png" }, // Placeholder image
+                        { name: "Julien F.", role: "Managing Director", stack: "Growth", image: "/team/julien_v3.png" },
+                        { name: "Ivo N.", role: "Tech Director", stack: "Next.js", image: "/team/ivo.png" }
                     ].map((member, i) => (
                         <motion.div
                             key={i}
-                            whileHover={{ y: -10 }}
-                            className="group relative overflow-hidden rounded-2xl aspect-[3/4] bg-gray-900 border border-white/10"
+                            initial={{ opacity: 0, scale: 0.9 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            transition={{ duration: 0.5, delay: i * 0.1 }}
+                            viewport={{ once: true }}
+                            whileHover={{ scale: 1.02 }}
+                            className="group relative overflow-hidden rounded-2xl aspect-[3/4] bg-gray-900 border border-white/10 w-full"
                         >
-                            {/* Using same images for demo purposes */}
-                            <div className="absolute inset-0 bg-gray-800"></div> {/* Fallback color */}
                             <Image
                                 src={member.image}
                                 alt={member.name}
                                 fill
-                                className="object-cover opacity-70 group-hover:opacity-100 transition-opacity duration-500"
+                                className="object-cover opacity-60 group-hover:opacity-100 transition-opacity duration-500"
                             />
-                            <div className="absolute bottom-0 left-0 p-6 bg-gradient-to-t from-black to-transparent w-full">
-                                <h3 className="text-2xl font-bold">{member.name}</h3>
-                                <p className="text-pink-500 text-sm font-mono">{member.role}</p>
+
+                            <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-90"></div>
+
+                            <div className="absolute bottom-0 left-0 p-8">
+                                <h3 className="text-3xl font-bold text-white mb-2">{member.name}</h3>
+                                <p className="text-lg text-gray-300">{member.role}</p>
+                                <div className="mt-6 inline-block px-4 py-2 rounded-full text-sm font-bold bg-white/10 border border-white/20 backdrop-blur-md">
+                                    Loves {member.stack}
+                                </div>
                             </div>
                         </motion.div>
                     ))}

@@ -229,7 +229,7 @@ export default function NextJsServicePage() {
                     viewport={{ once: true }}
                 >
                     <h2 className="text-4xl md:text-6xl font-bold mb-8">Stop fighting your framework.</h2>
-                    <Link href="/contact" className="inline-block px-12 py-5 bg-white text-black rounded-full text-xl font-bold hover:scale-105 transition-transform">
+                    <Link href="/request-quote" className="inline-block px-12 py-5 bg-white text-black rounded-full text-xl font-bold hover:scale-105 transition-transform">
                         Book an Audit
                     </Link>
                 </motion.div>

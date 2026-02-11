@@ -215,7 +215,7 @@ export default function HeadlessCMSPage() {
 
             {/* CTA */}
             <section className="py-24 text-center">
-                <Link href="/contact" className="px-12 py-5 bg-pink-600 rounded-full text-xl font-bold hover:bg-pink-500 transition-colors">
+                <Link href="/request-quote" className="px-12 py-5 bg-pink-600 rounded-full text-xl font-bold hover:bg-pink-500 transition-colors">
                     Migrate to Headless
                 </Link>
             </section>

@@ -66,7 +66,7 @@ export default function MobileDevPage() {
             </section>
 
             <section className="py-24 text-center">
-                <Link href="/contact" className="px-12 py-5 bg-blue-600 rounded-full text-xl font-bold hover:bg-blue-500 transition-colors">
+                <Link href="/request-quote" className="px-12 py-5 bg-blue-600 rounded-full text-xl font-bold hover:bg-blue-500 transition-colors">
                     Start Your App
                 </Link>
             </section>

@@ -44,7 +44,7 @@ export default function Home() {
             transition={{ duration: 0.5, delay: 0.8 }}
             className="flex flex-col md:flex-row gap-6 justify-center"
           >
-            <Link href="/contact" className="px-8 py-4 bg-white text-black font-bold rounded-full hover:scale-105 transition-transform">
+            <Link href="/request-quote" className="px-8 py-4 bg-white text-black font-bold rounded-full hover:scale-105 transition-transform">
               START PROJECT
             </Link>
             <Link href="/work" className="px-8 py-4 border border-white/20 backdrop-blur-md rounded-full font-bold hover:bg-white/10 transition-colors">
@@ -75,41 +75,7 @@ export default function Home() {
         </div>
       </motion.section>
 
-      {/* NEW: Featured Case Study */}
-      <section className="py-24 px-4 max-w-7xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 100 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          viewport={{ once: true, margin: "-100px" }}
-          className="relative rounded-3xl overflow-hidden border border-white/10 bg-gray-900 aspect-video md:aspect-[21/9] group cursor-pointer"
-        >
-          {/* Placeholder Image */}
-          <div className="absolute inset-0 bg-gradient-to-tr from-purple-900 to-black opacity-80 group-hover:scale-105 transition-transform duration-700"></div>
 
-          <div className="absolute inset-0 flex flex-col justify-end p-8 md:p-16">
-            <div className="text-pink-500 font-bold tracking-widest uppercase mb-4 text-sm">Featured Project</div>
-            <h3 className="text-4xl md:text-6xl font-bold leading-tight mb-4">Neon Commerce <br /> Replatforming</h3>
-            <div className="flex flex-wrap gap-8 text-gray-300">
-              <motion.div whileHover={{ y: -5 }} className="transition-transform">
-                <span className="block text-3xl font-bold text-white">400%</span>
-                <span className="text-sm">Faster Load Time</span>
-              </motion.div>
-              <motion.div whileHover={{ y: -5 }} className="transition-transform">
-                <span className="block text-3xl font-bold text-white">99/100</span>
-                <span className="text-sm">Lighthouse Score</span>
-              </motion.div>
-              <motion.div whileHover={{ y: -5 }} className="transition-transform">
-                <span className="block text-3xl font-bold text-white">35%</span>
-                <span className="text-sm">Conversion Lift</span>
-              </motion.div>
-            </div>
-            <div className="mt-8 flex items-center text-white font-bold group-hover:text-pink-500 transition-colors">
-              View Case Study <span className="ml-2 group-hover:translate-x-2 transition-transform">→</span>
-            </div>
-          </div>
-        </motion.div>
-      </section>
 
       {/* Capabilities Overview */}
       <section className="py-24 px-4 md:px-8 max-w-7xl mx-auto">
@@ -339,6 +305,77 @@ export default function Home() {
         </div>
       </section>
 
+      {/* NEW: Performance Showcase */}
+      <section className="py-24 px-4 max-w-7xl mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-pink-500 font-bold tracking-widest uppercase mb-4 text-sm">Case Studies</h2>
+          <h3 className="text-4xl md:text-6xl font-bold">Need for <span className="text-purple-500 italic pr-2">Speed</span>.</h3>
+        </motion.div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {[
+            {
+              client: "Neon Commerce",
+              metric: "0.05s",
+              label: "Load Time",
+              desc: "Migrated from Magento to Sanity + Next.js. Instant page transitions.",
+              color: "from-pink-500 to-purple-600"
+            },
+            {
+              client: "Vogue Living",
+              metric: "100/100",
+              label: "Lighthouse Score",
+              desc: "Perfect Core Web Vitals on mobile and desktop. SEO traffic doubled.",
+              color: "from-blue-500 to-cyan-400"
+            },
+            {
+              client: "TechFlow",
+              metric: "60 FPS",
+              label: "Animations",
+              desc: "WebGL pricing configurator that runs smoothly on any device.",
+              color: "from-green-400 to-emerald-600"
+            }
+          ].map((caseStudy, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: i * 0.1 }}
+              viewport={{ once: true }}
+              whileHover={{ y: -10 }}
+              className="group relative rounded-3xl overflow-hidden bg-gray-900 border border-white/10 aspect-[4/5] md:aspect-[3/4] flex flex-col justify-between p-8 cursor-pointer"
+            >
+              <div className={`absolute inset-0 bg-gradient-to-br ${caseStudy.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500`}></div>
+              <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full blur-3xl -mr-16 -mt-16 transition-transform group-hover:scale-150 duration-700"></div>
+
+              <div>
+                <div className="text-gray-400 font-mono text-xs mb-2">{caseStudy.client}</div>
+                <div className="text-5xl md:text-6xl font-black text-white mb-2 tracking-tighter">
+                  {caseStudy.metric}
+                </div>
+                <div className="text-sm font-bold text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-400 uppercase tracking-widest">
+                  {caseStudy.label}
+                </div>
+              </div>
+
+              <div className="relative z-10">
+                <p className="text-gray-400 text-sm leading-relaxed mb-6">
+                  {caseStudy.desc}
+                </p>
+                <div className="flex items-center text-white font-bold text-sm group-hover:gap-2 transition-all">
+                  View Case Study <span className="opacity-0 group-hover:opacity-100 transition-opacity">→</span>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </section>
+
       {/* NEW: Process Section (Git Pipeline) */}
       <section className="py-24 px-4 md:px-8 max-w-5xl mx-auto">
         <motion.h2
@@ -537,7 +574,7 @@ export default function Home() {
           transition={{ duration: 0.8 }}
         >
           <h2 className="text-5xl md:text-7xl font-bold mb-8">Ready to disrupt?</h2>
-          <Link href="/contact" className="inline-block px-12 py-5 bg-gradient-to-r from-pink-500 to-purple-600 rounded-full text-xl font-bold hover:shadow-lg hover:shadow-purple-500/50 transition-all hover:scale-105 active:scale-95">
+          <Link href="/request-quote" className="inline-block px-12 py-5 bg-gradient-to-r from-pink-500 to-purple-600 rounded-full text-xl font-bold hover:shadow-lg hover:shadow-purple-500/50 transition-all hover:scale-105 active:scale-95">
             Launch Project
           </Link>
         </motion.div>

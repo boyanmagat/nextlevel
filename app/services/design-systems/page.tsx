@@ -52,7 +52,7 @@ export default function DesignSystemsPage() {
             </section>
 
             <section className="py-24 text-center">
-                <Link href="/contact" className="px-12 py-5 bg-purple-600 rounded-full text-xl font-bold hover:bg-purple-500 transition-colors">
+                <Link href="/request-quote" className="px-12 py-5 bg-purple-600 rounded-full text-xl font-bold hover:bg-purple-500 transition-colors">
                     Standardize Design
                 </Link>
             </section>

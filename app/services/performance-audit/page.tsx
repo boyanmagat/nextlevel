@@ -65,7 +65,7 @@ export default function PerformanceAuditPage() {
             </section>
 
             <section className="py-24 text-center">
-                <Link href="/contact" className="px-12 py-5 bg-green-600 rounded-full text-xl font-bold hover:bg-green-500 transition-colors">
+                <Link href="/request-quote" className="px-12 py-5 bg-green-600 rounded-full text-xl font-bold hover:bg-green-500 transition-colors">
                     Get Your Free Audit
                 </Link>
             </section>
