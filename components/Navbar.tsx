@@ -20,6 +20,7 @@ const SERVICES = [
             { title: "Custom Software", href: "/services/custom-software", icon: "🛠️" },
             { title: "Mobile Apps", href: "/services/mobile-app-development", icon: "📱" },
             { title: "Performance", href: "/services/performance-audit", icon: "🚀" },
+            { title: "Integrations", href: "/services/custom-integrations", icon: "🔗" },
         ]
     },
     {

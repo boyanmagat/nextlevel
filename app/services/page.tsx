@@ -19,6 +19,7 @@ export default function ServicesPage() {
                 { title: "Custom Software", href: "/services/custom-software", desc: "SaaS platforms and internal business tools." },
                 { title: "Mobile Development", href: "/services/mobile-app-development", desc: "React Native apps that feel truly native." },
                 { title: "Performance Audits", href: "/services/performance-audit", desc: "Core Web Vitals and architecture optimization." },
+                { title: "Custom API Integrations", href: "/services/custom-integrations", desc: "Unified ecology for Marketing, Ops, and Finance tools." },
             ]
         },
         {
