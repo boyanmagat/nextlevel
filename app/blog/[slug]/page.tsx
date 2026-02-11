@@ -2,9 +2,26 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { POSTS } from "../data";
+import BuildersTrap from "../posts/BuildersTrap";
+import BanThemeForest from "../posts/BanThemeForest";
+import RevenueRule from "../posts/RevenueRule";
 
 export default function BlogPostPage({ params }: { params: { slug: string } }) {
-    // Mock content based on slug could go here
+    const post = POSTS.find(p => p.slug === params.slug);
+
+    // If it's one of our special "Visual Essay" posts, render the custom component
+    if (params.slug === "unlimited-trap-builders-vs-custom") {
+        return <BuildersTrap />;
+    }
+    if (params.slug === "why-we-should-ban-themeforest") {
+        return <BanThemeForest />;
+    }
+    if (params.slug === "100ms-revenue-rule") {
+        return <RevenueRule />;
+    }
+
+    // Default Layout for other posts
     return (
         <article className="min-h-screen pt-32 pb-24">
             {/* Article Header */}
@@ -14,9 +31,9 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
                     animate={{ opacity: 1, y: 0 }}
                     className="flex items-center justify-center gap-4 text-sm font-bold uppercase tracking-widest text-pink-500 mb-6"
                 >
-                    <span>Engineering</span>
+                    <span>{post?.category || "Blog"}</span>
                     <span>•</span>
-                    <span>Oct 24, 2024</span>
+                    <span>{post?.date || "Today"}</span>
                 </motion.div>
                 <motion.h1
                     initial={{ opacity: 0, y: 20 }}
@@ -24,7 +41,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
                     transition={{ delay: 0.1 }}
                     className="text-4xl md:text-6xl font-bold leading-tight mb-8"
                 >
-                    Why We Moved From Redux to React Query
+                    {post?.title || "Blog Post Not Found"}
                 </motion.h1>
                 <motion.p
                     initial={{ opacity: 0, y: 20 }}
@@ -32,7 +49,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
                     transition={{ delay: 0.2 }}
                     className="text-xl text-gray-400 max-w-2xl mx-auto"
                 >
-                    State management doesn't have to be painful. Here is how we reduced our boilerplate by 80% and improved user experience.
+                    {post?.excerpt}
                 </motion.p>
             </header>
 
@@ -42,36 +59,17 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
                     initial={{ opacity: 0, scale: 0.95 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ delay: 0.3 }}
-                    className="aspect-video bg-gray-900 rounded-3xl border border-white/10"
-                ></motion.div>
+                    className="aspect-video bg-gray-900 rounded-3xl border border-white/10 flex items-center justify-center text-gray-500"
+                >
+                    {/* Placeholder for real image */}
+                    <span>Featured Image: {post?.image}</span>
+                </motion.div>
             </div>
 
             {/* Article Body */}
             <div className="max-w-3xl mx-auto px-4 prose prose-invert prose-lg prose-pink">
                 <p className="lead">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
-                </p>
-                <h2>The Problem with Global State</h2>
-                <p>
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
-                <blockquote>
-                    "Client state and server state are inherently different. Treating them the same is the root of all evil."
-                </blockquote>
-                <p>
-                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto.
-                </p>
-                <h3>Enter React Query</h3>
-                <p>
-                    Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
-                </p>
-                <pre>
-                    <code>
-                        const {'{ data, isLoading }'} = useQuery(['todos'], fetchTodos);
-                    </code>
-                </pre>
-                <p>
-                    Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+                    This is a placeholder for standard blog content. For the "Visual Essay" examples, please check the specific posts in the Insights section.
                 </p>
             </div>
 
