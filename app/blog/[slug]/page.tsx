@@ -2,22 +2,24 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { use } from "react";
 import { POSTS } from "../data";
 import BuildersTrap from "../posts/BuildersTrap";
 import BanThemeForest from "../posts/BanThemeForest";
 import RevenueRule from "../posts/RevenueRule";
 
-export default function BlogPostPage({ params }: { params: { slug: string } }) {
-    const post = POSTS.find(p => p.slug === params.slug);
+export default function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
+    const { slug } = use(params);
+    const post = POSTS.find(p => p.slug === slug);
 
     // If it's one of our special "Visual Essay" posts, render the custom component
-    if (params.slug === "unlimited-trap-builders-vs-custom") {
+    if (slug === "unlimited-trap-builders-vs-custom") {
         return <BuildersTrap />;
     }
-    if (params.slug === "why-we-should-ban-themeforest") {
+    if (slug === "why-we-should-ban-themeforest") {
         return <BanThemeForest />;
     }
-    if (params.slug === "100ms-revenue-rule") {
+    if (slug === "100ms-revenue-rule") {
         return <RevenueRule />;
     }
 

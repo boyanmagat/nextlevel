@@ -92,31 +92,100 @@ export default function RevenueRule() {
                 </div>
             </section>
 
-            <div className="max-w-3xl mx-auto px-4 prose prose-invert prose-lg prose-pink">
-                <p className="lead text-2xl font-light leading-relaxed mb-12">
-                    Amazon found that every 100ms of latency cost them 1% in sales. Google found an extra 500ms in search results generation dropped traffic by 20%. The data is clear: Human attention span is the most competitive resource on earth.
-                </p>
+            {/* Section 2: The Data */}
+            <section className="max-w-6xl mx-auto px-4 mb-32">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
+                    <div>
+                        <p className="text-2xl font-light leading-relaxed mb-8 text-gray-200">
+                            Amazon found that every <span className="text-cyan-400 font-bold">100ms of latency cost them 1% in sales</span>. Google found an extra 500ms in search results generation dropped traffic by 20%.
+                        </p>
+                        <p className="text-gray-400 text-lg">
+                            The data is clear: Human attention span is the most competitive resource on earth.
+                        </p>
+                    </div>
+                    <div>
+                        <div className="bg-white/5 p-8 rounded-3xl border border-white/10">
+                            <h3 className="text-lg font-bold text-gray-400 uppercase tracking-widest mb-6">The 3-Second Cliff</h3>
+                            <div className="space-y-4">
+                                <div>
+                                    <div className="flex justify-between text-sm mb-2">
+                                        <span>1 Second Load</span>
+                                        <span className="text-green-400">7% Bounce</span>
+                                    </div>
+                                    <div className="w-full h-2 bg-gray-800 rounded-full overflow-hidden">
+                                        <div className="w-[7%] h-full bg-green-500"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div className="flex justify-between text-sm mb-2">
+                                        <span>3 Seconds Load</span>
+                                        <span className="text-yellow-400">53% Bounce</span>
+                                    </div>
+                                    <div className="w-full h-2 bg-gray-800 rounded-full overflow-hidden">
+                                        <div className="w-[53%] h-full bg-yellow-500"></div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div className="flex justify-between text-sm mb-2">
+                                        <span>5 Seconds Load</span>
+                                        <span className="text-red-400">90% Bounce</span>
+                                    </div>
+                                    <div className="w-full h-2 bg-gray-800 rounded-full overflow-hidden">
+                                        <div className="w-[90%] h-full bg-red-500"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-                <h2>The 3-Second Cliff</h2>
-                <p>
-                    53% of mobile site visits are abandoned if pages take longer than 3 seconds to load. Yet, the average mobile site takes 15 seconds to load. This gap is where your revenue is leaking.
-                </p>
+            {/* Section 3: Core Web Vitals */}
+            <section className="max-w-6xl mx-auto px-4 mb-24">
+                <div className="text-center mb-16">
+                    <h2 className="text-3xl md:text-5xl font-black mb-6">Core Web Vitals</h2>
+                    <p className="text-xl text-gray-400">Google doesn't just measure speed; they measure user frustration.</p>
+                </div>
 
-                <h2>Core Web Vitals</h2>
-                <p>
-                    Google doesn't just measure speed; they measure user frustration.
-                </p>
-                <ul>
-                    <li><strong>LCP (Largest Contentful Paint):</strong> How long until the main content is visible? (Target: {`<`} 2.5s)</li>
-                    <li><strong>CLS (Cumulative Layout Shift):</strong> Does the page jump around while loading, causing user errors? (Target: 0)</li>
-                    <li><strong>INP (Interaction to Next Paint):</strong> When I click a button, does it freeze? (Target: {`<`} 200ms)</li>
-                </ul>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div className="bg-cyan-900/10 border border-cyan-500/20 p-8 rounded-2xl hover:bg-cyan-900/20 transition-colors group">
+                        <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">🎨</div>
+                        <h3 className="text-xl font-bold text-white mb-2">LCP</h3>
+                        <p className="text-sm font-mono text-cyan-400 mb-4">Largest Contentful Paint</p>
+                        <div className="h-px w-full bg-cyan-500/20 mb-4"></div>
+                        <p className="text-gray-400 text-sm">How long until the main content is visible?</p>
+                        <p className="mt-4 font-bold text-green-400 text-sm">Target: &lt; 2.5s</p>
+                    </div>
 
-                <h2>Our Approach</h2>
-                <p>
-                    We don't optimize after the fact. We architect for speed. By using Static Site Generation (SSG) in Next.js and optimizing images at the edge, we ensure your site is delivered instantly from a CDN close to your user, not generated on a slow server halfway across the world.
-                </p>
-            </div>
+                    <div className="bg-purple-900/10 border border-purple-500/20 p-8 rounded-2xl hover:bg-purple-900/20 transition-colors group">
+                        <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">📐</div>
+                        <h3 className="text-xl font-bold text-white mb-2">CLS</h3>
+                        <p className="text-sm font-mono text-purple-400 mb-4">Cumulative Layout Shift</p>
+                        <div className="h-px w-full bg-purple-500/20 mb-4"></div>
+                        <p className="text-gray-400 text-sm">Does the page jump around while loading?</p>
+                        <p className="mt-4 font-bold text-green-400 text-sm">Target: 0</p>
+                    </div>
+
+                    <div className="bg-pink-900/10 border border-pink-500/20 p-8 rounded-2xl hover:bg-pink-900/20 transition-colors group">
+                        <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">👆</div>
+                        <h3 className="text-xl font-bold text-white mb-2">INP</h3>
+                        <p className="text-sm font-mono text-pink-400 mb-4">Interaction to Next Paint</p>
+                        <div className="h-px w-full bg-pink-500/20 mb-4"></div>
+                        <p className="text-gray-400 text-sm">When I click, does the interface freeze?</p>
+                        <p className="mt-4 font-bold text-green-400 text-sm">Target: &lt; 200ms</p>
+                    </div>
+                </div>
+            </section>
+
+            {/* Section 4: Architecture */}
+            <section className="bg-white/5 border-y border-white/10 py-24">
+                <div className="max-w-4xl mx-auto px-4 text-center">
+                    <h2 className="text-3xl font-bold mb-8">Our Approach: Structural Speed</h2>
+                    <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed mb-8">
+                        We don't optimize after the fact. We architect for speed. By using <span className="text-white font-bold">Static Site Generation (SSG)</span> and Edge Caching, we ensure your site is delivered instantly from a CDN close to your user, not generated on a slow server halfway across the world.
+                    </p>
+                </div>
+            </section>
         </article>
     );
 }

@@ -88,37 +88,75 @@ export default function BuildersTrap() {
                 </div>
             </section>
 
-            <div className="max-w-3xl mx-auto px-4 prose prose-invert prose-lg prose-pink">
-                <p className="lead text-2xl font-light leading-relaxed mb-12">
-                    The pitch is seductive: "Drag and drop anything, anywhere. No code required." But in software, freedom without constraints is chaos.
-                </p>
+            {/* Section 2: The Illusion of Choice */}
+            <section className="max-w-6xl mx-auto px-4 mb-32">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
+                    <div>
+                        <h2 className="text-3xl md:text-5xl font-bold mb-8 leading-tight">
+                            The Illusion of <span className="text-red-500">Choice</span>.
+                        </h2>
+                        <p className="text-xl text-gray-400 mb-8 leading-relaxed">
+                            Page builders like Elementor or Divi operate on a principle of "universal possibility." To allow you to put any element inside any other element, they must generate a generic HTML wrapper structure capable of handling every edge case.
+                        </p>
+                        <p className="text-lg text-gray-500 leading-relaxed">
+                            This guarantees what developers call <span className="text-white font-mono bg-white/10 px-2 py-1 rounded">Div Soup</span>—nested structures 15 layers deep just to display a simple headline.
+                        </p>
+                    </div>
 
-                <h2>The Illusion of Choice</h2>
-                <p>
-                    Page builders like Elementor, Divi, or Wix operate on a principle of "universal possibility." To allow you to put any element inside any other element with any possible styling override, they must generate a generic HTML wrapper structure capable of handling every edge case.
-                </p>
-                <p>
-                    This results in what developers call "Div Soup"—nested structures 15 layers deep just to display a simple headline.
-                </p>
+                    <div className="space-y-6">
+                        <div className="bg-white/5 p-8 rounded-2xl border border-white/10 hover:border-red-500/50 transition-colors">
+                            <h3 className="text-xl font-bold text-white mb-2 flex items-center gap-2">
+                                <span className="w-2 h-2 rounded-full bg-red-500"></span>
+                                Performance
+                            </h3>
+                            <p className="text-gray-400 text-sm">The browser parses 10x the nodes. This kills Lighthouse scores and drains mobile battery.</p>
+                        </div>
+                        <div className="bg-white/5 p-8 rounded-2xl border border-white/10 hover:border-red-500/50 transition-colors">
+                            <h3 className="text-xl font-bold text-white mb-2 flex items-center gap-2">
+                                <span className="w-2 h-2 rounded-full bg-red-500"></span>
+                                Maintenance
+                            </h3>
+                            <p className="text-gray-400 text-sm">Global style changes become impossible because every element has specific inline overrides.</p>
+                        </div>
+                        <div className="bg-white/5 p-8 rounded-2xl border border-white/10 hover:border-red-500/50 transition-colors">
+                            <h3 className="text-xl font-bold text-white mb-2 flex items-center gap-2">
+                                <span className="w-2 h-2 rounded-full bg-red-500"></span>
+                                Accessibility
+                            </h3>
+                            <p className="text-gray-400 text-sm">Semantic HTML is lost in a sea of generic divs, making the site invisible to screen readers.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-                <h3>Why it matters:</h3>
-                <ul>
-                    <li><strong>Performance:</strong> The browser has to parse and render 10x the nodes. This kills your Lighthouse score and drains mobile battery.</li>
-                    <li><strong>Maintenance:</strong> Global style changes become impossible because every element has inline overrides.</li>
-                    <li><strong>Accessibility:</strong> Semantic HTML (nav, aside, main) is often lost in a sea of generic divs, making your site invisible to screen readers.</li>
-                </ul>
+            {/* Section 3: The Philosophy */}
+            <section className="max-w-4xl mx-auto px-4 text-center mb-24">
+                <div className="relative py-24">
+                    <div className="absolute inset-0 flex items-center justify-center opacity-10 pointer-events-none">
+                        <span className="text-[20vw] font-black text-white leading-none">EXACT</span>
+                    </div>
 
-                <h2>The Custom Philosophy</h2>
-                <p>
-                    We don't sell "unlimited." We sell "exact."
-                </p>
-                <p>
-                    When we build a component, we define its strict constraints. A "Hero Section" allows a title, a subtitle, and a CTA. It does not allow you to drag a pricing table into the H1 tag. By constraining the inputs, we guarantee the output is always performant, accessible, and brand-consistent.
-                </p>
-                <p>
-                    Constraints are not limitations. They are guardrails for quality.
-                </p>
-            </div>
+                    <h2 className="relative z-10 text-4xl md:text-6xl font-black mb-12">
+                        We don't sell "unlimited." <br />
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-cyan-500">We sell exact.</span>
+                    </h2>
+
+                    <p className="relative z-10 text-xl md:text-2xl text-gray-400 max-w-2xl mx-auto leading-relaxed mb-12">
+                        A "Hero Section" should allow a title, subtitle, and CTA. <strong className="text-white">It should not allow you to drag a pricing table into the H1 tag.</strong>
+                    </p>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-2xl mx-auto">
+                        <div className="p-6 rounded-xl bg-red-900/10 border border-red-500/20 text-red-200">
+                            <strong>Constraint = Restriction</strong>
+                            <p className="text-sm opacity-70 mt-2">The Amateur View</p>
+                        </div>
+                        <div className="p-6 rounded-xl bg-green-900/10 border border-green-500/20 text-green-200">
+                            <strong>Constraint = Quality</strong>
+                            <p className="text-sm opacity-70 mt-2">The Engineering View</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </article>
     );
 }

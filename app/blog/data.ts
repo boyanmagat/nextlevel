@@ -25,41 +25,5 @@ export const POSTS = [
         date: "Jan 12, 2026",
         readTime: "4 min read",
         image: "/blog/speed.jpg"
-    },
-    {
-        title: "Why We Moved From Redux to React Query",
-        excerpt: "State management doesn't have to be painful. Here is how we reduced our boilerplate by 80%.",
-        category: "Engineering",
-        slug: "redux-to-react-query",
-        date: "Oct 24, 2025",
-        readTime: "5 min read",
-        image: "/blog/post1.jpg"
-    },
-    {
-        title: "The Ultimate Guide to Next.js 14 Server Actions",
-        excerpt: "Mutations directly in your components? Yes, please. A deep dive into the new mental model.",
-        category: "Next.js",
-        slug: "nextjs-server-actions",
-        date: "Nov 12, 2024",
-        readTime: "8 min read",
-        image: "/blog/post2.jpg"
-    },
-    {
-        title: "Design Tokens: Scaling Figma to 100+ Screens",
-        excerpt: "How to structure your variables for dark mode, density, and multi-brand support.",
-        category: "Design",
-        slug: "design-tokens-scaling",
-        date: "Dec 01, 2024",
-        readTime: "6 min read",
-        image: "/blog/post3.jpg"
-    },
-    {
-        title: "Headless Shopify: The 2025 Architecture",
-        excerpt: "Stop using Liquid. Build a custom storefront that converts better and loads faster.",
-        category: "Strategy",
-        slug: "headless-shopify-architecture",
-        date: "Dec 08, 2024",
-        readTime: "10 min read",
-        image: "/blog/post4.jpg"
     }
 ];

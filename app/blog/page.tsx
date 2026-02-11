@@ -5,6 +5,16 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 import { POSTS } from "./data";
+import { BuilderThumbnail, ThemeForestThumbnail, RevenueThumbnail, DefaultThumbnail } from "./thumbnails";
+
+const renderThumbnail = (slug: string) => {
+    switch (slug) {
+        case "unlimited-trap-builders-vs-custom": return <BuilderThumbnail />;
+        case "why-we-should-ban-themeforest": return <ThemeForestThumbnail />;
+        case "100ms-revenue-rule": return <RevenueThumbnail />;
+        default: return <DefaultThumbnail />;
+    }
+};
 
 export default function BlogIndexPage() {
     return (
@@ -20,7 +30,7 @@ export default function BlogIndexPage() {
                         INSIGHTS
                     </motion.h1>
                     <div className="flex flex-wrap justify-center gap-4">
-                        {["All", "Engineering", "Design", "Strategy", "Next.js"].map((cat) => (
+                        {["All", "Strategy", "Agency", "Performance"].map((cat) => (
                             <Link href={cat === "All" ? "/blog" : `/blog/category/${cat.toLowerCase()}`} key={cat} className="px-6 py-2 rounded-full border border-white/10 hover:bg-white hover:text-black transition-colors text-sm font-bold">
                                 {cat}
                             </Link>
@@ -36,11 +46,13 @@ export default function BlogIndexPage() {
                             animate={{ opacity: 1, scale: 1 }}
                             className="relative aspect-video md:aspect-[21/9] bg-gray-900 rounded-3xl overflow-hidden group border border-white/10"
                         >
-                            <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent z-10 opacity-80"></div>
-                            {/* Placeholder for real image */}
-                            <div className="absolute inset-0 bg-gray-800 group-hover:scale-105 transition-transform duration-700"></div>
+                            <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent z-10 opacity-80 pointer-events-none"></div>
 
-                            <div className="absolute bottom-0 left-0 p-8 md:p-16 z-20 max-w-4xl">
+                            <div className="absolute inset-0 group-hover:scale-105 transition-transform duration-700">
+                                {renderThumbnail(POSTS[0].slug)}
+                            </div>
+
+                            <div className="absolute bottom-0 left-0 p-8 md:p-16 z-20 max-w-4xl pointer-events-none">
                                 <div className="flex items-center gap-4 mb-4 text-sm font-bold">
                                     <span className="text-pink-500 uppercase tracking-widest">{POSTS[0].category}</span>
                                     <span className="text-gray-400">{POSTS[0].date}</span>
@@ -63,8 +75,10 @@ export default function BlogIndexPage() {
                                 transition={{ delay: i * 0.1 }}
                                 className="group cursor-pointer h-full flex flex-col"
                             >
-                                <div className="aspect-video bg-gray-900 rounded-xl mb-6 overflow-hidden border border-white/10">
-                                    <div className="w-full h-full bg-gray-800 group-hover:scale-110 transition-transform duration-500"></div>
+                                <div className="aspect-video bg-gray-900 rounded-xl mb-6 overflow-hidden border border-white/10 relative">
+                                    <div className="absolute inset-0 group-hover:scale-110 transition-transform duration-500">
+                                        {renderThumbnail(post.slug)}
+                                    </div>
                                 </div>
                                 <div className="flex-1">
                                     <div className="flex items-center gap-3 mb-3 text-xs font-bold uppercase tracking-wider">
