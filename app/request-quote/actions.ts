@@ -72,7 +72,7 @@ export async function sendQuoteRequest(prevState: any, formData: FormData) {
         }
 
         const { data, error } = await resend.emails.send({
-            from: "NextLevel Quote <onboarding@resend.dev>",
+            from: "NextLevel Quote <info@nextleveldigital.ca>",
             to: ["info@nextleveldigital.ca"],
             subject: `New Quote Request from ${name} at ${company || "Unknown Company"}`,
             html: `

@@ -64,7 +64,7 @@ export async function sendContactEmail(prevState: any, formData: FormData) {
         }
 
         const { data, error } = await resend.emails.send({
-            from: "NextLevel Contact <onboarding@resend.dev>", // Check if user has domain set up or use default test domain
+            from: "NextLevel Contact <info@nextleveldigital.ca>",
             to: ["info@nextleveldigital.ca"],
             subject: `New Contact Form Submission from ${name}`,
             html: `
