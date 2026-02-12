@@ -79,7 +79,7 @@ export async function sendContactEmail(prevState: any, formData: FormData) {
 
         if (error) {
             console.error("Resend Error:", error);
-            return { success: false, message: "Failed to send email. Please try again." };
+            return { success: false, message: `Failed to send email: ${error.message}` };
         }
 
         return { success: true, message: "Message sent successfully!" };
