@@ -1,10 +1,75 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { useState } from "react";
+import { motion, animate } from "framer-motion";
+import { useState, useEffect } from "react";
 
 export default function RevenueRule() {
     const [latency, setLatency] = useState(100);
+
+    const percentage = ((latency - 100) / 2900) * 100;
+
+    useEffect(() => {
+        const sequence = async () => {
+            // Wait 1 second start
+            await new Promise(r => setTimeout(r, 1000));
+
+            // Stop 1: 100 -> 1200
+            await new Promise<void>(resolve => {
+                animate(100, 1200, {
+                    duration: 1.5,
+                    ease: "easeInOut",
+                    onUpdate: (v) => setLatency(Math.round(v)),
+                    onComplete: () => resolve()
+                });
+            });
+            await new Promise(r => setTimeout(r, 500)); // Pause
+
+            // Stop 2: 1200 -> 2000
+            await new Promise<void>(resolve => {
+                animate(1200, 2000, {
+                    duration: 1.2,
+                    ease: "easeInOut",
+                    onUpdate: (v) => setLatency(Math.round(v)),
+                    onComplete: () => resolve()
+                });
+            });
+            await new Promise(r => setTimeout(r, 500)); // Pause
+
+            // Stop 3 (Peak): 2000 -> 2800
+            await new Promise<void>(resolve => {
+                animate(2000, 2800, {
+                    duration: 1.2,
+                    ease: "easeInOut",
+                    onUpdate: (v) => setLatency(Math.round(v)),
+                    onComplete: () => resolve()
+                });
+            });
+            await new Promise(r => setTimeout(r, 800)); // Longer pause at peak
+
+            // Return Stop 1: 2800 -> 1500
+            await new Promise<void>(resolve => {
+                animate(2800, 1500, {
+                    duration: 1.5,
+                    ease: "easeInOut",
+                    onUpdate: (v) => setLatency(Math.round(v)),
+                    onComplete: () => resolve()
+                });
+            });
+            await new Promise(r => setTimeout(r, 500)); // Pause
+
+            // Final: 1500 -> 500
+            await new Promise<void>(resolve => {
+                animate(1500, 500, {
+                    duration: 1.2,
+                    ease: "easeInOut",
+                    onUpdate: (v) => setLatency(Math.round(v)),
+                    onComplete: () => resolve()
+                });
+            });
+        };
+
+        sequence();
+    }, []);
 
     return (
         <article className="min-h-screen pt-32 pb-24">
@@ -32,7 +97,7 @@ export default function RevenueRule() {
                     transition={{ delay: 0.2 }}
                     className="text-xl text-gray-400 max-w-2xl mx-auto font-light leading-relaxed"
                 >
-                    We analyzed 50 e-commerce sites. Every 100ms of latency cost 1% in conversion. Speed isn't vanity; it's profit.
+                    We analyzed 50 e-commerce sites. Every 100ms of latency cost 1% in conversion. Speed isn&apos;t vanity; it&apos;s profit.
                 </motion.p>
             </header>
 
@@ -58,10 +123,13 @@ export default function RevenueRule() {
                             type="range"
                             min="100"
                             max="3000"
-                            step="100"
+                            step="10"
                             value={latency}
                             onChange={(e) => setLatency(parseInt(e.target.value))}
-                            className="w-full h-2 bg-gray-700 rounded-lg appearance-none cursor-pointer mb-16 accent-cyan-500"
+                            style={{
+                                background: `linear-gradient(to right, #06b6d4 0%, #06b6d4 ${percentage}%, #374151 ${percentage}%, #374151 100%)`
+                            }}
+                            className="w-full h-2 rounded-lg appearance-none cursor-pointer mb-16 accent-cyan-500"
                         />
 
                         {/* Visualization */}
@@ -144,7 +212,7 @@ export default function RevenueRule() {
             <section className="max-w-6xl mx-auto px-4 mb-24">
                 <div className="text-center mb-16">
                     <h2 className="text-3xl md:text-5xl font-black mb-6">Core Web Vitals</h2>
-                    <p className="text-xl text-gray-400">Google doesn't just measure speed; they measure user frustration.</p>
+                    <p className="text-xl text-gray-400">Google doesn&apos;t just measure speed; they measure user frustration.</p>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -182,7 +250,7 @@ export default function RevenueRule() {
                 <div className="max-w-4xl mx-auto px-4 text-center">
                     <h2 className="text-3xl font-bold mb-8">Our Approach: Structural Speed</h2>
                     <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed mb-8">
-                        We don't optimize after the fact. We architect for speed. By using <span className="text-white font-bold">Static Site Generation (SSG)</span> and Edge Caching, we ensure your site is delivered instantly from a CDN close to your user, not generated on a slow server halfway across the world.
+                        We don&apos;t optimize after the fact. We architect for speed. By using <span className="text-white font-bold">Static Site Generation (SSG)</span> and Edge Caching, we ensure your site is delivered instantly from a CDN close to your user, not generated on a slow server halfway across the world.
                     </p>
                 </div>
             </section>

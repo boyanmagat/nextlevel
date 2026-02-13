@@ -13,6 +13,7 @@ const PATHS = [
     '/team',
     '/team/ivo',
     '/team/julien',
+    '/services',
     '/services/nextjs',
     '/services/headless-cms',
     '/services/headless-wordpress',

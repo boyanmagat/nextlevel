@@ -1,17 +1,44 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { useState } from "react";
+import { motion, animate } from "framer-motion";
+import { useState, useEffect } from "react";
 
 export default function BanThemeForest() {
     const [pluginCount, setPluginCount] = useState(11);
+
+    useEffect(() => {
+        // Wait 1 second after load
+        const timer = setTimeout(() => {
+            // Animate 11 -> 28 (25-30 range)
+            animate(11, 28, {
+                duration: 1.5,
+                ease: "easeInOut",
+                onUpdate: (latest) => setPluginCount(Math.round(latest)),
+                onComplete: () => {
+                    // Wait 0.5 seconds
+                    setTimeout(() => {
+                        // Animate 28 -> 15
+                        animate(28, 15, {
+                            duration: 1,
+                            ease: "easeInOut",
+                            onUpdate: (latest) => setPluginCount(Math.round(latest))
+                        });
+                    }, 500);
+                }
+            });
+        }, 1000);
+
+        return () => clearTimeout(timer);
+    }, []);
 
     const health = Math.max(0, 100 - (pluginCount * 2));
     const conflicts = Math.min(100, Math.pow(pluginCount, 1.5) / 5);
 
     // Calculate percentage for slider background
     const percentage = (pluginCount / 50) * 100;
-    const sliderColor = pluginCount > 30 ? '#EF4444' : pluginCount > 15 ? '#EAB308' : '#10B981';
+    const sliderColor = pluginCount > 30 ? "#EF4444" : pluginCount > 15 ? "#EAB308" : "#10B981";
+
+    const backgroundStyle = `radial-gradient(circle at center, ${pluginCount > 30 ? "rgba(239, 68, 68, 0.2)" : pluginCount > 15 ? "rgba(234, 179, 8, 0.2)" : "rgba(16, 185, 129, 0.2)"} 0%, transparent 70%)`;
 
     return (
         <article className="min-h-screen pt-32 pb-24">
@@ -40,7 +67,7 @@ export default function BanThemeForest() {
                     transition={{ delay: 0.2 }}
                     className="text-xl text-gray-400 max-w-2xl mx-auto font-light leading-relaxed"
                 >
-                    Technical debt is real debt. We stopped buying cheap templates when we realized our clients were paying 10x in 'interest' later.
+                    Technical debt is real debt. We stopped buying cheap templates when we realized our clients were paying 10x in &apos;interest&apos; later.
                 </motion.p>
             </header>
 
@@ -51,7 +78,7 @@ export default function BanThemeForest() {
                     <div
                         className="absolute inset-0 transition-opacity duration-500"
                         style={{
-                            background: `radial-gradient(circle at center, ${pluginCount > 30 ? 'rgba(239, 68, 68, 0.2)' : pluginCount > 15 ? 'rgba(234, 179, 8, 0.2)' : 'rgba(16, 185, 129, 0.2)'} 0%, transparent 70%)`
+                            background: backgroundStyle
                         }}
                     ></div>
 
@@ -59,7 +86,7 @@ export default function BanThemeForest() {
                         {/* Controls & Metrics */}
                         <div className="space-y-8">
                             <div>
-                                <h3 className="text-2xl font-bold text-white mb-2">The "Just One More" Trap</h3>
+                                <h3 className="text-2xl font-bold text-white mb-2">The &quot;Just One More&quot; Trap</h3>
                                 <p className="text-gray-400 text-sm">Add plugins to see how they impact stability.</p>
                             </div>
 
@@ -121,8 +148,8 @@ export default function BanThemeForest() {
                                         animate={{
                                             scale: 1,
                                             opacity: 1,
-                                            x: i % 2 === 0 ? Math.random() * -2 : Math.random() * 2,
-                                            rotate: Math.random() * (pluginCount / 10) * (Math.random() > 0.5 ? 1 : -1)
+                                            x: i % 2 === 0 ? ((i * 7) % 5) * -0.5 : ((i * 7) % 5) * 0.5,
+                                            rotate: ((i * 13) % 10) * (pluginCount / 20) * (i % 2 === 0 ? 1 : -1)
                                         }}
                                         className={`
                                             h-8 rounded border border-white/10 w-[48%] bg-opacity-80 shrink-0
@@ -165,13 +192,13 @@ export default function BanThemeForest() {
                         <svg className="w-24 h-24 text-yellow-500" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clipRule="evenodd" /></svg>
                     </div>
                     <div className="relative z-10">
-                        <h2 className="text-3xl font-bold text-yellow-500 mb-6">The "Lock-in" Effect</h2>
+                        <h2 className="text-3xl font-bold text-yellow-500 mb-6">The &quot;Lock-in&quot; Effect</h2>
                         <p className="text-xl text-gray-300 leading-relaxed mb-6 max-w-2xl">
                             ThemeForest themes are not just styles; they are massive applications that hijack WordPress. To generate those 400 layouts, they bundle heavy plugins like Visual Composer and Slider Revolution directly into the theme logic.
                         </p>
                         <div className="bg-black/50 p-6 rounded-xl font-mono text-sm text-yellow-200/70 border border-yellow-500/10">
-                            <p className="mb-2">// What happens when you try to switch themes:</p>
-                            <p className="text-gray-500">[vc_row][vc_column width="1/2"][vc_column_text] <br /> ...content is trapped in proprietary shortcodes... <br /> [/vc_column_text][/vc_column][/vc_row]</p>
+                            <p className="mb-2">{"// What happens when you try to switch themes:"}</p>
+                            <p className="text-gray-500">[vc_row][vc_column width=&quot;1/2&quot;][vc_column_text] <br /> ...content is trapped in proprietary shortcodes... <br /> [/vc_column_text][/vc_column][/vc_row]</p>
                         </div>
                     </div>
                 </div>
@@ -185,11 +212,11 @@ export default function BanThemeForest() {
                         <ul className="space-y-4">
                             <li className="flex items-start gap-3">
                                 <span className="text-red-500 mt-1">✕</span>
-                                <span className="text-gray-300"><strong>Unused CSS:</strong> Most sites use 5% of the theme's CSS but load 100% of it.</span>
+                                <span className="text-gray-300"><strong>Unused CSS:</strong> Most sites use 5% of the theme&apos;s CSS but load 100% of it.</span>
                             </li>
                             <li className="flex items-start gap-3">
                                 <span className="text-red-500 mt-1">✕</span>
-                                <span className="text-gray-300"><strong>Dependency Hell:</strong> You can't update one plugin without breaking the theme.</span>
+                                <span className="text-gray-300"><strong>Dependency Hell:</strong> You can&apos;t update one plugin without breaking the theme.</span>
                             </li>
                         </ul>
                     </div>
