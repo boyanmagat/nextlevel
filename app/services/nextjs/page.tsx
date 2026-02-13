@@ -1,340 +1,40 @@
-"use client";
+import { Metadata } from "next";
+import NextJsClient from "./NextJsClient";
 
-import Link from "next/link";
-import { motion } from "framer-motion";
-import FAQ from "@/components/FAQ";
-import { LandingPageGraphic, FormGraphic, CodeGraphic, DashboardGraphic } from "@/components/ServiceGraphics";
+export const metadata: Metadata = {
+    title: "Next.js Development Agency | Fast & Scalable Typescript Apps",
+    description: "Upgrade to Next.js for instant load times, better Google rankings, and a codebase your team will love. We are Vercel Architect experts.",
+    openGraph: {
+        title: "Next.js Development Agency | NextLevelDigital",
+        description: "We build high-performance web apps with Next.js, React, and Sanity.io. Stop fighting your framework and start shipping.",
+        url: "https://nextleveldigital.agency/services/nextjs",
+        siteName: "NextLevelDigital",
+        locale: "en_US",
+        type: "website",
+    },
+};
 
-export default function NextJsServicePage() {
+export default function NextJsPage() {
     return (
-        <div className="flex flex-col min-h-screen pt-24">
-            {/* Hero Section */}
-            <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
-                <div className="absolute inset-0 z-0">
-                    <div className="absolute top-20 right-20 w-96 h-96 bg-black rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
-                    <div className="absolute bottom-20 left-20 w-96 h-96 bg-gray-900 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
-                </div>
-
-                <div className="relative z-10 text-center max-w-5xl px-4">
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5 }}
-                        className="inline-block px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm font-mono text-white mb-8"
-                    >
-                        <span className="w-2 h-2 bg-black rounded-full inline-block mr-2 animate-pulse"></span>
-                        Vercel Architect Experts
-                    </motion.div>
-                    <motion.h1
-                        initial={{ opacity: 0, y: 50 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8, delay: 0.2 }}
-                        className="text-6xl md:text-8xl font-black tracking-tighter mb-8 leading-none"
-                    >
-                        NEXT<span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500">.JS</span> <br />
-                        MASTERY
-                    </motion.h1>
-                    <motion.p
-                        initial={{ opacity: 0, y: 30 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8, delay: 0.4 }}
-                        className="text-xl md:text-2xl text-gray-400 mb-12 max-w-2xl mx-auto font-light"
-                    >
-                        Delight your users with a website that feels like a native app. Instant load times, better Google and <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-500">AI</span> rankings, and a content editor your marketing team will love.
-                    </motion.p>
-                </div>
-            </section>
-
-            {/* Educational Section */}
-            <section className="py-16 px-4 bg-blue-900/10 border-y border-blue-500/20">
-                <div className="max-w-4xl mx-auto text-center">
-                    <h2 className="text-sm font-bold text-blue-400 tracking-widest uppercase mb-4">New to Next.js?</h2>
-                    <h3 className="text-3xl font-bold mb-6">It's React, but <span className="text-white">Professional</span>.</h3>
-                    <p className="text-gray-400 leading-relaxed text-lg">
-                        Imagine if your website was pre-printed before the user asked for it, instead of being drawn from scratch every time they clicked.
-                        That's Next.js. It handles the heavy lifting on our global servers so your users get instant interactions, better SEO, and longer battery life on their phones.
-                    </p>
-                </div>
-            </section>
-
-            {/* Target Audience / Right Place Section */}
-            <section className="py-24 px-4 relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-b from-blue-900/5 to-purple-900/5"></div>
-                <div className="max-w-6xl mx-auto relative z-10">
-                    <div className="text-center mb-16">
-                        <motion.h2
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            className="text-4xl md:text-5xl font-bold mb-6"
-                        >
-                            Is this the right fit for you?
-                        </motion.h2>
-                        <motion.p
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: 0.1 }}
-                            className="text-xl text-gray-400 max-w-2xl mx-auto"
-                        >
-                            Next.js is powerful, but it's most effective for teams who care deeply about user experience.
-                        </motion.p>
-                    </div>
-
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        {[
-                            {
-                                title: "Founders & Startups",
-                                desc: "You're building something new and want it to be fast, secure, and ready to scale from day one.",
-                                icon: "🚀",
-                                gradient: "from-blue-500/20 to-cyan-500/20"
-                            },
-                            {
-                                title: "Marketing Teams",
-                                desc: "You need the freedom to launch landing pages and update content instantly without waiting on developers.",
-                                icon: "✍️",
-                                gradient: "from-pink-500/20 to-rose-500/20"
-                            },
-                            {
-                                title: "eCommerce Brands",
-                                desc: "You want a store that loads instantly, because you know that speed creates trust and drives sales.",
-                                icon: "🛍️",
-                                gradient: "from-amber-500/20 to-orange-500/20"
-                            },
-                            {
-                                title: "Product Owners",
-                                desc: "You want your web app to feel smooth, responsive, and premium—just like a native mobile app.",
-                                icon: "✨",
-                                gradient: "from-purple-500/20 to-violet-500/20"
-                            }
-                        ].map((item, i) => (
-                            <motion.div
-                                key={i}
-                                initial={{ opacity: 0, scale: 0.95 }}
-                                whileInView={{ opacity: 1, scale: 1 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: i * 0.1 }}
-                                className={`p-8 rounded-3xl border border-white/10 bg-gradient-to-br ${item.gradient} backdrop-blur-sm hover:border-white/30 transition-all hover:scale-[1.02] cursor-default`}
-                            >
-                                <div className="text-4xl mb-4">{item.icon}</div>
-                                <h3 className="text-2xl font-bold mb-3">{item.title}</h3>
-                                <p className="text-gray-300 leading-relaxed text-lg">
-                                    {item.desc}
-                                </p>
-                            </motion.div>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
-            {/* Value Props */}
-            <section className="py-24 px-4 bg-white/5 border-y border-white/10">
-                <div className="max-w-7xl mx-auto">
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        {[
-                            {
-                                title: "App Router Natives",
-                                desc: "We abandoned the `pages` directory years ago. We build exclusively with the modern App Router for nested layouts and streaming.",
-                                icon: "⚡"
-                            },
-                            {
-                                title: "Server Actions",
-                                desc: "Forget API routes. We write type-safe functions that execute on the server and return data directly to your components.",
-                                icon: "🔒"
-                            },
-                            {
-                                title: "Edge Ready",
-                                desc: "Your users are everywhere. Your code should be too. We deploy to Vercel's Edge Network for sub-millisecond latency.",
-                                icon: "🌍"
-                            }
-                        ].map((item, i) => (
-                            <motion.div
-                                key={i}
-                                initial={{ opacity: 0, y: 30 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ delay: i * 0.1 }}
-                                viewport={{ once: true }}
-                                className="p-8 border border-white/10 rounded-2xl bg-black/40 hover:border-white/30 transition-colors"
-                            >
-                                <div className="text-4xl mb-6">{item.icon}</div>
-                                <h3 className="text-2xl font-bold mb-4">{item.title}</h3>
-                                <p className="text-gray-400 leading-relaxed">{item.desc}</p>
-                            </motion.div>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
-            {/* Use Cases - What we can build */}
-            <section className="py-24 px-4 max-w-7xl mx-auto">
-                <div className="text-center mb-16">
-                    <h2 className="text-pink-500 font-bold tracking-widest uppercase mb-4 text-sm">Use Cases</h2>
-                    <h3 className="text-4xl md:text-6xl font-bold">What can we build?</h3>
-                </div>
-
-                <div className="space-y-24">
-                    {/* 1. Landing Pages */}
-                    <div className="flex flex-col md:flex-row gap-12 items-center">
-                        <div className="flex-1 order-2 md:order-1">
-                            <h4 className="text-3xl font-bold mb-4">High-Conversion Landing Pages</h4>
-                            <p className="text-gray-400 text-lg leading-relaxed mb-6">
-                                Stopped paying for Unbounce or Instapage? We build hard-coded marketing pages that load instantly.
-                                <br />
-                                <strong>Why this makes sense:</strong> 0.1s delay = 1% lost revenue. Our landing pages score 100/100 on Lighthouse, ensuring your ad spend isn't wasted on bounces.
-                            </p>
-                            <ul className="space-y-2">
-                                {["A/B Testing Ready", "Instant Analytics Integration", "Zero Layout Shift"].map(item => (
-                                    <li key={item} className="flex items-center text-pink-400">
-                                        <span className="w-1.5 h-1.5 bg-pink-400 rounded-full mr-3"></span> {item}
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-                        <div className="flex-1 order-1 md:order-2">
-                            <LandingPageGraphic />
-                        </div>
-                    </div>
-
-                    {/* 2. Custom Forms */}
-                    <div className="flex flex-col md:flex-row gap-12 items-center">
-                        <div className="flex-1">
-                            <FormGraphic />
-                        </div>
-                        <div className="flex-1">
-                            <h4 className="text-3xl font-bold mb-4">Complex React Forms</h4>
-                            <p className="text-gray-400 text-lg leading-relaxed mb-6">
-                                Typeform is great, but sometimes you need real logic. Multi-step wizards, file uploads, conditional branching, and direct integration with your CRM (HubSpot, Salesforce).
-                            </p>
-                            <ul className="space-y-2">
-                                {["Zod Schema Validation", "Save Progress Locally", "GDPR Compliant"].map(item => (
-                                    <li key={item} className="flex items-center text-blue-400">
-                                        <span className="w-1.5 h-1.5 bg-blue-400 rounded-full mr-3"></span> {item}
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-                    </div>
-
-                    {/* 3. Pure Code MVP */}
-                    <div className="flex flex-col md:flex-row gap-12 items-center">
-                        <div className="flex-1 order-2 md:order-1">
-                            <h4 className="text-3xl font-bold mb-4">Pure Code (No CMS) MVP</h4>
-                            <p className="text-gray-400 text-lg leading-relaxed mb-6">
-                                Just starting out? You don't need a CMS yet. We build a "Pure Website" where content is hard-coded but structured.
-                                <br />
-                                <strong>The Benefit:</strong> Extremely fast to build, zero maintenance costs, hack-proof. When you're ready, we can plug in a CMS later without a rewrite.
-                            </p>
-                        </div>
-                        <div className="flex-1 order-1 md:order-2">
-                            <CodeGraphic />
-                        </div>
-                    </div>
-
-                    {/* 4. Dashboards (Bonus) */}
-                    <div className="flex flex-col md:flex-row gap-12 items-center">
-                        <div className="flex-1">
-                            <DashboardGraphic />
-                        </div>
-                        <div className="flex-1">
-                            <h4 className="text-3xl font-bold mb-4">SaaS Dashboards</h4>
-                            <p className="text-gray-400 text-lg leading-relaxed mb-6">
-                                Need to show data to your users? We build interactive, client-side dashboards using SWR or React Query. Real-time charts, data tables, and user management.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Services List */}
-            <section className="py-24 px-4 max-w-7xl mx-auto w-full">
-                <div className="flex flex-col md:flex-row gap-16">
-                    <div className="md:w-1/3">
-                        <h2 className="text-4xl font-bold mb-6">How we help.</h2>
-                        <p className="text-gray-400">
-                            Whether you're migrating from a legacy React app or building the next big SaaS, our engineering standards are non-negotiable.
-                        </p>
-                    </div>
-                    <div className="md:w-2/3 grid grid-cols-1 gap-4">
-                        {[
-                            { name: "React to Next.js Migration", tags: ["SEO Lift", "Performance"] },
-                            { name: "Codebase Audits", tags: ["Security", "Best Practices"] },
-                            { name: "Vercel Deployment Optimization", tags: ["Cost Reduction", "Speed"] },
-                            { name: "Headless Integration", tags: ["Sanity", "Shopify"] }
-                        ].map((service, i) => (
-                            <motion.div
-                                key={i}
-                                initial={{ opacity: 0, x: 20 }}
-                                whileInView={{ opacity: 1, x: 0 }}
-                                transition={{ delay: i * 0.1 }}
-                                viewport={{ once: true }}
-                                className="flex items-center justify-between p-6 border border-white/10 rounded-xl bg-white/5 hover:bg-white/10 transition-colors group cursor-pointer"
-                            >
-                                <span className="text-xl font-bold">{service.name}</span>
-                                <div className="flex items-center gap-4">
-                                    {service.tags.map(tag => (
-                                        <span key={tag} className="text-xs font-mono text-gray-500 border border-white/10 px-2 py-1 rounded hidden sm:inline-block">
-                                            {tag}
-                                        </span>
-                                    ))}
-                                    <span className="text-white group-hover:translate-x-2 transition-transform">→</span>
-                                </div>
-                            </motion.div>
-                        ))}
-                    </div>
-                </div>
-            </section>
-
-            {/* FAQ Section */}
-            <section className="py-32 px-4 bg-gradient-to-b from-black to-slate-950">
-                <div className="max-w-4xl mx-auto">
-                    <div className="text-center mb-16">
-                        <h2 className="text-blue-500 font-bold tracking-widest uppercase mb-4 text-sm">Common Questions</h2>
-                        <h3 className="text-4xl md:text-5xl font-bold mb-6">You ask. We answer.</h3>
-                        <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-                            Transitioning to a modern stack is a big decision. Here's what our clients usually want to know before diving in.
-                        </p>
-                    </div>
-
-                    <FAQ
-                        items={[
-                            {
-                                question: "Will switching to Next.js negatively impact my SEO?",
-                                answer: "No, quite the opposite. Next.js is designed precisely for performance and SEO dominance. Features like Server-Side Rendering (SSR) ensure search engines can crawl your full content immediately, unlike standard React apps. Plus, faster load times (Core Web Vitals) directly improve your Google rankings."
-                            },
-                            {
-                                question: "Why choose Next.js over WordPress?",
-                                answer: "Speed, Security, and Scalability. WordPress relies on a heavy ecosystem of plugins that often slow you down and introduce security vulnerabilities. Next.js sends pre-built, optimized pages to your users instantly. It's the engineering difference between a family sedan and a Formula 1 car."
-                            },
-                            {
-                                question: "Is it hard for my marketing team to manage content?",
-                                answer: "Not at all. We pair Next.js with Sanity CMS. Your team gets a visual, real-time editor that feels like a website builder (drag-and-drop, live previews), but it produces clean, enterprise-grade code in the background. You get the best of both worlds."
-                            },
-                            {
-                                question: "Can Next.js handle complex e-commerce?",
-                                answer: "It is the industry standard for modern e-commerce. From Nike to TikTok, big brands use Next.js. You get instant page transitions, dynamic product availability, and a checkout flow that never lags, which directly increases conversion rates."
-                            },
-                            {
-                                question: "How much does it cost?",
-                                answer: "Projects typically range from $5k to $50k+. But the real question is ROI. Our high-performance sites lower ad costs and boost conversions, often paying for themselves within the first year. It's an investment, not an expense."
-                            }
-                        ]}
-                    />
-                </div>
-            </section>
-
-            {/* CTA */}
-            <section className="py-32 text-center px-4 bg-gradient-to-b from-transparent to-black">
-                <motion.div
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ once: true }}
-                >
-                    <h2 className="text-4xl md:text-6xl font-bold mb-8">Stop fighting your framework.</h2>
-                    <Link href="/request-quote" className="inline-block px-12 py-5 bg-white text-black rounded-full text-xl font-bold hover:scale-105 transition-transform">
-                        Book an Audit
-                    </Link>
-                </motion.div>
-            </section>
-        </div>
+        <>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "Service",
+                        "name": "Next.js Development",
+                        "provider": {
+                            "@type": "Organization",
+                            "name": "NextLevelDigital"
+                        },
+                        "description": "Expert Next.js development services focusing on performance, SEO, and scalable architecture. Vercel deployment specialists.",
+                        "serviceType": "Web Development",
+                        "areaServed": "Global"
+                    })
+                }}
+            />
+            <NextJsClient />
+        </>
     );
 }

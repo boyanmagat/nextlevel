@@ -1,73 +1,54 @@
-"use client";
-
-import { motion } from "framer-motion";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import type { Metadata } from "next";
 import FAQ from "@/components/FAQ";
+import { ALL_FAQS } from "@/constants/faq";
+
+export const metadata: Metadata = {
+    title: "Frequently Asked Questions | NextLevelDigital",
+    description: "Common questions about Headless CMS, Next.js, and our development process.",
+};
 
 export default function FAQPage() {
     return (
-        <div className="min-h-screen bg-black text-white selection:bg-pink-500 selection:text-white">
-            <Navbar />
-
-            <main className="pt-32 pb-24 px-4">
-                <div className="max-w-4xl mx-auto text-center mb-16">
-                    <motion.h1
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        className="text-5xl md:text-7xl font-bold tracking-tighter mb-6"
-                    >
-                        FREQUENTLY ASKED <br />
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-500">QUESTIONS</span>
-                    </motion.h1>
-                    <motion.p
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.1 }}
-                        className="text-xl text-gray-400"
-                    >
-                        Deep dives into our tech, process, and pricing.
-                    </motion.p>
+        <div className="min-h-screen pt-32 pb-24 px-4 bg-black text-white">
+            <div className="max-w-4xl mx-auto">
+                <div className="text-center mb-16">
+                    <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                        Frequently Asked <span className="text-pink-500">Questions</span>
+                    </h1>
+                    <p className="text-xl text-gray-400">
+                        Everything you need to know about our process, technology, and pricing.
+                    </p>
                 </div>
 
-                <div className="max-w-3xl mx-auto">
-                    <FAQ
-                        showLink={false}
-                        items={[
-                            {
-                                question: "Will switching to Next.js negatively impact my SEO?",
-                                answer: "No. In fact, moving to Next.js is one of the best things you can do for SEO. Unlike standard React apps (SPAs) that search engines struggle to read, Next.js uses Server-Side Rendering (SSR). This means we send a fully formed HTML page to Googlebot effectively instantly. Combined with Vercel's global CDN and automatic image optimization, your Core Web Vitals (speed metrics) will likely turn green, directly boosting your ranking."
-                            },
-                            {
-                                question: "Why should I choose Next.js over WordPress?",
-                                answer: "It comes down to Speed, Security, and Scalability. WordPress was built for blogging in 2003. It relies on a stack of heavy plugins that slow down your site and open up security holes. Next.js is a modern framework used by Netflix, TikTok, and Nike. It separates your content (Sanity CMS) from your code, meaning your site loads instantly, can't be hacked via plugins, and can scale to millions of users without crashing."
-                            },
-                            {
-                                question: "How does the Content Management System (Sanity) work?",
-                                answer: "We use Sanity.io, a 'Headless CMS'. For your marketing team, it looks just like a modern website builder. You get a real-time preview of your changes, drag-and-drop page building, and image cropping. But under the hood, it stores your content as pure data, which allows us to feed it into your website, mobile app, or any other platform instantly. It's the best editor experience on the market."
-                            },
-                            {
-                                question: "Can Next.js handle complex e-commerce?",
-                                answer: "Absolutely. Next.js is the gold standard for high-performance e-commerce (\"Composable Commerce\"). We build custom storefronts that connect to Shopify or any other backend. This gives you the inventory management of Shopify but with a frontend that is 10x faster and distinctively yours. No more generic themes."
-                            },
-                            {
-                                question: "How much does a project cost?",
-                                answer: "We don't do cookie-cutter pricing because we don't do cookie-cutter work. A high-end marketing site normally lands between $5k - $15k. Complex web applications or large-scale e-commerce migrations start at $20k and can go up to $50k+. We provide fixed-price quotes so you know exactly what the investment is upfront. We focus on ROI—building a tool that pays for itself through higher conversions."
-                            },
-                            {
-                                question: "How long does a typical project take?",
-                                answer: "A focused landing page or marketing site can be live in 2-4 weeks. Larger migrations or custom web apps typically take 6-12 weeks. We work in 2-week sprints and give you a live demo link at the end of every sprint so you can see progress in real-time."
-                            },
-                            {
-                                question: "What happens after the website is launched?",
-                                answer: "We don't disappear. We offer monthly retainer packages for updates, new features, and performance monitoring. Alternatively, since we build on modern standards, you own the code. Any React developer can pick it up. We also provide training videos for your team on how to use the CMS."
-                            }
-                        ]}
-                    />
-                </div>
-            </main>
+                <div className="space-y-16">
+                    {/* General / Next.js */}
+                    <section>
+                        <h2 className="text-2xl font-bold mb-8 text-blue-400 border-b border-blue-900/30 pb-4">Next.js & Process</h2>
+                        {/* We filter or pass all. For now passing relevant slices or just letting the component handle it if we passed categories? 
+                            The component takes flat list. Let's slice/filter if we want sections, or just pass ALL.
+                            Let's pass ALL for now, or maybe group them visually? 
+                            The design in page.tsx wasn't grouped before, just a list. 
+                            But grouping is nicer. Let's group.
+                         */}
+                        <FAQ items={ALL_FAQS.filter(q => q.category === "Next.js" || q.category === "General")} showLink={false} />
+                    </section>
 
-            <Footer />
+                    <section>
+                        <h2 className="text-2xl font-bold mb-8 text-pink-400 border-b border-pink-900/30 pb-4">Headless CMS (Sanity)</h2>
+                        <FAQ items={ALL_FAQS.filter(q => q.category === "Headless CMS")} showLink={false} />
+                    </section>
+
+                    <section>
+                        <h2 className="text-2xl font-bold mb-8 text-blue-400 border-b border-blue-900/30 pb-4">Headless WordPress</h2>
+                        <FAQ items={ALL_FAQS.filter(q => q.category === "Headless WordPress")} showLink={false} />
+                    </section>
+
+                    <section>
+                        <h2 className="text-2xl font-bold mb-8 text-cyan-400 border-b border-cyan-900/30 pb-4">Mobile App Development</h2>
+                        <FAQ items={ALL_FAQS.filter(q => q.category === "Mobile")} showLink={false} />
+                    </section>
+                </div>
+            </div>
         </div>
     );
 }
