@@ -15,6 +15,81 @@ export default function IvoProfile() {
 
     const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
 
+    const galleryItems = [
+        {
+            src: "/team/ivo/antelope.jpg",
+            alt: "Antelope Canyon",
+            title: "Light & Shadow",
+            className: "md:col-span-2 md:row-span-2",
+            sizes: "(max-width: 768px) 100vw, 50vw",
+            titleSize: "text-2xl",
+            delay: 0
+        },
+        {
+            src: "/team/ivo/kayak.jpg",
+            alt: "Kayaking Adventure",
+            title: "On The Water",
+            className: "md:col-span-2",
+            sizes: "(max-width: 768px) 100vw, 50vw",
+            titleSize: "text-xl",
+            delay: 0.1
+        },
+        {
+            src: "/team/ivo/meditation.jpg",
+            alt: "Meditation",
+            title: "Quiet Mind",
+            className: "",
+            sizes: "(max-width: 768px) 100vw, 25vw",
+            titleSize: "text-xl",
+            delay: 0.2
+        },
+        {
+            src: "/team/ivo/ski.jpg",
+            alt: "Skiing",
+            title: "Alpine Focus",
+            className: "",
+            sizes: "(max-width: 768px) 100vw, 25vw",
+            titleSize: "text-xl",
+            delay: 0.25
+        },
+        {
+            src: "/team/ivo/brusel.jpg",
+            alt: "Brussels Atomium",
+            title: "Design",
+            className: "",
+            sizes: "(max-width: 768px) 100vw, 25vw",
+            titleSize: "text-xl",
+            delay: 0.3
+        },
+        {
+            src: "/team/ivo/family.jpg",
+            alt: "My Team",
+            title: "My Team",
+            className: "",
+            sizes: "(max-width: 768px) 100vw, 25vw",
+            titleSize: "text-xl",
+            delay: 0.35
+        },
+        {
+            src: "/team/ivo/swiss.jpg",
+            alt: "Swiss Alps",
+            title: "Swiss Alps",
+            className: "md:col-span-2 md:row-span-2",
+            sizes: "(max-width: 768px) 100vw, 50vw",
+            titleSize: "text-2xl",
+            delay: 0.4
+        },
+        {
+            src: "/team/ivo/hike.jpg",
+            alt: "Hiking Adventure",
+            title: "The Ascent",
+            className: "md:col-span-2",
+            sizes: "(max-width: 768px) 100vw, 50vw",
+            titleSize: "text-xl",
+            delay: 0.5
+        }
+    ];
+
     return (
         <div ref={containerRef} className="min-h-screen bg-black text-white selection:bg-pink-500/30">
             {/* Navigation */}
@@ -65,34 +140,84 @@ export default function IvoProfile() {
                 </div>
             </section>
 
-            {/* Bio & Intro */}
-            <section className="py-24 px-4 bg-black relative z-10">
-                <div className="max-w-4xl mx-auto text-center md:text-left">
+            {/* The Backstory */}
+            <section className="py-32 px-4 bg-black relative z-10 overflow-hidden">
+                <div className="max-w-6xl mx-auto">
                     <motion.h2
-                        initial={{ opacity: 0 }}
-                        whileInView={{ opacity: 1 }}
-                        className="text-4xl md:text-6xl font-bold mb-12 leading-tight"
+                        initial={{ opacity: 0, x: -50 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        className="text-5xl md:text-7xl font-black mb-20 tracking-tighter"
                     >
-                        I don't just write code. <br />
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-500">
-                            I engineer reality.
-                        </span>
+                        THE <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-emerald-500">BACKSTORY.</span>
                     </motion.h2>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-12 text-lg text-gray-400 leading-relaxed">
-                        <motion.p
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ delay: 0.1 }}
-                        >
-                            Obsessed with performance since 2010. I believe that a website should feel instantaneous, fluid, and alive. If there is a millisecond of lag, I take it personally.
-                        </motion.p>
-                        <motion.p
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ delay: 0.2 }}
-                        >
-                            My approach combines rigorous engineering discipline with creative freedom. I build systems that allow brands to scale without losing their soul.
-                        </motion.p>
+
+                    <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-24">
+                        {/* Left Column: The Narrative */}
+                        <div className="md:col-span-7 space-y-16 text-lg md:text-xl leading-relaxed text-gray-300">
+                            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
+                                <h3 className="text-white font-bold mb-4 flex items-center gap-3">
+                                    <span className="text-xs px-3 py-1 rounded-full border border-white/20 text-gray-400 font-mono tracking-widest">v1.0 • ORIGIN</span>
+                                </h3>
+                                <p>
+                                    Ivo started his career with a <strong className="text-white">Master's in Mechanical Engineering</strong> from the Technical University of Sofia — because apparently, building websites wasn't complicated enough without understanding thermodynamics first.
+                                </p>
+                            </motion.div>
+
+                            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} viewport={{ once: true }}>
+                                <h3 className="text-white font-bold mb-4 flex items-center gap-3">
+                                    <span className="text-xs px-3 py-1 rounded-full border border-white/20 text-gray-400 font-mono tracking-widest">v2.0 • MIGRATION</span>
+                                </h3>
+                                <p>
+                                    After <strong className="text-white">trading Bulgaria for Vancouver</strong>, he spent 14+ years in the digital marketing trenches, growing from web developer to leading software and website development at one of Vancouver's established agencies. Along the way, he picked up an unhealthy obsession with SEO data, a deep love for clean code, and strong opinions about WordPress.
+                                </p>
+                            </motion.div>
+
+                            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} viewport={{ once: true }}>
+                                <h3 className="text-white font-bold mb-4 flex items-center gap-3">
+                                    <span className="text-xs px-3 py-1 rounded-full border border-white/20 text-gray-400 font-mono tracking-widest">v3.0 • CURRENT STATE</span>
+                                </h3>
+                                <p>
+                                    These days, Ivo lives at the intersection of <strong className="text-white">AI and digital marketing</strong> — building tools that turn mountains of analytics data into actual, actionable insights (instead of the spreadsheets-nobody-reads kind). He's certified in Next.js, Sanity CMS, and machine learning, and is always chasing whatever technology is about to make last year's "cutting edge" look quaint.
+                                </p>
+                            </motion.div>
+                        </div>
+
+                        {/* Right Column: The "Offline" optimized block */}
+                        <div className="md:col-span-5 relative">
+                            <div className="sticky top-32">
+                                <motion.div
+                                    initial={{ opacity: 0, scale: 0.95 }}
+                                    whileInView={{ opacity: 1, scale: 1 }}
+                                    transition={{ delay: 0.3 }}
+                                    viewport={{ once: true }}
+                                    className="p-8 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-sm hover:bg-white/10 transition-colors"
+                                >
+                                    <div className="flex items-center gap-4 mb-6">
+                                        <div className="w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center">
+                                            <Globe className="w-6 h-6 text-blue-400" />
+                                        </div>
+                                        <div>
+                                            <div className="text-xs text-gray-500 uppercase tracking-wider font-bold">Background Process</div>
+                                            <div className="text-white font-bold">Flight Optimizer Daemon</div>
+                                        </div>
+                                    </div>
+                                    <p className="text-gray-400 italic mb-6 text-sm leading-relaxed">
+                                        "When he's not architecting headless CMS solutions or debating API integrations, you can probably find him planning absurdly optimized multi-city flight routes across Europe."
+                                    </p>
+                                    <div className="h-1 w-full bg-gray-800 rounded-full overflow-hidden">
+                                        <motion.div
+                                            animate={{ x: ["-100%", "100%"] }}
+                                            transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
+                                            className="h-full w-1/3 bg-gradient-to-r from-transparent via-blue-500 to-transparent"
+                                        />
+                                    </div>
+                                    <div className="mt-3 flex justify-between text-xs font-mono text-gray-500">
+                                        <span>PID: 8392</span>
+                                        <span>Status: RUNNING</span>
+                                    </div>
+                                </motion.div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -148,192 +273,28 @@ export default function IvoProfile() {
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-4 gap-4 auto-rows-[300px]">
-                        {/* 1. Antelope Canyon (2x2) */}
-                        <motion.div
-                            initial={{ opacity: 0, y: 50 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ margin: "-50px" }}
-                            className="relative md:col-span-2 md:row-span-2 rounded-3xl overflow-hidden group"
-                        >
-                            <Image
-                                src="/team/ivo/antelope.jpg"
-                                alt="Antelope Canyon"
-                                fill
-                                className="object-cover transition-transform duration-700 group-hover:scale-105"
-                                sizes="(max-width: 768px) 100vw, 50vw"
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-500" />
-                            <div className="absolute bottom-6 left-6 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                                <span className="text-white font-bold text-2xl drop-shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">Light & Shadow</span>
-                            </div>
-                        </motion.div>
-
-                        <motion.div
-                            initial={{ opacity: 0, y: 50 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ delay: 0.1 }}
-                            viewport={{ margin: "-50px" }}
-                            className="relative md:col-span-2 rounded-3xl overflow-hidden group"
-                        >
-                            <Image
-                                src="/team/ivo/kayak.jpg"
-                                alt="Kayaking Adventure"
-                                fill
-                                className="object-cover transition-transform duration-700 group-hover:scale-105"
-                                sizes="(max-width: 768px) 100vw, 50vw"
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-500" />
-                            <div className="absolute bottom-6 left-6 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                                <span className="text-white font-bold text-xl drop-shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">On The Water</span>
-                            </div>
-                        </motion.div>
-
-                        {/* 2. Kayak (2x1) */}
-                        <motion.div
-                            initial={{ opacity: 0, y: 50 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ delay: 0.1 }}
-                            viewport={{ margin: "-50px" }}
-                            className="relative rounded-3xl overflow-hidden group"
-                        >
-                            <Image
-                                src="/team/ivo/kayak.jpg"
-                                alt="Kayaking Adventure"
-                                fill
-                                className="object-cover transition-transform duration-700 group-hover:scale-105"
-                                sizes="(max-width: 768px) 100vw, 50vw"
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-500" />
-                            <div className="absolute bottom-6 left-6 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                                <span className="text-white font-bold text-xl drop-shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">On The Water</span>
-                            </div>
-                        </motion.div>
-
-                        {/* 3. Meditation (1x1) */}
-                        <motion.div
-                            initial={{ opacity: 0, y: 50 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ delay: 0.2 }}
-                            viewport={{ margin: "-50px" }}
-                            className="relative rounded-3xl overflow-hidden group"
-                        >
-                            <Image
-                                src="/team/ivo/meditation.jpg"
-                                alt="Meditation"
-                                fill
-                                className="object-cover transition-transform duration-700 group-hover:scale-105"
-                                sizes="(max-width: 768px) 100vw, 25vw"
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-500" />
-                            <div className="absolute bottom-6 left-6 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                                <span className="text-white font-bold text-xl drop-shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">Quiet Mind</span>
-                            </div>
-                        </motion.div>
-
-                        {/* 4. Skiing (1x1) */}
-                        <motion.div
-                            initial={{ opacity: 0, y: 50 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ delay: 0.25 }}
-                            viewport={{ margin: "-50px" }}
-                            className="relative rounded-3xl overflow-hidden group"
-                        >
-                            <Image
-                                src="/team/ivo/skiing.jpg"
-                                alt="Skiing"
-                                fill
-                                className="object-cover transition-transform duration-700 group-hover:scale-105"
-                                sizes="(max-width: 768px) 100vw, 25vw"
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-500" />
-                            <div className="absolute bottom-6 left-6 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                                <span className="text-white font-bold text-xl drop-shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">Alpine Focus</span>
-                            </div>
-                        </motion.div>
-
-                        {/* 5. Brussels (1x1) */}
-                        <motion.div
-                            initial={{ opacity: 0, y: 50 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ delay: 0.3 }}
-                            viewport={{ margin: "-50px" }}
-                            className="relative rounded-3xl overflow-hidden group"
-                        >
-                            <Image
-                                src="/team/ivo/atomium.jpg"
-                                alt="Brussels Atomium"
-                                fill
-                                className="object-cover transition-transform duration-700 group-hover:scale-105"
-                                sizes="(max-width: 768px) 100vw, 25vw"
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-500" />
-                            <div className="absolute bottom-6 left-6 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                                <span className="text-white font-bold text-xl drop-shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">Design</span>
-                            </div>
-                        </motion.div>
-
-                        {/* 6. Family (1x1) */}
-                        <motion.div
-                            initial={{ opacity: 0, y: 50 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ delay: 0.35 }}
-                            viewport={{ margin: "-50px" }}
-                            className="relative rounded-3xl overflow-hidden group"
-                        >
-                            <Image
-                                src="/team/ivo/family.jpg"
-                                alt="Family"
-                                fill
-                                className="object-cover transition-transform duration-700 group-hover:scale-105"
-                                sizes="(max-width: 768px) 100vw, 25vw"
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-500" />
-                            <div className="absolute bottom-6 left-6 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                                <span className="text-white font-bold text-xl drop-shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">My Team</span>
-                            </div>
-                        </motion.div>
-
-                        {/* 8. Swiss (2x2) */}
-                        <motion.div
-                            initial={{ opacity: 0, y: 50 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ delay: 0.4 }}
-                            viewport={{ margin: "-50px" }}
-                            className="relative md:col-span-2 md:row-span-2 rounded-3xl overflow-hidden group"
-                        >
-                            <Image
-                                src="/team/ivo/swiss.jpg"
-                                alt="Switzerland"
-                                fill
-                                className="object-cover transition-transform duration-700 group-hover:scale-105"
-                                sizes="(max-width: 768px) 100vw, 50vw"
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-500" />
-                            <div className="absolute bottom-6 left-6 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                                <span className="text-white font-bold text-2xl drop-shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">Swiss Alps</span>
-                            </div>
-                        </motion.div>
-
-                        {/* 9. Hike (2x1) */}
-                        <motion.div
-                            initial={{ opacity: 0, y: 50 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ delay: 0.5 }}
-                            viewport={{ margin: "-50px" }}
-                            className="relative md:col-span-2 rounded-3xl overflow-hidden group"
-                        >
-                            <Image
-                                src="/team/ivo/hike.jpg"
-                                alt="Hiking Adventure"
-                                fill
-                                className="object-cover transition-transform duration-700 group-hover:scale-105"
-                                sizes="(max-width: 768px) 100vw, 50vw"
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-500" />
-                            <div className="absolute bottom-6 left-6 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                                <span className="text-white font-bold text-xl drop-shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">The Ascent</span>
-                            </div>
-                        </motion.div>
+                        {galleryItems.map((item, index) => (
+                            <motion.div
+                                key={item.alt}
+                                initial={{ opacity: 0, y: 50 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ delay: item.delay }}
+                                viewport={{ margin: "-50px" }}
+                                className={`relative rounded-3xl overflow-hidden group ${item.className}`}
+                            >
+                                <Image
+                                    src={item.src}
+                                    alt={item.alt}
+                                    fill
+                                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                                    sizes={item.sizes}
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-500" />
+                                <div className="absolute bottom-6 left-6 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                                    <span className={`text-white font-bold drop-shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 ${item.titleSize}`}>{item.title}</span>
+                                </div>
+                            </motion.div>
+                        ))}
                     </div>
                 </div>
             </section>
