@@ -18,8 +18,8 @@ export default function JulienProfileClient() {
     const galleryItems = [
         {
             src: "/team/ivo/antelope.jpg", // Placeholder
-            alt: "Design Exploration",
-            title: "Visual Research",
+            alt: "Global Strategy",
+            title: "Global Strategy",
             className: "md:col-span-2 md:row-span-2",
             sizes: "(max-width: 768px) 100vw, 50vw",
             titleSize: "text-2xl",
@@ -27,8 +27,8 @@ export default function JulienProfileClient() {
         },
         {
             src: "/team/ivo/kayak.jpg", // Placeholder
-            alt: "Brand Strategy Workshop",
-            title: "Strategy Session",
+            alt: "Leadership Summit",
+            title: "Leadership Summit",
             className: "md:col-span-2",
             sizes: "(max-width: 768px) 100vw, 50vw",
             titleSize: "text-xl",
@@ -36,8 +36,8 @@ export default function JulienProfileClient() {
         },
         {
             src: "/team/ivo/meditation.jpg", // Placeholder
-            alt: "Creative Focus",
-            title: "Deep Work",
+            alt: "Focus",
+            title: "Vision & Focus",
             className: "",
             sizes: "(max-width: 768px) 100vw, 25vw",
             titleSize: "text-xl",
@@ -45,8 +45,8 @@ export default function JulienProfileClient() {
         },
         {
             src: "/team/ivo/ski.jpg", // Placeholder
-            alt: "Inspiration",
-            title: "Fresh Perspectives",
+            alt: "Peak Performance",
+            title: "Peak Performance",
             className: "",
             sizes: "(max-width: 768px) 100vw, 25vw",
             titleSize: "text-xl",
@@ -54,8 +54,8 @@ export default function JulienProfileClient() {
         },
         {
             src: "/team/ivo/brusel.jpg", // Placeholder
-            alt: "Architecture",
-            title: "Structure & Form",
+            alt: "Scalability",
+            title: "Scalability",
             className: "",
             sizes: "(max-width: 768px) 100vw, 25vw",
             titleSize: "text-xl",
@@ -63,8 +63,8 @@ export default function JulienProfileClient() {
         },
         {
             src: "/team/ivo/family.jpg", // Placeholder
-            alt: "Team Collaboration",
-            title: "Collaboration",
+            alt: "Team Culture",
+            title: "Team Culture",
             className: "",
             sizes: "(max-width: 768px) 100vw, 25vw",
             titleSize: "text-xl",
@@ -72,8 +72,8 @@ export default function JulienProfileClient() {
         },
         {
             src: "/team/ivo/swiss.jpg", // Placeholder
-            alt: "Global Influences",
-            title: "Global Design",
+            alt: "Global Operations",
+            title: "Global Operations",
             className: "md:col-span-2 md:row-span-2",
             sizes: "(max-width: 768px) 100vw, 50vw",
             titleSize: "text-2xl",
@@ -81,8 +81,8 @@ export default function JulienProfileClient() {
         },
         {
             src: "/team/ivo/hike.jpg", // Placeholder
-            alt: "User Journey Mapping",
-            title: "Journey Mapping",
+            alt: "The Path Forward",
+            title: "The Path Forward",
             className: "md:col-span-2",
             sizes: "(max-width: 768px) 100vw, 50vw",
             titleSize: "text-xl",
@@ -127,13 +127,13 @@ export default function JulienProfileClient() {
                         </h1>
                         <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 text-xl md:text-2xl font-light text-gray-300">
                             <span className="flex items-center gap-2">
-                                <Palette className="w-6 h-6 text-purple-500" />
-                                Creative Director
+                                <span className="text-purple-500 font-bold">★</span>
+                                Managing Director
                             </span>
                             <span className="hidden md:block w-px h-8 bg-white/20" />
                             <span className="flex items-center gap-2">
-                                <Layout className="w-6 h-6 text-pink-500" />
-                                Brand Strategist
+                                <span className="text-pink-500 font-bold">📈</span>
+                                Growth Strategist
                             </span>
                         </div>
                     </motion.div>
@@ -148,7 +148,7 @@ export default function JulienProfileClient() {
                         whileInView={{ opacity: 1, x: 0 }}
                         className="text-5xl md:text-7xl font-black mb-20 tracking-tighter"
                     >
-                        THE <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500">BACKSTORY.</span>
+                        THE <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500">BLUEPRINT.</span>
                     </motion.h2>
 
                     <div className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-24">
@@ -159,25 +159,25 @@ export default function JulienProfileClient() {
                                     <span className="text-xs px-3 py-1 rounded-full border border-white/20 text-gray-400 font-mono tracking-widest">v1.0 • ORIGIN</span>
                                 </h3>
                                 <p>
-                                    Julien's journey began with a <strong className="text-white">Fine Arts degree</strong> and an insatiable curiosity for visual storytelling. While others were learning code syntax, he was mastering the language of color, composition, and human emotion.
+                                    Julien's journey began with a clear vision: <strong className="text-white">building scalable organizations</strong> caused by an obsession with efficiency and growth. He saw businesses not just as structures, but as living engines needing constant tuning.
                                 </p>
                             </motion.div>
 
                             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} viewport={{ once: true }}>
                                 <h3 className="text-white font-bold mb-4 flex items-center gap-3">
-                                    <span className="text-xs px-3 py-1 rounded-full border border-white/20 text-gray-400 font-mono tracking-widest">v2.0 • EVOLUTION</span>
+                                    <span className="text-xs px-3 py-1 rounded-full border border-white/20 text-gray-400 font-mono tracking-widest">v2.0 • EXPANSION</span>
                                 </h3>
                                 <p>
-                                    After <strong className="text-white">years in top-tier ad agencies</strong>, he realized that traditional advertising was losing its pulse. He shifted focus to digital experiences, believing that a brand is not just what you see, but how you feel when you interact with it.
+                                    After <strong className="text-white">years of leading high-performance teams</strong>, he mastered the art of turning chaotic startups into structured powerhouses. He learned that true growth isn't just about revenue—it's about culture, strategy, and execution alignment.
                                 </p>
                             </motion.div>
 
                             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} viewport={{ once: true }}>
                                 <h3 className="text-white font-bold mb-4 flex items-center gap-3">
-                                    <span className="text-xs px-3 py-1 rounded-full border border-white/20 text-gray-400 font-mono tracking-widest">v3.0 • CURRENT STATE</span>
+                                    <span className="text-xs px-3 py-1 rounded-full border border-white/20 text-gray-400 font-mono tracking-widest">v3.0 • LEADERSHIP</span>
                                 </h3>
                                 <p>
-                                    Today, Julian leads our <strong className="text-white">creative vision</strong>, ensuring every pixel serves a purpose. He bridges the gap between abstract concepts and tangible interfaces, translating business goals into compelling visual narratives that resonate on a human level.
+                                    Today, Julien steers the ship as our <strong className="text-white">Managing Director</strong>. He bridges the gap between creative ambition and business reality, ensuring that every innovative idea has a solid foundation to scale globally.
                                 </p>
                             </motion.div>
                         </div>
@@ -193,27 +193,27 @@ export default function JulienProfileClient() {
                                     className="p-8 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-sm hover:bg-white/10 transition-colors"
                                 >
                                     <div className="flex items-center gap-4 mb-6">
-                                        <div className="w-12 h-12 rounded-full bg-purple-500/20 flex items-center justify-center">
-                                            <Lightbulb className="w-6 h-6 text-purple-400" />
+                                        <div className="w-12 h-12 rounded-full bg-pink-500/20 flex items-center justify-center">
+                                            <Globe className="w-6 h-6 text-pink-400" />
                                         </div>
                                         <div>
-                                            <div className="text-xs text-gray-500 uppercase tracking-wider font-bold">Creative Daemon</div>
-                                            <div className="text-white font-bold">Inspiration Engine</div>
+                                            <div className="text-xs text-gray-500 uppercase tracking-wider font-bold">System Process</div>
+                                            <div className="text-white font-bold">Growth Engine</div>
                                         </div>
                                     </div>
                                     <p className="text-gray-400 italic mb-6 text-sm leading-relaxed">
-                                        "When he's not refining design systems or critiquing typography, he's likely exploring obscure art galleries or capturing street photography in monochrome."
+                                        "When he's not optimizing operational workflows or closing strategic partnerships, he's mapping out the next phase of global expansion."
                                     </p>
                                     <div className="h-1 w-full bg-gray-800 rounded-full overflow-hidden">
                                         <motion.div
                                             animate={{ x: ["-100%", "100%"] }}
                                             transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-                                            className="h-full w-1/3 bg-gradient-to-r from-transparent via-purple-500 to-transparent"
+                                            className="h-full w-1/3 bg-gradient-to-r from-transparent via-pink-500 to-transparent"
                                         />
                                     </div>
                                     <div className="mt-3 flex justify-between text-xs font-mono text-gray-500">
-                                        <span>PID: 1985</span>
-                                        <span>Status: FLOWING</span>
+                                        <span>PID: 2025</span>
+                                        <span>Status: SCALING</span>
                                     </div>
                                 </motion.div>
                             </div>
@@ -222,20 +222,20 @@ export default function JulienProfileClient() {
                 </div>
             </section>
 
-            {/* Design Arsenal */}
+            {/* Executive Arsenal */}
             <section className="py-24 border-y border-white/5 bg-white/5">
                 <div className="max-w-7xl mx-auto px-4">
-                    <h3 className="text-xs font-bold text-gray-500 tracking-[0.2em] mb-12 uppercase text-center">Design Arsenal</h3>
+                    <h3 className="text-xs font-bold text-gray-500 tracking-[0.2em] mb-12 uppercase text-center">Executive Arsenal</h3>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                         {[
-                            { name: "Figma", level: "Elite", icon: "🎨" },
-                            { name: "Adobe CC", level: "Master", icon: "✨" },
-                            { name: "UI/UX", level: "Expert", icon: "🖥️" },
-                            { name: "Branding", level: "Visionary", icon: "🔥" },
-                            { name: "Strategy", level: "Advanced", icon: "♟️" },
-                            { name: "Motion", level: "Pro", icon: "🎬" },
-                            { name: "Typography", level: "Obsessive", icon: "Aa" },
-                            { name: "Webflow", level: "Fluent", icon: "🕸️" },
+                            { name: "Strategy", level: "Visionary", icon: "♟️" },
+                            { name: "Leadership", level: "Elite", icon: "👑" },
+                            { name: "Growth", level: "Expert", icon: "📈" },
+                            { name: "Operations", level: "Master", icon: "⚙️" },
+                            { name: "Negotiation", level: "Advanced", icon: "🤝" },
+                            { name: "Finance", level: "Pro", icon: "📊" },
+                            { name: "Networking", level: "Global", icon: "🌐" },
+                            { name: "Scaling", level: "Architect", icon: "🏗️" },
                         ].map((skill, i) => (
                             <motion.div
                                 key={skill.name}
