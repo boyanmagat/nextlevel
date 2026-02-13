@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
+import FAQ from "@/components/FAQ";
+import { LandingPageGraphic, FormGraphic, CodeGraphic, DashboardGraphic } from "@/components/ServiceGraphics";
 
 export default function NextJsServicePage() {
     return (
@@ -38,8 +40,7 @@ export default function NextJsServicePage() {
                         transition={{ duration: 0.8, delay: 0.4 }}
                         className="text-xl md:text-2xl text-gray-400 mb-12 max-w-2xl mx-auto font-light"
                     >
-                        We don't just use Next.js; we push it to the edge.
-                        Server Actions, PPR, and zero-compromise performance.
+                        Delight your users with a website that feels like a native app. Instant load times, better Google rankings, and a content editor your marketing team will love.
                     </motion.p>
                 </div>
             </section>
@@ -53,6 +54,76 @@ export default function NextJsServicePage() {
                         Imagine if your website was pre-printed before the user asked for it, instead of being drawn from scratch every time they clicked.
                         That's Next.js. It handles the heavy lifting on our global servers so your users get instant interactions, better SEO, and longer battery life on their phones.
                     </p>
+                </div>
+            </section>
+
+            {/* Target Audience / Right Place Section */}
+            <section className="py-24 px-4 relative overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-b from-blue-900/5 to-purple-900/5"></div>
+                <div className="max-w-6xl mx-auto relative z-10">
+                    <div className="text-center mb-16">
+                        <motion.h2
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            className="text-4xl md:text-5xl font-bold mb-6"
+                        >
+                            Is this the right fit for you?
+                        </motion.h2>
+                        <motion.p
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.1 }}
+                            className="text-xl text-gray-400 max-w-2xl mx-auto"
+                        >
+                            Next.js is powerful, but it's most effective for teams who care deeply about user experience.
+                        </motion.p>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        {[
+                            {
+                                title: "Founders & Startups",
+                                desc: "You're building something new and want it to be fast, secure, and ready to scale from day one.",
+                                icon: "🚀",
+                                gradient: "from-blue-500/20 to-cyan-500/20"
+                            },
+                            {
+                                title: "Marketing Teams",
+                                desc: "You need the freedom to launch landing pages and update content instantly without waiting on developers.",
+                                icon: "✍️",
+                                gradient: "from-pink-500/20 to-rose-500/20"
+                            },
+                            {
+                                title: "eCommerce Brands",
+                                desc: "You want a store that loads instantly, because you know that speed creates trust and drives sales.",
+                                icon: "🛍️",
+                                gradient: "from-amber-500/20 to-orange-500/20"
+                            },
+                            {
+                                title: "Product Owners",
+                                desc: "You want your web app to feel smooth, responsive, and premium—just like a native mobile app.",
+                                icon: "✨",
+                                gradient: "from-purple-500/20 to-violet-500/20"
+                            }
+                        ].map((item, i) => (
+                            <motion.div
+                                key={i}
+                                initial={{ opacity: 0, scale: 0.95 }}
+                                whileInView={{ opacity: 1, scale: 1 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: i * 0.1 }}
+                                className={`p-8 rounded-3xl border border-white/10 bg-gradient-to-br ${item.gradient} backdrop-blur-sm hover:border-white/30 transition-all hover:scale-[1.02] cursor-default`}
+                            >
+                                <div className="text-4xl mb-4">{item.icon}</div>
+                                <h3 className="text-2xl font-bold mb-3">{item.title}</h3>
+                                <p className="text-gray-300 leading-relaxed text-lg">
+                                    {item.desc}
+                                </p>
+                            </motion.div>
+                        ))}
+                    </div>
                 </div>
             </section>
 
@@ -119,19 +190,15 @@ export default function NextJsServicePage() {
                                 ))}
                             </ul>
                         </div>
-                        <div className="flex-1 bg-white/5 border border-white/10 p-8 rounded-2xl order-1 md:order-2">
-                            <div className="bg-black/50 aspect-video rounded-xl border border-white/5 flex items-center justify-center">
-                                <span className="text-4xl">🚀</span>
-                            </div>
+                        <div className="flex-1 order-1 md:order-2">
+                            <LandingPageGraphic />
                         </div>
                     </div>
 
                     {/* 2. Custom Forms */}
                     <div className="flex flex-col md:flex-row gap-12 items-center">
-                        <div className="flex-1 bg-white/5 border border-white/10 p-8 rounded-2xl">
-                            <div className="bg-black/50 aspect-video rounded-xl border border-white/5 flex items-center justify-center">
-                                <span className="text-4xl">📝</span>
-                            </div>
+                        <div className="flex-1">
+                            <FormGraphic />
                         </div>
                         <div className="flex-1">
                             <h4 className="text-3xl font-bold mb-4">Complex React Forms</h4>
@@ -158,19 +225,15 @@ export default function NextJsServicePage() {
                                 <strong>The Benefit:</strong> Extremely fast to build, zero maintenance costs, hack-proof. When you're ready, we can plug in a CMS later without a rewrite.
                             </p>
                         </div>
-                        <div className="flex-1 bg-white/5 border border-white/10 p-8 rounded-2xl order-1 md:order-2">
-                            <div className="bg-black/50 aspect-video rounded-xl border border-white/5 flex items-center justify-center">
-                                <span className="text-4xl">💎</span>
-                            </div>
+                        <div className="flex-1 order-1 md:order-2">
+                            <CodeGraphic />
                         </div>
                     </div>
 
                     {/* 4. Dashboards (Bonus) */}
                     <div className="flex flex-col md:flex-row gap-12 items-center">
-                        <div className="flex-1 bg-white/5 border border-white/10 p-8 rounded-2xl">
-                            <div className="bg-black/50 aspect-video rounded-xl border border-white/5 flex items-center justify-center">
-                                <span className="text-4xl">📊</span>
-                            </div>
+                        <div className="flex-1">
+                            <DashboardGraphic />
                         </div>
                         <div className="flex-1">
                             <h4 className="text-3xl font-bold mb-4">SaaS Dashboards</h4>
@@ -218,6 +281,44 @@ export default function NextJsServicePage() {
                             </motion.div>
                         ))}
                     </div>
+                </div>
+            </section>
+
+            {/* FAQ Section */}
+            <section className="py-32 px-4 bg-gradient-to-b from-black to-slate-950">
+                <div className="max-w-4xl mx-auto">
+                    <div className="text-center mb-16">
+                        <h2 className="text-blue-500 font-bold tracking-widest uppercase mb-4 text-sm">Common Questions</h2>
+                        <h3 className="text-4xl md:text-5xl font-bold mb-6">You ask. We answer.</h3>
+                        <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+                            Transitioning to a modern stack is a big decision. Here's what our clients usually want to know before diving in.
+                        </p>
+                    </div>
+
+                    <FAQ
+                        items={[
+                            {
+                                question: "Will switching to Next.js negatively impact my SEO?",
+                                answer: "No, quite the opposite. Next.js is designed precisely for performance and SEO dominance. Features like Server-Side Rendering (SSR) ensure search engines can crawl your full content immediately, unlike standard React apps. Plus, faster load times (Core Web Vitals) directly improve your Google rankings."
+                            },
+                            {
+                                question: "Why choose Next.js over WordPress?",
+                                answer: "Speed, Security, and Scalability. WordPress relies on a heavy ecosystem of plugins that often slow you down and introduce security vulnerabilities. Next.js sends pre-built, optimized pages to your users instantly. It's the engineering difference between a family sedan and a Formula 1 car."
+                            },
+                            {
+                                question: "Is it hard for my marketing team to manage content?",
+                                answer: "Not at all. We pair Next.js with Sanity CMS. Your team gets a visual, real-time editor that feels like a website builder (drag-and-drop, live previews), but it produces clean, enterprise-grade code in the background. You get the best of both worlds."
+                            },
+                            {
+                                question: "Can Next.js handle complex e-commerce?",
+                                answer: "It is the industry standard for modern e-commerce. From Nike to TikTok, big brands use Next.js. You get instant page transitions, dynamic product availability, and a checkout flow that never lags, which directly increases conversion rates."
+                            },
+                            {
+                                question: "How much does it cost?",
+                                answer: "Projects typically range from $5k to $50k+. But the real question is ROI. Our high-performance sites lower ad costs and boost conversions, often paying for themselves within the first year. It's an investment, not an expense."
+                            }
+                        ]}
+                    />
                 </div>
             </section>
 
