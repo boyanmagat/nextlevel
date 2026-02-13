@@ -90,10 +90,10 @@ export default function AboutPage() {
                 <h2 className="text-4xl font-bold mb-16">The Minds.</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12 w-full">
                     {[
-                        { name: "Julien F.", role: "Managing Director", stack: "Growth", image: "/team/julien_v3.png" },
-                        { name: "Ivo N.", role: "Tech Director", stack: "Next.js", image: "/team/ivo.png" }
+                        { name: "Julien F.", role: "Managing Director", stack: "Growth", image: "/team/julien_v3.png", link: "/team/julien" },
+                        { name: "Ivo N.", role: "Tech Director", stack: "Next.js", image: "/team/ivo.png", link: "/team/ivo" }
                     ].map((member, i) => (
-                        <Link href={member.name.includes("Ivo") ? "/team/ivo" : "#"} key={i} className="block w-full">
+                        <Link href={member.link} key={i} className="block w-full">
                             <motion.div
                                 initial={{ opacity: 0, scale: 0.9 }}
                                 whileInView={{ opacity: 1, scale: 1 }}
