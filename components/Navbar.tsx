@@ -40,7 +40,7 @@ export default function Navbar() {
             initial={{ y: -100, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="fixed w-full z-50 top-4 px-4"
+            className="fixed w-full z-60 top-4 px-4"
         >
             <div className={`max-w-6xl mx-auto backdrop-blur-xl border border-white/20 rounded-full px-6 py-3 flex justify-between items-center shadow-lg shadow-purple-500/10 relative z-50 transition-colors duration-300 ${isMobileOpen ? 'bg-black/90' : 'bg-white/10'}`}>
                 <div className="z-50 relative">
