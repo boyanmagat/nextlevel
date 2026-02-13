@@ -101,6 +101,7 @@ export default function Navbar() {
                     <Link href="/work" className="text-sm font-medium hover:text-pink-400 transition-colors">CASE STUDIES</Link>
                     <Link href="/about" className="text-sm font-medium hover:text-blue-400 transition-colors">AGENCY</Link>
                     <Link href="/blog" className="text-sm font-medium hover:text-green-400 transition-colors">INSIGHTS</Link>
+                    <Link href="/faq" className="text-sm font-medium hover:text-orange-400 transition-colors">FAQ</Link>
                     <Link href="/contact" className="text-sm font-medium hover:text-yellow-400 transition-colors">CONTACT</Link>
                 </div>
 
@@ -145,6 +146,7 @@ export default function Navbar() {
                             <Link href="/work" onClick={() => setIsMobileOpen(false)} className="hover:text-pink-500 transition-colors">Case Studies</Link>
                             <Link href="/about" onClick={() => setIsMobileOpen(false)} className="hover:text-blue-500 transition-colors">Agency</Link>
                             <Link href="/blog" onClick={() => setIsMobileOpen(false)} className="hover:text-green-500 transition-colors">Insights</Link>
+                            <Link href="/faq" onClick={() => setIsMobileOpen(false)} className="hover:text-orange-500 transition-colors">FAQ</Link>
                             <Link href="/contact" onClick={() => setIsMobileOpen(false)} className="hover:text-yellow-500 transition-colors">Contact</Link>
                             <Link href="/request-quote" onClick={() => setIsMobileOpen(false)} className="hover:text-white transition-colors text-pink-500">Start Project</Link>
                         </div>

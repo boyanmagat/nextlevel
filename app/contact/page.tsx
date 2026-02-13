@@ -111,11 +111,11 @@ export default function ContactPage() {
                     <div className="mt-24 grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
                         <div>
                             <h3 className="font-bold text-white mb-2">EMAIL</h3>
-                            <p className="text-gray-400">hello@nextlevel.agency</p>
+                            <p className="text-gray-400">create@nextlevelagency.ca</p>
                         </div>
                         <div>
                             <h3 className="font-bold text-white mb-2">STUDIO</h3>
-                            <p className="text-gray-400">123 Creative Blvd<br />Los Angeles, CA</p>
+                            <p className="text-gray-400">Vancouver, British Columbia, Canada</p>
                         </div>
                         <div>
                             <h3 className="font-bold text-white mb-2">SOCIAL</h3>
