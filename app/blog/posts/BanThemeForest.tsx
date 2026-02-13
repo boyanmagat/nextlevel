@@ -13,7 +13,7 @@ export default function BanThemeForest() {
             animate(11, 28, {
                 duration: 1.5,
                 ease: "easeInOut",
-                onUpdate: (latest) => setPluginCount(Math.round(latest)),
+                onUpdate: (latest) => setPluginCount(latest),
                 onComplete: () => {
                     // Wait 0.5 seconds
                     setTimeout(() => {
@@ -21,7 +21,7 @@ export default function BanThemeForest() {
                         animate(28, 15, {
                             duration: 1,
                             ease: "easeInOut",
-                            onUpdate: (latest) => setPluginCount(Math.round(latest))
+                            onUpdate: (latest) => setPluginCount(latest)
                         });
                     }, 500);
                 }
@@ -93,14 +93,15 @@ export default function BanThemeForest() {
                             <div className="space-y-2">
                                 <div className="flex justify-between text-sm font-bold uppercase tracking-widest text-gray-500">
                                     <span>Active Plugins</span>
-                                    <span className="text-white">{pluginCount}</span>
+                                    <span className="text-white">{Math.round(pluginCount)}</span>
                                 </div>
                                 <input
                                     type="range"
                                     min="0"
                                     max="50"
+                                    step="0.1"
                                     value={pluginCount}
-                                    onChange={(e) => setPluginCount(parseInt(e.target.value))}
+                                    onChange={(e) => setPluginCount(parseFloat(e.target.value))}
                                     style={{
                                         background: `linear-gradient(to right, ${sliderColor} 0%, ${sliderColor} ${percentage}%, #374151 ${percentage}%, #374151 100%)`
                                     }}
@@ -140,7 +141,7 @@ export default function BanThemeForest() {
                         <div className="h-[400px] bg-black/50 rounded-2xl border border-white/5 p-8 relative flex flex-col justify-end overflow-hidden">
                             {/* Plugin Container: Fills space above core, wraps columns upwards */}
                             <div className="flex-1 w-full flex flex-col-reverse flex-wrap content-center gap-1 pb-4 overflow-hidden">
-                                {[...Array(pluginCount)].map((_, i) => (
+                                {[...Array(Math.round(pluginCount))].map((_, i) => (
                                     <motion.div
                                         key={i}
                                         layout
