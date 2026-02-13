@@ -5,11 +5,36 @@ import { ALL_FAQS } from "@/constants/faq";
 export const metadata: Metadata = {
     title: "Frequently Asked Questions | NextLevelDigital",
     description: "Common questions about Headless CMS, Next.js, and our development process.",
+    openGraph: {
+        title: "Frequently Asked Questions | NextLevelDigital",
+        description: "Everything you need to know about our process, technology (Next.js, Sanity), and pricing.",
+        url: "https://nextleveldigital.agency/faq",
+        siteName: "NextLevelDigital",
+        locale: "en_US",
+        type: "website",
+    },
 };
 
 export default function FAQPage() {
     return (
         <div className="min-h-screen pt-32 pb-24 px-4 bg-black text-white">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "FAQPage",
+                        "mainEntity": ALL_FAQS.map(faq => ({
+                            "@type": "Question",
+                            "name": faq.question,
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": faq.detailedAnswer || faq.answer
+                            }
+                        }))
+                    })
+                }}
+            />
             <div className="max-w-4xl mx-auto">
                 <div className="text-center mb-16">
                     <h1 className="text-4xl md:text-6xl font-bold mb-6">

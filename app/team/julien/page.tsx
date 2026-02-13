@@ -27,5 +27,29 @@ export const metadata: Metadata = {
 };
 
 export default function JulienProfilePage() {
-    return <JulienProfileClient />;
+    return (
+        <>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "Person",
+                        "name": "Julien F.",
+                        "jobTitle": "Managing Director",
+                        "image": "https://nextleveldigital.agency/team/julien.png",
+                        "url": "https://nextleveldigital.agency/team/julien",
+                        "worksFor": {
+                            "@type": "Organization",
+                            "name": "NextLevelDigital"
+                        },
+                        "sameAs": [
+                            "https://linkedin.com/in/julienf"
+                        ]
+                    })
+                }}
+            />
+            <JulienProfileClient />
+        </>
+    );
 }

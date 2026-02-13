@@ -27,5 +27,30 @@ export const metadata: Metadata = {
 };
 
 export default function IvoProfilePage() {
-    return <IvoProfileClient />;
+    return (
+        <>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "Person",
+                        "name": "Ivo N.",
+                        "jobTitle": "Tech Director",
+                        "image": "https://nextleveldigital.agency/team/ivo.png",
+                        "url": "https://nextleveldigital.agency/team/ivo",
+                        "worksFor": {
+                            "@type": "Organization",
+                            "name": "NextLevelDigital"
+                        },
+                        "sameAs": [
+                            "https://github.com/ivoneu",
+                            "https://linkedin.com/in/ivoneu"
+                        ]
+                    })
+                }}
+            />
+            <IvoProfileClient />
+        </>
+    );
 }
