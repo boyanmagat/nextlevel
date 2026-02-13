@@ -1,7 +1,8 @@
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
-import { useState, useActionState } from "react";
+import { useState, useActionState, useEffect } from "react";
+import { useRouter } from "next/navigation";
 import { GoogleReCaptchaProvider, useGoogleReCaptcha } from "react-google-recaptcha-v3";
 import { sendQuoteRequest } from "./actions";
 
@@ -26,6 +27,14 @@ const BUDGET_RANGES = ["Not sure", "Exploring options", "Budget defined", "Budge
 function QuoteForm() {
     const { executeRecaptcha } = useGoogleReCaptcha();
     const [state, formAction, isPending] = useActionState(sendQuoteRequest, { success: false, message: "" });
+    const router = useRouter();
+
+    useEffect(() => {
+        if (state?.success) {
+            router.push("/thank-you");
+        }
+    }, [state, router]);
+
     const [step, setStep] = useState(1);
     const [formData, setFormData] = useState<FormData>({
         name: "",

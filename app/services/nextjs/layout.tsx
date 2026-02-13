@@ -2,11 +2,11 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
     title: "Next.js Development Agency | Speed & Performance Experts",
-    description: "Delight your users with a website that feels like a native app. We build high-performance Next.js sites with Sanity CMS that boost SEO and conversion.",
+    description: "Delight your users with a website that feels like a native app. Instant load times, better Google and AI rankings, and a content editor your marketing team will love.",
     keywords: ["Next.js Agency", "React Development", "Headless CMS", "Sanity.io", "Vercel Experts", "Web Performance", "NextLevel Digital"],
     openGraph: {
         title: "Next.js Development Agency | Speed & Performance Experts",
-        description: "Delight your users with a website that feels like a native app. We build high-performance Next.js sites with Sanity CMS that boost SEO and conversion.",
+        description: "Delight your users with a website that feels like a native app. Instant load times, better Google and AI rankings, and a content editor your marketing team will love.",
         url: "https://nextleveldigital.ca/services/nextjs",
         siteName: "NextLevel Digital",
         locale: "en_US",

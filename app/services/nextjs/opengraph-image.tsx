@@ -114,7 +114,7 @@ export default async function Image() {
                             fontFamily: 'sans-serif',
                         }}
                     >
-                        Delight your users with a website that feels like a native app.
+                        Delight your users with a website that feels like a native app. Instant load times, better Google and AI rankings.
                     </div>
                 </div>
             </div>

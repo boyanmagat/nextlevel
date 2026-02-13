@@ -40,7 +40,7 @@ export default function NextJsServicePage() {
                         transition={{ duration: 0.8, delay: 0.4 }}
                         className="text-xl md:text-2xl text-gray-400 mb-12 max-w-2xl mx-auto font-light"
                     >
-                        Delight your users with a website that feels like a native app. Instant load times, better Google rankings, and a content editor your marketing team will love.
+                        Delight your users with a website that feels like a native app. Instant load times, better Google and <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-500">AI</span> rankings, and a content editor your marketing team will love.
                     </motion.p>
                 </div>
             </section>

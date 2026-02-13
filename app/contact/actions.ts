@@ -65,7 +65,7 @@ export async function sendContactEmail(prevState: any, formData: FormData) {
 
         const { data, error } = await resend.emails.send({
             from: "NextLevel Contact <info@nextleveldigital.ca>",
-            to: ["info@nextleveldigital.ca"],
+            to: ["info@nextleveldigital.ca", "ju@nextleveldigital.ca"],
             subject: `New Contact Form Submission from ${name}`,
             html: `
         <h2>New Contact Submission</h2>

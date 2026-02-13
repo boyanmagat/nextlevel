@@ -1,7 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useActionState } from "react";
+import { useActionState, useEffect } from "react";
+import { useRouter } from "next/navigation";
 import { GoogleReCaptchaProvider, useGoogleReCaptcha } from "react-google-recaptcha-v3";
 import { sendContactEmail } from "./actions";
 
@@ -13,6 +14,13 @@ const initialState = {
 function ContactForm() {
     const { executeRecaptcha } = useGoogleReCaptcha();
     const [state, formAction, isPending] = useActionState(sendContactEmail, initialState);
+    const router = useRouter();
+
+    useEffect(() => {
+        if (state?.success) {
+            router.push("/thank-you");
+        }
+    }, [state, router]);
 
     const handleSubmit = async (formData: FormData) => {
         if (!executeRecaptcha) {

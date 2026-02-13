@@ -35,7 +35,7 @@ export default function Footer() {
                 </div>
                 <div className="mt-20 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-gray-500 text-sm">
                     <p>&copy; {new Date().getFullYear()} NextLevelDigital.ca. All rights reserved.</p>
-                    <p>Designed for the bold.</p>
+                    <p>Crafted with Next.js in Vancouver, Canada 🇨🇦</p>
                 </div>
             </div>
         </footer>
