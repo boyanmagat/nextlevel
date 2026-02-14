@@ -1,5 +1,4 @@
-"use client";
-
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { use } from "react";
 import { POSTS } from "../data";
@@ -7,6 +6,7 @@ import BuildersTrap from "../posts/BuildersTrap";
 import BanThemeForest from "../posts/BanThemeForest";
 import RevenueRule from "../posts/RevenueRule";
 import BlogNavigation from "../BlogNavigation";
+import RelatedService from "../RelatedService";
 
 export default function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
     const { slug } = use(params);
@@ -82,6 +82,9 @@ export default function BlogPostPage({ params }: { params: Promise<{ slug: strin
     return (
         <>
             {Content}
+            {post?.relatedService && (
+                <RelatedService service={post.relatedService} />
+            )}
             <BlogNavigation newerPost={newerPost} olderPost={olderPost} />
         </>
     );
