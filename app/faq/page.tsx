@@ -46,15 +46,17 @@ export default function FAQPage() {
                 </div>
 
                 <div className="space-y-16">
+                    {/* AI & Efficiency */}
+                    <section>
+                        <h2 className="text-2xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400 border-b border-blue-900/30 pb-4">
+                            AI & Efficiency
+                        </h2>
+                        <FAQ items={ALL_FAQS.filter(q => q.category === "AI Efficiency")} showLink={false} />
+                    </section>
+
                     {/* General / Next.js */}
                     <section>
                         <h2 className="text-2xl font-bold mb-8 text-blue-400 border-b border-blue-900/30 pb-4">Next.js & Process</h2>
-                        {/* We filter or pass all. For now passing relevant slices or just letting the component handle it if we passed categories? 
-                            The component takes flat list. Let's slice/filter if we want sections, or just pass ALL.
-                            Let's pass ALL for now, or maybe group them visually? 
-                            The design in page.tsx wasn't grouped before, just a list. 
-                            But grouping is nicer. Let's group.
-                         */}
                         <FAQ items={ALL_FAQS.filter(q => q.category === "Next.js" || q.category === "General")} showLink={false} />
                     </section>
 

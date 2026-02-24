@@ -96,7 +96,29 @@ export const CUSTOM_SOFTWARE_FAQS: FAQItem[] = [
     }
 ];
 
+export const AI_FAQS: FAQItem[] = [
+    {
+        question: "How does your AI-integrated workflow benefit my project?",
+        answer: "Speed and efficiency. We deliver projects up to 30% faster while maintaining 100% human-level quality control.",
+        detailedAnswer: "We've re-engineered our development lifecycle around AI-orchestration. By using specialized LLMs and agentic workflows to handle boilerplate and unit testing, our engineers can focus on high-level architecture. This results in faster turnarounds and significant cost savings that we pass directly to you.",
+        category: "AI Efficiency"
+    },
+    {
+        question: "Does using AI compromise the quality of the code?",
+        answer: "No, it enhances it. AI allows us to run more comprehensive testing and automated bug-hunting than traditional agencies.",
+        detailedAnswer: "Our AI-driven QA agents perform continuous penetration testing and edge-case simulations that are often skipped in manual workflows. Every line of code is still peer-reviewed by a senior developer, combining machine velocity with human-grade precision.",
+        category: "AI Efficiency"
+    },
+    {
+        question: "Is my project data and IP safe from being use to train public AI?",
+        answer: "Absolutely. We use private, enterprise-grade environments that ensure your code and logic are never shared or leaked.",
+        detailedAnswer: "Security is non-negotiable. We utilize private API endpoints and enterprise subscriptions that strictly forbid using customer data for training public models. Your proprietary code remains internal to your project, protected by industry-standard security protocols.",
+        category: "AI Efficiency"
+    }
+];
+
 export const ALL_FAQS = [
+    ...AI_FAQS,
     ...NEXT_JS_FAQS,
     ...HEADLESS_CMS_FAQS,
     ...HEADLESS_WORDPRESS_FAQS,
