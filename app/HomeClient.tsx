@@ -129,11 +129,14 @@ export default function Home() {
         </div>
       </section>
 
+      {/* High-Impact Divider */}
+      <div className="h-px w-full bg-gradient-to-r from-transparent via-blue-500 to-transparent opacity-50"></div>
+
       {/* NEW: AI Efficiency / Velocity Section */}
-      <section className="py-32 px-4 overflow-hidden relative">
+      <section className="relative py-32 overflow-hidden bg-black border-y border-white/5">
         <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-[120px] pointer-events-none"></div>
 
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
@@ -143,8 +146,9 @@ export default function Home() {
               <div className="inline-block px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-bold tracking-widest uppercase mb-8">
                 The AI Multiplier
               </div>
-              <h2 className="text-5xl md:text-7xl font-black mb-8 tracking-tighter leading-tight">
-                SMARTER <br /> <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400 text-6xl md:text-8xl italic">VELOCITY.</span>
+              <h2 className="text-5xl md:text-7xl font-black mb-8 tracking-tighter leading-tight flex flex-wrap items-center gap-6">
+                SMARTER <br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400 text-6xl md:text-8xl italic">VELOCITY.</span>
               </h2>
               <p className="text-xl text-gray-400 mb-12 leading-relaxed max-w-xl font-light">
                 We don't just use AI, we've re-engineered our entire development lifecycle around it. By integrating specialized LLMs and agentic workflows, we deliver superior quality at a fraction of the traditional timeline.
@@ -175,77 +179,106 @@ export default function Home() {
               </div>
             </motion.div>
 
-            {/* Interactive Graph Display */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              className="relative aspect-square md:aspect-[4/3] bg-gray-900/50 rounded-[2.5rem] border border-white/10 p-8 md:p-12 overflow-hidden flex flex-col justify-between"
-            >
-              <div className="absolute inset-0 bg-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-
-              <div className="flex justify-between items-start relative z-10">
-                <div>
-                  <div className="text-xs font-mono text-gray-500 uppercase tracking-widest mb-1">Metrics_Output</div>
-                  <div className="text-2xl font-bold">Efficiency Delta</div>
-                </div>
-                <div className="px-3 py-1 rounded-full bg-blue-500/20 border border-blue-500/30 text-blue-400 text-[10px] font-mono animate-pulse">
-                  LIVE_SYNC
-                </div>
-              </div>
-
-              <div className="flex-1 flex items-end gap-6 md:gap-12 pb-12 pt-20">
-                {/* Traditional Bar */}
-                <div className="flex-1 flex flex-col items-center gap-4 h-full justify-end group/bar">
-                  <motion.div
-                    initial={{ height: 0 }}
-                    whileInView={{ height: "60%" }}
-                    transition={{ duration: 1, delay: 0.5 }}
-                    viewport={{ once: true }}
-                    className="w-full max-w-[60px] bg-gray-800 rounded-t-xl group-hover:bg-gray-700 transition-colors relative"
-                  >
-                    <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-full pb-2 text-[10px] text-gray-500 font-mono">10 Weeks</div>
-                  </motion.div>
-                  <div className="text-[10px] font-bold text-gray-600 uppercase tracking-widest text-center">Standard <br /> Agency</div>
-                </div>
-
-                {/* AI-Optimized Bar */}
-                <div className="flex-1 flex flex-col items-center gap-4 h-full justify-end group/bar">
-                  <motion.div
-                    initial={{ height: 0 }}
-                    whileInView={{ height: "42%" }}
-                    transition={{ duration: 1, delay: 0.8 }}
-                    viewport={{ once: true }}
-                    className="w-full max-w-[60px] bg-gradient-to-t from-blue-600 to-blue-400 rounded-t-xl shadow-[0_0_30px_rgba(59,130,246,0.3)] relative"
-                  >
-                    <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-full pb-2 text-[10px] text-blue-400 font-bold font-mono">7 Weeks</div>
-                  </motion.div>
-                  <div className="text-[10px] font-bold text-blue-400 uppercase tracking-widest text-center italic">AI-Engine <br /> (Us)</div>
-                </div>
-
-                {/* Quality Bar */}
-                <div className="flex-1 flex flex-col items-center gap-4 h-full justify-end group/bar">
-                  <motion.div
-                    initial={{ height: 0 }}
-                    whileInView={{ height: "90%" }}
-                    transition={{ duration: 1, delay: 1.1 }}
-                    viewport={{ once: true }}
-                    className="w-full max-w-[60px] bg-gradient-to-t from-emerald-600 to-emerald-400 rounded-t-xl shadow-[0_0_30px_rgba(16,185,129,0.3)] relative"
-                  >
-                    <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-full pb-2 text-[10px] text-emerald-400 font-bold font-mono">98%</div>
-                  </motion.div>
-                  <div className="text-[10px] font-bold text-emerald-400 uppercase tracking-widest text-center">Testing <br /> Coverage</div>
-                </div>
-              </div>
-
-              <div className="pt-8 border-t border-white/5 flex gap-4 overflow-x-auto no-scrollbar relative z-10">
-                {["Automation", "Deep Analysis", "Agentic QA", "Synthetic Data"].map(tag => (
-                  <span key={tag} className="text-[10px] font-mono text-gray-500 border border-white/10 px-3 py-1 rounded-full whitespace-nowrap">
-                    {tag}
+            {/* Interactive Graph Display with Flow-based AI Badge */}
+            <div className="flex flex-col items-center gap-12">
+              {/* Vibrant AI Branding Circle sitting in the flow */}
+              <div className="relative pointer-events-none select-none">
+                <motion.div
+                  animate={{
+                    scale: [1, 1.05, 1],
+                    boxShadow: [
+                      "0 0 40px rgba(236,72,153,0.3)",
+                      "0 0 80px rgba(236,72,153,0.5)",
+                      "0 0 40px rgba(236,72,153,0.3)"
+                    ]
+                  }}
+                  transition={{
+                    duration: 4,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                  }}
+                  className="w-32 h-32 md:w-48 md:h-48 rounded-full border-4 border-pink-500 bg-black/40 backdrop-blur-md flex items-center justify-center"
+                >
+                  <span className="text-4xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-500">
+                    AI
                   </span>
-                ))}
+                </motion.div>
+
+                {/* Background Glow */}
+                <div className="absolute inset-0 -z-10 bg-pink-500/10 rounded-full blur-3xl scale-150 animate-pulse"></div>
               </div>
-            </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                className="w-full relative aspect-square md:aspect-[4/3] bg-gray-900/50 rounded-[2.5rem] border border-white/10 p-8 md:p-12 overflow-hidden flex flex-col justify-between"
+              >
+                <div className="absolute inset-0 bg-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+
+                <div className="flex justify-between items-start relative z-10">
+                  <div>
+                    <div className="text-xs font-mono text-gray-500 uppercase tracking-widest mb-1">Metrics_Output</div>
+                    <div className="text-2xl font-bold">Efficiency Delta</div>
+                  </div>
+                  <div className="px-3 py-1 rounded-full bg-blue-500/20 border border-blue-500/30 text-blue-400 text-[10px] font-mono animate-pulse">
+                    LIVE_SYNC
+                  </div>
+                </div>
+
+                <div className="flex-1 flex items-end gap-6 md:gap-12 pb-12 pt-20">
+                  {/* Traditional Bar */}
+                  <div className="flex-1 flex flex-col items-center gap-4 h-full justify-end group/bar">
+                    <motion.div
+                      initial={{ height: 0 }}
+                      whileInView={{ height: "60%" }}
+                      transition={{ duration: 1, delay: 0.5 }}
+                      viewport={{ once: true }}
+                      className="w-full max-w-[60px] bg-gray-800 rounded-t-xl group-hover:bg-gray-700 transition-colors relative"
+                    >
+                      <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-full pb-2 text-[10px] text-gray-500 font-mono">10 Weeks</div>
+                    </motion.div>
+                    <div className="text-[10px] font-bold text-gray-600 uppercase tracking-widest text-center">Standard <br /> Agency</div>
+                  </div>
+
+                  {/* AI-Optimized Bar */}
+                  <div className="flex-1 flex flex-col items-center gap-4 h-full justify-end group/bar">
+                    <motion.div
+                      initial={{ height: 0 }}
+                      whileInView={{ height: "42%" }}
+                      transition={{ duration: 1, delay: 0.8 }}
+                      viewport={{ once: true }}
+                      className="w-full max-w-[60px] bg-gradient-to-t from-blue-600 to-blue-400 rounded-t-xl shadow-[0_0_30px_rgba(59,130,246,0.3)] relative"
+                    >
+                      <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-full pb-2 text-[10px] text-blue-400 font-bold font-mono">7 Weeks</div>
+                    </motion.div>
+                    <div className="text-[10px] font-bold text-blue-400 uppercase tracking-widest text-center italic">AI-Engine <br /> (Us)</div>
+                  </div>
+
+                  {/* Quality Bar */}
+                  <div className="flex-1 flex flex-col items-center gap-4 h-full justify-end group/bar">
+                    <motion.div
+                      initial={{ height: 0 }}
+                      whileInView={{ height: "90%" }}
+                      transition={{ duration: 1, delay: 1.1 }}
+                      viewport={{ once: true }}
+                      className="w-full max-w-[60px] bg-gradient-to-t from-emerald-600 to-emerald-400 rounded-t-xl shadow-[0_0_30px_rgba(16,185,129,0.3)] relative"
+                    >
+                      <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-full pb-2 text-[10px] text-emerald-400 font-bold font-mono">98%</div>
+                    </motion.div>
+                    <div className="text-[10px] font-bold text-emerald-400 uppercase tracking-widest text-center">Testing <br /> Coverage</div>
+                  </div>
+                </div>
+
+                <div className="pt-8 border-t border-white/5 flex gap-4 overflow-x-auto no-scrollbar relative z-10">
+                  {["Automation", "Deep Analysis", "Agentic QA", "Synthetic Data"].map(tag => (
+                    <span key={tag} className="text-[10px] font-mono text-gray-500 border border-white/10 px-3 py-1 rounded-full whitespace-nowrap">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </motion.div>
+            </div>
           </div>
         </div>
       </section>
