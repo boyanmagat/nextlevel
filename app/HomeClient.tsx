@@ -129,6 +129,127 @@ export default function Home() {
         </div>
       </section>
 
+      {/* NEW: AI Efficiency / Velocity Section */}
+      <section className="py-32 px-4 overflow-hidden relative">
+        <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-[120px] pointer-events-none"></div>
+
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+            >
+              <div className="inline-block px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-bold tracking-widest uppercase mb-8">
+                The AI Multiplier
+              </div>
+              <h2 className="text-5xl md:text-7xl font-black mb-8 tracking-tighter leading-tight">
+                SMARTER <br /> <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400 text-6xl md:text-8xl italic">VELOCITY.</span>
+              </h2>
+              <p className="text-xl text-gray-400 mb-12 leading-relaxed max-w-xl font-light">
+                We don't just use AI, we've re-engineered our entire development lifecycle around it. By integrating specialized LLMs and agentic workflows, we deliver superior quality at a fraction of the traditional timeline.
+              </p>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-12">
+                <div className="p-6 rounded-2xl bg-white/5 border border-white/10 group hover:border-blue-500/30 transition-colors">
+                  <div className="text-4xl font-black text-blue-400 mb-2">30%</div>
+                  <div className="text-sm font-bold text-white uppercase tracking-wider mb-2">Faster Cycles</div>
+                  <p className="text-xs text-gray-500">Accelerated prototyping and automated unit testing means earlier launches.</p>
+                </div>
+                <div className="p-6 rounded-2xl bg-white/5 border border-white/10 group hover:border-emerald-500/30 transition-colors">
+                  <div className="text-4xl font-black text-emerald-400 mb-2">40%</div>
+                  <div className="text-sm font-bold text-white uppercase tracking-wider mb-2">Cost Savings</div>
+                  <p className="text-xs text-gray-500">Efficiency gains passed directly to you. Premium quality, competitive pricing.</p>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-6">
+                <div className="flex -space-x-4">
+                  {[1, 2, 3].map(i => (
+                    <div key={i} className="w-10 h-10 rounded-full border-2 border-black bg-gray-800 flex items-center justify-center text-[10px] font-bold">AI</div>
+                  ))}
+                </div>
+                <p className="text-sm text-gray-400 italic font-mono">
+                  &gt; development_engine --optimized --ai-boost
+                </p>
+              </div>
+            </motion.div>
+
+            {/* Interactive Graph Display */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              className="relative aspect-square md:aspect-[4/3] bg-gray-900/50 rounded-[2.5rem] border border-white/10 p-8 md:p-12 overflow-hidden flex flex-col justify-between"
+            >
+              <div className="absolute inset-0 bg-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+
+              <div className="flex justify-between items-start relative z-10">
+                <div>
+                  <div className="text-xs font-mono text-gray-500 uppercase tracking-widest mb-1">Metrics_Output</div>
+                  <div className="text-2xl font-bold">Efficiency Delta</div>
+                </div>
+                <div className="px-3 py-1 rounded-full bg-blue-500/20 border border-blue-500/30 text-blue-400 text-[10px] font-mono animate-pulse">
+                  LIVE_SYNC
+                </div>
+              </div>
+
+              <div className="flex-1 flex items-end gap-6 md:gap-12 pb-12 pt-20">
+                {/* Traditional Bar */}
+                <div className="flex-1 flex flex-col items-center gap-4 h-full justify-end group/bar">
+                  <motion.div
+                    initial={{ height: 0 }}
+                    whileInView={{ height: "60%" }}
+                    transition={{ duration: 1, delay: 0.5 }}
+                    viewport={{ once: true }}
+                    className="w-full max-w-[60px] bg-gray-800 rounded-t-xl group-hover:bg-gray-700 transition-colors relative"
+                  >
+                    <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-full pb-2 text-[10px] text-gray-500 font-mono">10 Weeks</div>
+                  </motion.div>
+                  <div className="text-[10px] font-bold text-gray-600 uppercase tracking-widest text-center">Standard <br /> Agency</div>
+                </div>
+
+                {/* AI-Optimized Bar */}
+                <div className="flex-1 flex flex-col items-center gap-4 h-full justify-end group/bar">
+                  <motion.div
+                    initial={{ height: 0 }}
+                    whileInView={{ height: "42%" }}
+                    transition={{ duration: 1, delay: 0.8 }}
+                    viewport={{ once: true }}
+                    className="w-full max-w-[60px] bg-gradient-to-t from-blue-600 to-blue-400 rounded-t-xl shadow-[0_0_30px_rgba(59,130,246,0.3)] relative"
+                  >
+                    <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-full pb-2 text-[10px] text-blue-400 font-bold font-mono">7 Weeks</div>
+                  </motion.div>
+                  <div className="text-[10px] font-bold text-blue-400 uppercase tracking-widest text-center italic">AI-Engine <br /> (Us)</div>
+                </div>
+
+                {/* Quality Bar */}
+                <div className="flex-1 flex flex-col items-center gap-4 h-full justify-end group/bar">
+                  <motion.div
+                    initial={{ height: 0 }}
+                    whileInView={{ height: "90%" }}
+                    transition={{ duration: 1, delay: 1.1 }}
+                    viewport={{ once: true }}
+                    className="w-full max-w-[60px] bg-gradient-to-t from-emerald-600 to-emerald-400 rounded-t-xl shadow-[0_0_30px_rgba(16,185,129,0.3)] relative"
+                  >
+                    <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-full pb-2 text-[10px] text-emerald-400 font-bold font-mono">98%</div>
+                  </motion.div>
+                  <div className="text-[10px] font-bold text-emerald-400 uppercase tracking-widest text-center">Testing <br /> Coverage</div>
+                </div>
+              </div>
+
+              <div className="pt-8 border-t border-white/5 flex gap-4 overflow-x-auto no-scrollbar relative z-10">
+                {["Automation", "Deep Analysis", "Agentic QA", "Synthetic Data"].map(tag => (
+                  <span key={tag} className="text-[10px] font-mono text-gray-500 border border-white/10 px-3 py-1 rounded-full whitespace-nowrap">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* NEW: Under the Hood (Tech Stack) */}
       <section className="py-24 bg-white/5 border-y border-white/10">
         <div className="max-w-7xl mx-auto px-4 md:px-8">
@@ -306,151 +427,159 @@ export default function Home() {
       </section>
 
       {/* NEW: Performance Showcase */}
-      <section className="py-24 px-4 max-w-7xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-pink-500 font-bold tracking-widest uppercase mb-4 text-sm">Case Studies</h2>
-          <h3 className="text-4xl md:text-6xl font-bold">Need for <span className="text-purple-500 italic pr-2">Speed</span>.</h3>
-        </motion.div>
+      <section className="relative py-32 overflow-hidden bg-[#030303] border-y border-white/5">
+        {/* Subtle Background Detail */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-pink-500/5 rounded-full blur-[120px]"></div>
+        </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {[
-            {
-              client: "Neon Commerce",
-              metric: "0.05s",
-              label: "Load Time",
-              desc: "Migrated from Magento to Sanity + Next.js. Instant page transitions.",
-              color: "from-pink-500 to-purple-600"
-            },
-            {
-              client: "Vogue Living",
-              metric: "100/100",
-              label: "Lighthouse Score",
-              desc: "Perfect Core Web Vitals on mobile and desktop. SEO traffic doubled.",
-              color: "from-blue-500 to-cyan-400"
-            },
-            {
-              client: "TechFlow",
-              metric: "60 FPS",
-              label: "Animations",
-              desc: "WebGL pricing configurator that runs smoothly on any device.",
-              color: "from-green-400 to-emerald-600"
-            }
-          ].map((caseStudy, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
-              viewport={{ once: true }}
-              whileHover={{ y: -10 }}
-              className="group relative rounded-3xl overflow-hidden bg-gray-900 border border-white/10 aspect-[4/5] md:aspect-[3/4] flex flex-col justify-between p-8 cursor-pointer"
-            >
-              <div className={`absolute inset-0 bg-gradient-to-br ${caseStudy.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500`}></div>
-              <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full blur-3xl -mr-16 -mt-16 transition-transform group-hover:scale-150 duration-700"></div>
+        <div className="relative px-4 max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-24"
+          >
+            <div className="inline-block px-4 py-1.5 rounded-full bg-pink-500/10 border border-pink-500/20 text-pink-500 text-xs font-bold tracking-widest uppercase mb-8">
+              Case Study
+            </div>
+            <h3 className="text-5xl md:text-7xl font-black tracking-tighter">
+              NEED FOR <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-600">SPEED</span>.
+            </h3>
+          </motion.div>
 
-              <div>
-                <div className="text-gray-400 font-mono text-xs mb-2">{caseStudy.client}</div>
-                <div className="text-5xl md:text-6xl font-black text-white mb-2 tracking-tighter">
-                  {caseStudy.metric}
-                </div>
-                <div className="text-sm font-bold text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-400 uppercase tracking-widest">
-                  {caseStudy.label}
-                </div>
-              </div>
+          <div className="grid grid-cols-1 max-w-4xl mx-auto gap-12">
+            {[
+              {
+                client: "Clash of Tech",
+                slug: "wordpress-vs-nextjs",
+                title: "CLASH OF TECH.",
+                desc: "WordPress vs Next.js: A professional head-to-head comparison between legacy architecture and the modern web.",
+                color: "from-pink-500 to-purple-600",
+                image: "/work/clash_hero.png"
+              }
+            ].map((caseStudy, i) => (
+              <Link href={`/work/${caseStudy.slug}`} key={i} className="group block space-y-12">
+                {/* Premium Image Container */}
+                <div className="relative rounded-[3rem] overflow-hidden border border-white/10 aspect-square shadow-2xl bg-gray-900 mx-auto max-w-2xl">
+                  <Image
+                    src={caseStudy.image}
+                    alt={caseStudy.client}
+                    fill
+                    className="object-contain group-hover:scale-105 transition-transform duration-1000"
+                    priority
+                  />
 
-              <div className="relative z-10">
-                <p className="text-gray-400 text-sm leading-relaxed mb-6">
-                  {caseStudy.desc}
-                </p>
-                <div className="flex items-center text-white font-bold text-sm group-hover:gap-2 transition-all">
-                  View Case Study <span className="opacity-0 group-hover:opacity-100 transition-opacity">→</span>
+                  {/* Subtle Hover Gradient */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 </div>
-              </div>
-            </motion.div>
-          ))}
+
+                {/* Text Content */}
+                <div className="text-center">
+                  <div className="flex items-center justify-center gap-4 mb-8">
+                    <div className="h-px w-12 bg-pink-500"></div>
+                    <div className="text-pink-500 font-mono text-xs font-bold uppercase tracking-[0.4em]">
+                      Selected Case Study
+                    </div>
+                    <div className="h-px w-12 bg-pink-500"></div>
+                  </div>
+
+                  <h3 className="text-5xl md:text-7xl font-black mb-8 tracking-tighter text-white group-hover:text-pink-500 transition-colors">
+                    {caseStudy.title}
+                  </h3>
+
+                  <p className="text-xl md:text-2xl text-gray-400 max-w-2xl mx-auto font-light leading-relaxed mb-10">
+                    {caseStudy.desc}
+                  </p>
+
+                  <div className="inline-flex items-center gap-3 text-white font-bold text-xl border-b-2 border-pink-500 pb-2 hover:gap-6 transition-all duration-300">
+                    <span>Explore Technical Audit</span>
+                    <span>→</span>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
 
       {/* NEW: Process Section (Git Pipeline) */}
-      <section className="py-24 px-4 md:px-8 max-w-5xl mx-auto">
-        <motion.h2
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center text-4xl md:text-5xl font-bold mb-20"
-        >
-          The <span className="font-mono text-green-500">&lt;Pipeline /&gt;</span>
-        </motion.h2>
+      <section className="py-32 bg-black border-t border-white/5">
+        <div className="px-4 md:px-8 max-w-5xl mx-auto">
+          <motion.h2
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center text-4xl md:text-5xl font-bold mb-20"
+          >
+            The <span className="font-mono text-green-500">&lt;Pipeline /&gt;</span>
+          </motion.h2>
 
-        <div className="relative">
-          {/* Vertical Pipeline Line */}
-          <div className="absolute left-[30px] md:left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-blue-500 via-purple-500 to-pink-500 md:-translate-x-1/2 rounded-full"></div>
+          <div className="relative">
+            {/* Vertical Pipeline Line */}
+            <div className="absolute left-[30px] md:left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-blue-500 via-purple-500 to-pink-500 md:-translate-x-1/2 rounded-full"></div>
 
-          <div className="space-y-16">
-            {[
-              {
-                step: "git init discovery",
-                title: "Blueprint",
-                desc: "We map your goals to technical requirements. We don't start coding until we have a locked architecture.",
-                icon: "📄"
-              },
-              {
-                step: "git checkout -b build",
-                title: "Development",
-                desc: "Rapid component development using our internal libraries. Components are isolated, tested, and pixel-perfect.",
-                icon: "🏗️"
-              },
-              {
-                step: "git commit -m 'launch'",
-                title: "Deployment",
-                desc: "Automated CI/CD pipelines push to Vercel's edge network. Zero downtime, instant rollbacks, 100% uptime.",
-                icon: "🚀"
-              },
-              {
-                step: "git push origin growth",
-                title: "Scale",
-                desc: "Performance monitoring and iterative A/B testing. We use data to drive design decisions post-launch.",
-                icon: "📈"
-              }
-            ].map((phase, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: i * 0.1 }}
-                viewport={{ once: true }}
-                className={`relative flex flex-col md:flex-row gap-8 items-start md:items-center ${i % 2 === 0 ? 'md:flex-row-reverse' : ''}`}
-              >
-                {/* Node on Line */}
-                <div className="absolute left-0 md:left-1/2 md:-translate-x-1/2 w-[60px] h-[60px] rounded-full bg-black border-4 border-gray-900 flex items-center justify-center z-10">
-                  <div className="w-4 h-4 rounded-full bg-white animate-pulse"></div>
-                </div>
-
-                {/* Content Card */}
-                <div className="ml-[80px] md:ml-0 md:w-1/2 pl-0 md:px-12">
-                  <div className="bg-gray-900/50 border border-white/10 p-6 rounded-xl relative hover:border-blue-500 transition-colors">
-                    {/* Terminal Header */}
-                    <div className="font-mono text-xs text-green-400 mb-2 border-b border-white/5 pb-2 flex gap-2">
-                      <span className="text-gray-500">$</span> {phase.step}
-                    </div>
-                    <h3 className="text-2xl font-bold mb-2 flex items-center gap-3">
-                      <span>{phase.icon}</span> {phase.title}
-                    </h3>
-                    <p className="text-gray-400 leading-relaxed text-sm">
-                      {phase.desc}
-                    </p>
+            <div className="space-y-16">
+              {[
+                {
+                  step: "git init discovery",
+                  title: "Blueprint",
+                  desc: "We map your goals to technical requirements. We don't start coding until we have a locked architecture.",
+                  icon: "📄"
+                },
+                {
+                  step: "git checkout -b build",
+                  title: "Development",
+                  desc: "Rapid component development using our internal libraries. Components are isolated, tested, and pixel-perfect.",
+                  icon: "🏗️"
+                },
+                {
+                  step: "git commit -m 'launch'",
+                  title: "Deployment",
+                  desc: "Automated CI/CD pipelines push to Vercel's edge network. Zero downtime, instant rollbacks, 100% uptime.",
+                  icon: "🚀"
+                },
+                {
+                  step: "git push origin growth",
+                  title: "Scale",
+                  desc: "Performance monitoring and iterative A/B testing. We use data to drive design decisions post-launch.",
+                  icon: "📈"
+                }
+              ].map((phase, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: i * 0.1 }}
+                  viewport={{ once: true }}
+                  className={`relative flex flex-col md:flex-row gap-8 items-start md:items-center ${i % 2 === 0 ? 'md:flex-row-reverse' : ''}`}
+                >
+                  {/* Node on Line */}
+                  <div className="absolute left-0 md:left-1/2 md:-translate-x-1/2 w-[60px] h-[60px] rounded-full bg-black border-4 border-gray-900 flex items-center justify-center z-10">
+                    <div className="w-4 h-4 rounded-full bg-white animate-pulse"></div>
                   </div>
-                </div>
 
-                {/* Empty spacer for opposite side */}
-                <div className="hidden md:block md:w-1/2"></div>
-              </motion.div>
-            ))}
+                  {/* Content Card */}
+                  <div className="ml-[80px] md:ml-0 md:w-1/2 pl-0 md:px-12">
+                    <div className="bg-gray-900/50 border border-white/10 p-6 rounded-xl relative hover:border-blue-500 transition-colors">
+                      {/* Terminal Header */}
+                      <div className="font-mono text-xs text-green-400 mb-2 border-b border-white/5 pb-2 flex gap-2">
+                        <span className="text-gray-500">$</span> {phase.step}
+                      </div>
+                      <h3 className="text-2xl font-bold mb-2 flex items-center gap-3">
+                        <span>{phase.icon}</span> {phase.title}
+                      </h3>
+                      <p className="text-gray-400 leading-relaxed text-sm">
+                        {phase.desc}
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Empty spacer for opposite side */}
+                  <div className="hidden md:block md:w-1/2"></div>
+                </motion.div>
+              ))}
+            </div>
           </div>
         </div>
       </section>

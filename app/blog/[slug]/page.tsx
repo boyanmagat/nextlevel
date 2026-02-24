@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { motion } from "framer-motion";
 import { use } from "react";
 import { POSTS } from "../data";
