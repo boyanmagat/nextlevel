@@ -18,8 +18,8 @@ export default function ServicesClient() {
                         animate={{ opacity: 1, y: 0 }}
                         className="text-6xl md:text-9xl font-black mb-8 tracking-tighter"
                     >
-                        OUR <br />
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500">EXPERTISE</span>
+                        DRIVING <br />
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500">GROWTH</span>
                     </motion.h1>
                     <motion.p
                         initial={{ opacity: 0, y: 30 }}
@@ -27,8 +27,8 @@ export default function ServicesClient() {
                         transition={{ delay: 0.2 }}
                         className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed font-light"
                     >
-                        We architect digital futures using two distinct, powerful strategies.
-                        Whether you need raw scalability or familiar flexibility, we have the stack.
+                        We engineer high-performance platforms that capture revenue and scale seamlessly.
+                        Choose the strategy that perfectly aligns with your business goals.
                     </motion.p>
                 </div>
             </section>
@@ -50,7 +50,7 @@ export default function ServicesClient() {
                             <h3 className="text-pink-500 font-bold tracking-widest uppercase mb-4 text-sm">Strategy A</h3>
                             <h2 className="text-4xl font-bold mb-6">The Hyper-Scale Stack.</h2>
                             <p className="text-gray-400 mb-8 leading-relaxed h-[80px]">
-                                Next.js frontend + Sanity.io backend. The choice for ambitious brands that need instant page loads, global edge delivery, and total design freedom.
+                                Next.js + Sanity.io. The ultimate choice for ambitious brands that need lightning-fast load times to maximize conversions, unparalleled creative freedom, and instant global reach.
                             </p>
 
                             <div className="flex flex-wrap gap-2 mb-10">
@@ -89,7 +89,7 @@ export default function ServicesClient() {
                             <h3 className="text-blue-500 font-bold tracking-widest uppercase mb-4 text-sm">Strategy B</h3>
                             <h2 className="text-4xl font-bold mb-6">The Flexible Classic.</h2>
                             <p className="text-gray-400 mb-8 leading-relaxed h-[80px]">
-                                Next.js frontend + WordPress backend. Keep the admin panel your marketing team loves, but detach the frontend for blazing speed and security.
+                                Next.js + WordPress. Keep the familiar interface your marketing team loves, while supercharging your frontend for drastically higher conversion rates and bullet-proof security.
                             </p>
 
                             <div className="flex flex-wrap gap-2 mb-10">
@@ -129,31 +129,31 @@ export default function ServicesClient() {
                             {
                                 title: "Custom Software",
                                 href: "/services/custom-software",
-                                desc: "SaaS platforms, internal tools, and complex web apps built from scratch.",
+                                desc: "Bespoke SaaS platforms and internal tools that automate logic, save labor hours, and drive recurring revenue.",
                                 icon: "⚡"
                             },
                             {
                                 title: "Mobile Apps",
                                 href: "/services/mobile-app-development",
-                                desc: "High-performance React Native applications for iOS and Android.",
+                                desc: "Engaging mobile experiences that build loyalty and put your brand directly in your customers' pockets.",
                                 icon: "📱"
                             },
                             {
                                 title: "Performance Audits",
                                 href: "/services/performance-audit",
-                                desc: "Deep-dive analysis of Core Web Vitals and architectural bottlenecks.",
+                                desc: "Deep-dive analysis to eliminate bottlenecks and optimize your platform for peak SEO and conversion performance.",
                                 icon: "🔍"
                             },
                             {
                                 title: "Design Systems",
                                 href: "/services/design-systems",
-                                desc: "Scalable component libraries bridging the gap between Figma and Code.",
+                                desc: "Premium, scalable interface libraries that establish brand trust and ensure a frictionless customer journey.",
                                 icon: "🎨"
                             },
                             {
                                 title: "API Integrations",
                                 href: "/services/custom-integrations",
-                                desc: "Unified ecology connecting your ERP, CRM, and Marketing tools.",
+                                desc: "Seamlessly connect your ERP, CRM, and Marketing tools to eliminate data silos and accelerate workflows.",
                                 icon: "🔗"
                             }
                         ].map((item, i) => (
@@ -189,9 +189,9 @@ export default function ServicesClient() {
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
                 >
-                    <h2 className="text-5xl md:text-7xl font-bold mb-8">Ready to disrupt?</h2>
+                    <h2 className="text-5xl md:text-7xl font-bold mb-8">Ready to scale your revenue?</h2>
                     <p className="text-xl text-gray-400 mb-12 max-w-2xl mx-auto">
-                        Whether you choose the Hyper-Scale Stack or the Flexible Classic, we deliver pixel-perfect results.
+                        Whether you choose the Hyper-Scale Stack or the Flexible Classic, we deliver platforms expressly built to convert.
                     </p>
                     <Link href="/request-quote" className="inline-block px-12 py-5 bg-white text-black rounded-full text-xl font-bold hover:bg-gray-200 transition-colors transform hover:scale-105">
                         Start Your Project

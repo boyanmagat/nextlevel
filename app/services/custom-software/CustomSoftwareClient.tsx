@@ -24,7 +24,7 @@ export default function CustomSoftwareClient() {
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-600">SOFTWARE</span>
                     </motion.h1>
                     <p className="text-xl md:text-2xl text-gray-400 mb-12 max-w-2xl mx-auto font-light">
-                        We build SaaS platforms and internal tools that your competitors can't buy off the shelf. Own your technology.
+                        We build high-performance SaaS platforms and internal tools designed to eliminate thousands of manual labor hours and generate recurring revenue.
                     </p>
                 </div>
             </section>
@@ -42,7 +42,7 @@ export default function CustomSoftwareClient() {
                             Is this the right fit for you?
                         </motion.h2>
                         <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-                            Off-the-shelf software (SaaS) is great until it isn't. When you hit the ceiling of what generic tools can do, we build the solution.
+                            Off-the-shelf software is great until it bottlenecks your growth. When generic tools start costing you time and money, we engineer the solution.
                         </p>
                     </div>
 
@@ -50,25 +50,25 @@ export default function CustomSoftwareClient() {
                         {[
                             {
                                 title: "SaaS Founders",
-                                desc: "You have a validated idea and need an MVP that scales. You don't want a 'no-code' prototype that you'll have to throw away in 6 months.",
+                                desc: "You need a revenue-generating MVP built for speed-to-market. You want an architecture that scales with your subscriber count from day one.",
                                 icon: "🦄",
                                 gradient: "from-green-500/20 to-emerald-500/20"
                             },
                             {
                                 title: "Operations Teams",
-                                desc: "You're running a $10M business on a fragile spreadsheet. You need a custom internal dashboard to manage orders, staff, and inventory.",
+                                desc: "You're running a growing business on fragile spreadsheets. You need an automated operations hub to streamline logistics and save manual labor.",
                                 icon: "📊",
                                 gradient: "from-blue-500/20 to-indigo-500/20"
                             },
                             {
                                 title: "Niche Industries",
-                                desc: "Generic CRM software doesn't fit your specific workflow. You need a tool tailored exactly to how your business operates.",
+                                desc: "Generic CRM software forces you to change how you work. You need software engineered entirely around your unique competitive advantage.",
                                 icon: "🎯",
                                 gradient: "from-purple-500/20 to-violet-500/20"
                             },
                             {
                                 title: "Data Heavy",
-                                desc: "You have massive datasets and need robust analytics, visualization, and reporting features that standard tools choke on.",
+                                desc: "You require instant, secure insights out of massive datasets to drive critical business decisions—without your dashboards crashing.",
                                 icon: "📉",
                                 gradient: "from-orange-500/20 to-red-500/20"
                             }
@@ -103,10 +103,10 @@ export default function CustomSoftwareClient() {
                     {/* 1. Multi-tenant SaaS */}
                     <div className="flex flex-col md:flex-row gap-12 items-center">
                         <div className="flex-1 order-2 md:order-1">
-                            <h4 className="text-3xl font-bold mb-4">Multi-Tenant SaaS Architecture</h4>
+                            <h4 className="text-3xl font-bold mb-4">Recurring Revenue Engines</h4>
                             <p className="text-gray-400 text-lg leading-relaxed mb-6">
-                                We build scalable platforms where one codebase serves thousands of customers, but their data remains strictly isolated.
-                                Includes subscription billing (Stripe), team management, and role-based access control out of the box.
+                                We don't just write code; we build businesses. We engineer multi-tenant platforms designed to securely serve thousands of paying subscribers.
+                                Includes automated subscription billing, team management, and secure role-based access control.
                             </p>
                         </div>
                         <div className="flex-1 order-1 md:order-2">
@@ -120,10 +120,9 @@ export default function CustomSoftwareClient() {
                             <AdminPanelGraphic />
                         </div>
                         <div className="flex-1">
-                            <h4 className="text-3xl font-bold mb-4">Internal Tools & Dashboards</h4>
+                            <h4 className="text-3xl font-bold mb-4">Digital Operations Hubs</h4>
                             <p className="text-gray-400 text-lg leading-relaxed mb-6">
-                                Stop using Excel. We build secure, web-based admin panels that give your team superpowers.
-                                Automate workflows, visualize KPIs, and manage your business from anywhere.
+                                Stop hemorrhaging time on manual copy-pasting. We build highly secure, centralized admin panels that automate workflows, visualize real-time KPIs, and give your team operational superpowers.
                             </p>
                         </div>
                     </div>
@@ -144,7 +143,7 @@ export default function CustomSoftwareClient() {
             {/* CTA */}
             <section className="py-24 text-center">
                 <Link href="/request-quote" className="px-12 py-5 bg-green-600 rounded-full text-xl font-bold hover:bg-green-500 transition-colors">
-                    Build Your Solution
+                    Automate Your Business
                 </Link>
             </section>
         </div>

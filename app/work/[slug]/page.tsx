@@ -116,13 +116,13 @@ export default function CaseStudyPage({ params }: { params: Promise<{ slug: stri
 
                 {/* Footer CTA */}
                 <div className="text-center border-t border-white/10 pt-24">
-                    <h3 className="text-3xl font-bold mb-8">Ready to start your project?</h3>
+                    <h3 className="text-3xl font-bold mb-8">Ready to engineer your revenue growth?</h3>
                     <div className="flex justify-center gap-4">
                         <Link
-                            href="/contact"
+                            href="/request-quote"
                             className="bg-white text-black px-8 py-4 rounded-full font-bold hover:bg-gray-200 transition-colors"
                         >
-                            Get in Touch
+                            Book an Audit
                         </Link>
                         <Link
                             href="/work"

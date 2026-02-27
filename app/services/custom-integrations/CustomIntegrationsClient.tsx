@@ -47,7 +47,7 @@ export default function CustomIntegrationsClient() {
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-indigo-500">ORCHESTRATION</span>
                     </motion.h1>
                     <p className="text-xl md:text-2xl text-gray-400 mb-12 max-w-2xl mx-auto font-light">
-                        Stop copying data between spreadsheets. We build middleware that connects your CRM, ERP, and payment gateways into one unified system.
+                        Eliminate manual data entry and human error. We engineer custom middleware that unifies your CRM, ERP, and payment platforms into a single, automated revenue engine.
                     </p>
                 </div>
             </section>
@@ -58,10 +58,10 @@ export default function CustomIntegrationsClient() {
                     <h2 className="text-sm font-bold text-purple-400 tracking-widest uppercase mb-4">The Problem</h2>
                     <h3 className="text-3xl font-bold mb-6">Data Silos Kill Efficiency.</h3>
                     <p className="text-gray-400 leading-relaxed text-lg">
-                        Your Sales team lives in Salesforce. Your Warehouse uses NetSuite. Your user data is in Auth0.
-                        None of them talk to each other. You're wasting hours on manual CSV exports.
+                        Your Sales team lives in Salesforce. Your Warehouse uses NetSuite. Your user data is fragmented across platforms.
+                        Disconnected systems cost you thousands of hours in manual data entry and delay critical business decisions.
                         <br /><br />
-                        <strong>The Solution:</strong> We build "Middleware"—an invisible server that sits in the middle, listening for events and moving data instantly.
+                        <strong>The Solution:</strong> We build enterprise middleware—an invisible, highly secure intelligence layer that synchronizes your data across all platforms instantly.
                     </p>
                 </div>
             </section>
@@ -87,25 +87,25 @@ export default function CustomIntegrationsClient() {
                         {[
                             {
                                 title: "E-Commerce Logistics",
-                                desc: "You need orders from Shopify to automatically push to your 3PL warehouse system and update inventory levels back.",
+                                desc: "You need complex orders from Shopify to sync instantly with your 3PL warehouse, preventing costly stockouts and fulfilling orders faster.",
                                 icon: "📦",
                                 gradient: "from-blue-500/20 to-cyan-500/20"
                             },
                             {
-                                title: "SaaS Platforms",
-                                desc: "You need to pull user data from 5 different providers (Stripe, Intercom, AWS) and display it in one dashboard.",
+                                title: "Subscriber Intelligence",
+                                desc: "You need a single pane of glass. We pull fragmented subscriber data from Stripe, Intercom, and AWS into one unified command center.",
                                 icon: "🖥️",
                                 gradient: "from-purple-500/20 to-pink-500/20"
                             },
                             {
-                                title: "Marketing Automation",
-                                desc: "You need precise tracking that attributes a purchase in Stripe back to a specific click in Google Ads.",
+                                title: "ROI Attribution",
+                                desc: "You are flying blind on ad spend. You need precise tracking that attributes a closed transaction in Stripe directly back to a Google Ads click.",
                                 icon: "🎯",
                                 gradient: "from-orange-500/20 to-red-500/20"
                             },
                             {
-                                title: "Legacy Migration",
-                                desc: "You are moving off a mainframe but need to keep it running in the background while you transition.",
+                                title: "Legacy Modernization",
+                                desc: "You are heavily invested in an aging mainframe but need it to securely communicate with modern web systems to avoid a risky platform replacement.",
                                 icon: "💾",
                                 gradient: "from-green-500/20 to-emerald-500/20"
                             }
@@ -140,10 +140,9 @@ export default function CustomIntegrationsClient() {
                     {/* 1. API Mesh */}
                     <div className="flex flex-col md:flex-row gap-12 items-center">
                         <div className="flex-1 order-2 md:order-1">
-                            <h4 className="text-3xl font-bold mb-4">The API Mesh</h4>
+                            <h4 className="text-3xl font-bold mb-4">Unified Data Architecture</h4>
                             <p className="text-gray-400 text-lg leading-relaxed mb-6">
-                                We create a unified GraphQL or REST API layer that sits in front of all your microservices.
-                                Your frontend only ever talks to ONE endpoint. We handle the complexity of routing requests to the right service.
+                                We architect a unified data layer that consolidates all your fragmented microservices. Your front-end applications interact with one extremely fast, secure endpoint, drastically reducing development time on future features.
                             </p>
                         </div>
                         <div className="flex-1 order-1 md:order-2">
@@ -157,10 +156,9 @@ export default function CustomIntegrationsClient() {
                             <SyncStatusGraphic />
                         </div>
                         <div className="flex-1">
-                            <h4 className="text-3xl font-bold mb-4">Real-Time Sync & Observability</h4>
+                            <h4 className="text-3xl font-bold mb-4">Mission-Critical Observability</h4>
                             <p className="text-gray-400 text-lg leading-relaxed mb-6">
-                                We build dashboards that show you exactly what data is moving where.
-                                If a sync fails (e.g., Shopify is down), our system automatically retries and alerts you via Slack. No orders lost.
+                                Our systems ensure zero dropped data. If an external service experiences an outage, our middleware automatically queues the transactions and alerts your team, ensuring no revenue is ever lost.
                             </p>
                         </div>
                     </div>
@@ -181,7 +179,7 @@ export default function CustomIntegrationsClient() {
             {/* CTA */}
             <section className="py-24 text-center">
                 <Link href="/request-quote" className="px-12 py-5 bg-purple-600 rounded-full text-xl font-bold hover:bg-purple-500 transition-colors">
-                    Connect Your Systems
+                    Unify Your Operations
                 </Link>
             </section>
         </div>

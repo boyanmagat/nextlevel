@@ -42,7 +42,7 @@ export default function DesignSystemsClient() {
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-600">tamed</span>
                     </motion.h1>
                     <p className="text-xl md:text-2xl text-gray-400 mb-12 max-w-2xl mx-auto font-light">
-                        Bridge the gap between Design and Engineering. We build living component libraries that ensure pixel-perfect consistency at scale.
+                        Stop paying engineers to write the same CSS twice. We engineer scalable component libraries that ensure enterprise-level brand trust and dramatically accelerate your time-to-market.
                     </p>
                 </div>
             </section>
@@ -60,33 +60,33 @@ export default function DesignSystemsClient() {
                             Is this the right fit for you?
                         </motion.h2>
                         <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-                            A Design System is an investment. It pays off when you have multiple teams working on the same product.
+                            A Design System is a strategic asset. It eliminates design debt, prevents disjointed user experiences, and allows your engineering teams to ship features at unprecedented speeds.
                         </p>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         {[
                             {
-                                title: "Scaling Startups",
-                                desc: "You just hired 5 new engineers and they are all implementing buttons differently. You need a single source of truth.",
+                                title: "Scaling Teams",
+                                desc: "You are rapidly expanding headcount. You need a single source of truth so new engineers can ship features immediately without breaking your brand's visual identity.",
                                 icon: "📈",
                                 gradient: "from-pink-500/20 to-rose-500/20"
                             },
                             {
-                                title: "Enterprise Products",
-                                desc: "You have 3 different web apps and a mobile app that all look slightly different. You want to unify your brand.",
+                                title: "Enterprise Portfolios",
+                                desc: "You maintain multiple applications that look disjointed. You need to unify your user experience to establish and maintain enterprise-level trust with your customers.",
                                 icon: "🏢",
                                 gradient: "from-purple-500/20 to-indigo-500/20"
                             },
                             {
-                                title: "Rebranding",
-                                desc: "You are going through a rebrand and dread the idea of manually updating hex codes across 500 different files.",
+                                title: "Agile Branding",
+                                desc: "You need the agility to update your brand's visual identity globally in seconds—without requiring a costly, six-month engineering migration.",
                                 icon: "🎨",
                                 gradient: "from-orange-500/20 to-amber-500/20"
                             },
                             {
-                                title: "Efficiency Seekers",
-                                desc: "You want to ship features faster by reusing pre-tested, accessible components instead of writing CSS from scratch.",
+                                title: "Velocity Focused",
+                                desc: "You want to maximize your engineering ROI. By reusing pre-tested blocks, your team spends time solving core business problems, not rewriting UI CSS.",
                                 icon: "⚡",
                                 gradient: "from-blue-500/20 to-cyan-500/20"
                             }
@@ -114,17 +114,16 @@ export default function DesignSystemsClient() {
             <section className="py-24 px-4 max-w-7xl mx-auto">
                 <div className="text-center mb-16">
                     <h2 className="text-pink-500 font-bold tracking-widest uppercase mb-4 text-sm">Capabilities</h2>
-                    <h3 className="text-4xl md:text-6xl font-bold">Design to Code. Instantly.</h3>
+                    <h3 className="text-4xl md:text-6xl font-bold">Scale Development. Protect the Brand.</h3>
                 </div>
 
                 <div className="space-y-24">
                     {/* 1. Figma Sync */}
                     <div className="flex flex-col md:flex-row gap-12 items-center">
                         <div className="flex-1 order-2 md:order-1">
-                            <h4 className="text-3xl font-bold mb-4">Figma Token Sync</h4>
+                            <h4 className="text-3xl font-bold mb-4">Automated Design Handoff</h4>
                             <p className="text-gray-400 text-lg leading-relaxed mb-6">
-                                We automate the handoff. When a designer changes the primary color in Figma, a GitHub Action runs and updates your CSS variables automatically.
-                                No more "Can you make this blue slightly darker?" messages.
+                                We automate the translation from design to code. When your design team updates a variable in Figma, it automatically deploys to your application framework. This eliminates costly manual handoffs and guarantees your live product flawlessly matches your brand guidelines.
                             </p>
                         </div>
                         <div className="flex-1 order-1 md:order-2">
@@ -138,10 +137,9 @@ export default function DesignSystemsClient() {
                             <StorybookGraphic />
                         </div>
                         <div className="flex-1">
-                            <h4 className="text-3xl font-bold mb-4">Storybook Documentation</h4>
+                            <h4 className="text-3xl font-bold mb-4">Centralized Component Library</h4>
                             <p className="text-gray-400 text-lg leading-relaxed mb-6">
-                                We document every component in Storybook. Your team can browse a live catalog of buttons, inputs, and cards.
-                                Every component typically includes controls to test different states (Loading, Error, Disabled).
+                                We build a secure, centralized catalog of your brand's UI components. Your marketing and product teams can interact with live elements before they ever hit production, ensuring perfect quality control and accessibility compliance across your entire organization.
                             </p>
                         </div>
                     </div>
@@ -162,7 +160,7 @@ export default function DesignSystemsClient() {
             {/* CTA */}
             <section className="py-24 text-center">
                 <Link href="/request-quote" className="px-12 py-5 bg-pink-600 rounded-full text-xl font-bold hover:bg-pink-500 transition-colors">
-                    Unify Your UI
+                    Scale Your UI Engineering
                 </Link>
             </section>
         </div>

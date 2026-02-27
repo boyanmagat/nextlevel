@@ -2,7 +2,7 @@
 const { fetch } = global;
 // Given the environment, 'fetch' is likely available (Next.js project).
 
-const BASE_URL = 'http://localhost:3000';
+const BASE_URL = 'http://localhost:3001';
 const PATHS = [
     '/',
     '/about',

@@ -8,14 +8,14 @@ export interface FAQItem {
 export const NEXT_JS_FAQS: FAQItem[] = [
     {
         question: "Will switching to Next.js negatively impact my SEO?",
-        answer: "No, quite the opposite. Next.js is designed for performance and SEO dominance. SSR ensures search engines crawl your full content immediately.",
-        detailedAnswer: "No. In fact, moving to Next.js is one of the best things you can do for SEO. Unlike standard React apps (SPAs) that search engines struggle to read, Next.js uses Server-Side Rendering (SSR). This means we send a fully formed HTML page to Googlebot effectively instantly. Combined with Vercel's global CDN and automatic image optimization, your Core Web Vitals (speed metrics) will likely turn green, directly boosting your ranking.",
+        answer: "No, quite the opposite. Next.js is engineered for SEO dominance, ensuring search engines crawl your full content instantly to lower your Customer Acquisition Cost (CAC).",
+        detailedAnswer: "No. In fact, moving to Next.js is one of the most effective strategies for driving organic revenue. Unlike standard React apps that search engines struggle to index, Next.js uses Server-Side Rendering (SSR). This means we hand Googlebot a fully optimized HTML page instantly. Combined with an edge network and automatic image optimization, your Core Web Vitals will turn green, directly boosting your ranking and capturing high-intent search traffic.",
         category: "Next.js"
     },
     {
-        question: "Why choose Next.js over WordPress?",
-        answer: "Speed, Security, and Scalability. WordPress relies on heavy plugins. Next.js sends pre-built, optimized pages instantly.",
-        detailedAnswer: "It comes down to Speed, Security, and Scalability. WordPress was built for blogging in 2003. It relies on a stack of heavy plugins that slow down your site and open up security holes. Next.js is a modern framework used by Netflix, TikTok, and Nike. It separates your content (Sanity CMS) from your code, meaning your site loads instantly, can't be hacked via plugins, and can scale to millions of users without crashing.",
+        question: "Why choose Next.js over traditional WordPress?",
+        answer: "Speed, Security, and Scalability. Traditional WordPress relies on heavy plugins that bleed revenue. Next.js delivers pre-built, optimized pages instantly.",
+        detailedAnswer: "It comes down to maximizing your conversion rate and minimizing your operational risk. WordPress was built for blogging in 2003. It relies on a stack of heavy plugins that slow down your checkout and open up costly security vulnerabilities. Next.js separates your content from your code, meaning your site loads instantly, is fundamentally resilient against plugin hacks, and seamlessly scales during massive traffic events.",
         category: "Next.js"
     },
     {
@@ -25,18 +25,18 @@ export const NEXT_JS_FAQS: FAQItem[] = [
         category: "Next.js"
     },
     {
-        question: "How much does a project cost?",
-        answer: "Projects typically range from $5k to $50k+. We focus on ROI—building a tool that pays for itself through higher conversions.",
-        detailedAnswer: "We don't do cookie-cutter pricing because we don't do cookie-cutter work. A high-end marketing site normally lands between $5k - $15k. Complex web applications or large-scale e-commerce migrations start at $20k and can go up to $50k+. We provide fixed-price quotes so you know exactly what the investment is upfront. We focus on ROI—building a tool that pays for itself through higher conversions.",
+        question: "How do you price your projects?",
+        answer: "We focus exclusively on ROI. Our solutions are engineered to pay for themselves through higher conversion rates, reduced manual labor, and increased sales velocity.",
+        detailedAnswer: "We don't do cookie-cutter pricing because we engineer bespoke strategic assets. A high-converting marketing platform typically ranges from $10k - $25k. Complex corporate web applications, multi-tenant SaaS tools, or enterprise data migrations start at $30k. We provide fixed-price, outcome-based quotes so you know exactly what your business investment is upfront, without the risk of scope creep.",
         category: "General"
     }
 ];
 
 export const HEADLESS_CMS_FAQS: FAQItem[] = [
     {
-        question: "Is Sanity hard for non-technical users?",
-        answer: "Not at all. The Sanity Studio is a real-time, visual editor. It feels like Squarespace but outputs clean data.",
-        detailedAnswer: "We use Sanity.io because it offers the best editor experience on the market. For your marketing team, it looks just like a modern website builder. You get a real-time preview of your changes, drag-and-drop page building, and image cropping. But under the hood, it stores your content as pure data, which allows us to feed it into your website, mobile app, or any other platform instantly.",
+        question: "Does Sanity require technical skills for our marketing team?",
+        answer: "Not at all. The Sanity Studio empowers marketing teams to ship campaigns instantly with a visual builder, completely eliminating the engineering bottleneck.",
+        detailedAnswer: "We implement Sanity.io precisely because it accelerates your marketing velocity. For your marketing team, it provides an intuitive, real-time visual editing experience. They can drag-and-drop landing pages, run A/B tests, and update copy without ever filing an IT ticket. Meanwhile, under the hood, the content remains strictly structured, ensuring your brand stays perfectly consistent across all platforms.",
         category: "Headless CMS"
     },
     {
@@ -98,9 +98,9 @@ export const CUSTOM_SOFTWARE_FAQS: FAQItem[] = [
 
 export const AI_FAQS: FAQItem[] = [
     {
-        question: "How does your AI-integrated workflow benefit my project?",
-        answer: "Speed and efficiency. We deliver projects up to 30% faster while maintaining 100% human-level quality control.",
-        detailedAnswer: "We've re-engineered our development lifecycle around AI-orchestration. By using specialized LLMs and agentic workflows to handle boilerplate and unit testing, our engineers can focus on high-level architecture. This results in faster turnarounds and significant cost savings that we pass directly to you.",
+        question: "How does your AI-integrated workflow benefit my business?",
+        answer: "Speed to Market. We utilize AI automation to slash development cycles by up to 30%, allowing you to launch revenue-generating features faster.",
+        detailedAnswer: "We've re-engineered our agency around AI-orchestration for maximum commercial impact. By deploying specialized models to handle boilerplate code, test generation, and QA automation, our elite engineers are freed up to focus entirely on your core business logic and system architecture. This means faster time-to-market, zero technical debt, and optimized capital allocation.",
         category: "AI Efficiency"
     },
     {

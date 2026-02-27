@@ -24,7 +24,7 @@ export default function AboutPage() {
                         transition={{ delay: 0.2 }}
                         className="text-2xl text-gray-300 max-w-3xl leading-relaxed font-light"
                     >
-                        We are a team of obsessesive engineers and designers. We believe the web has lost its soul to generic templates and bloated frameworks. We're here to bring it back.
+                        We are a collective of strategists, engineers, and designers dedicated to one goal: building digital assets that aggressively drive your business forward. We don't just write code; we engineer revenue.
                     </motion.p>
                 </div>
 
@@ -54,10 +54,10 @@ export default function AboutPage() {
                         className="text-xl md:text-2xl text-gray-300 leading-relaxed font-light space-y-8 text-left md:text-center"
                     >
                         <p>
-                            We’ve spent 15 years in this reality, and we know the problem intimately. There are endless tools that do endless things, but when you have a specific need, the available options are almost always... "almost" right. <span className="text-white font-bold">But "almost" never truly cuts it.</span>
+                            We’ve spent 15 years analyzing digital businesses, and we know the problem intimately. Agencies sell you generic templates that throttle your growth, while off-the-shelf software forces you to compromise your unique competitive advantage. <span className="text-white font-bold">Compromise costs you market share.</span>
                         </p>
                         <p>
-                            We know the fatigue of settling—of bending your workflow to fit a tool rather than the other way around. But we also know the feeling of finally having something that just <em>works</em>. That’s the feeling we build for our clients. We don't just build websites; we solve the gap between what is available and what you actually need.
+                            We understand the frustration of losing customers to slow checkouts or fighting with a CMS that slows your marketing team down. We build bespoke solutions that eliminate those friction points. We aren't just an agency; we are your strategic technical partner for scale.
                         </p>
                     </motion.div>
                 </div>
@@ -67,9 +67,9 @@ export default function AboutPage() {
             <section className="px-4 py-24 border-y border-white/10 bg-white/5">
                 <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-16">
                     {[
-                        { title: "No Templates", desc: "Every line of code is written with purpose. We don't copy-paste; we architect." },
-                        { title: "Performance First", desc: "If it doesn't load in under 100ms, it's a bug. Speed is our primary feature." },
-                        { title: "Radical Transparency", desc: "You see our git commits. You join our internal Slack. We work as your internal team." }
+                        { title: "Commercial Impact", desc: "Every line of code is evaluated by its ability to increase ROI, drive conversions, or reduce your operational costs." },
+                        { title: "Velocity & Performance", desc: "Speed is a business strategy. If your platform isn't loading instantly, you are actively losing customers to competitors." },
+                        { title: "Radical Transparency", desc: "No black boxes. You see our roadmap, you access our metrics, and we integrate directly as an extension of your internal team." }
                     ].map((val, i) => (
                         <motion.div
                             key={i}

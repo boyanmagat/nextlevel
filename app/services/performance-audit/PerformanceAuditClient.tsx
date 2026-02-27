@@ -41,7 +41,7 @@ export default function PerformanceAuditClient() {
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-orange-500">KILLS</span>
                     </motion.h1>
                     <p className="text-xl md:text-2xl text-gray-400 mb-12 max-w-2xl mx-auto font-light">
-                        Slow websites kill conversion rates. We audit, analyze, and optimize your Next.js application for maximum velocity.
+                        Slow platforms bleed revenue. We uncover performance bottlenecks and re-engineer your application to maximize conversion rates and slash bounce rates.
                     </p>
                 </div>
             </section>
@@ -59,7 +59,7 @@ export default function PerformanceAuditClient() {
                             Is this the right fit for you?
                         </motion.h2>
                         <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-                            If you are losing customers because your site takes 5 seconds to load, this is for you.
+                            If you are losing revenue because your checkout takes seconds to load, you need a performance audit.
                         </p>
                     </div>
 
@@ -67,25 +67,25 @@ export default function PerformanceAuditClient() {
                         {[
                             {
                                 title: "E-Commerce",
-                                desc: "Amazon found that every 100ms of latency cost them 1% in sales. You cannot afford a slow checkout.",
+                                desc: "Every 100ms of latency actively costs you sales. We eliminate checkout friction to directly increase your conversion metrics.",
                                 icon: "🛒",
                                 gradient: "from-red-500/20 to-orange-500/20"
                             },
                             {
                                 title: "SaaS Apps",
-                                desc: "Users expect your web app to feel like separate desktop software. Laggy interactions lead to churn.",
+                                desc: "Sluggish interfaces frustrate users and drive up churn. We make your web app feel instantly responsive to retain paying subscribers.",
                                 icon: "⚡",
                                 gradient: "from-blue-500/20 to-cyan-500/20"
                             },
                             {
                                 title: "SEO Driven",
-                                desc: "You create great content but are losing traffic to competitors because they pass Core Web Vitals and you don't.",
+                                desc: "You are losing high-intent traffic to competitors simply because they pass Google's Core Web Vitals and you do not. We fix that.",
                                 icon: "🔍",
                                 gradient: "from-green-500/20 to-emerald-500/20"
                             },
                             {
                                 title: "Legacy Codebases",
-                                desc: "Your app has grown over 3 years and now includes 5MB of unused JavaScript that slows everything down.",
+                                desc: "Years of feature bloat have resulted in a sluggish platform. We strip away the excess to restore peak operational speed without a full redesign.",
                                 icon: "🕸️",
                                 gradient: "from-slate-500/20 to-gray-500/20"
                             }
@@ -113,7 +113,7 @@ export default function PerformanceAuditClient() {
             <section className="py-24 px-4 max-w-7xl mx-auto">
                 <div className="text-center mb-16">
                     <h2 className="text-red-500 font-bold tracking-widest uppercase mb-4 text-sm">Capabilities</h2>
-                    <h3 className="text-4xl md:text-6xl font-bold">Optimization Engineering.</h3>
+                    <h3 className="text-4xl md:text-6xl font-bold">Revenue-Driven Optimization.</h3>
                 </div>
 
                 <div className="space-y-24">
@@ -122,8 +122,7 @@ export default function PerformanceAuditClient() {
                         <div className="flex-1 order-2 md:order-1">
                             <h4 className="text-3xl font-bold mb-4">Core Web Vitals Optimization</h4>
                             <p className="text-gray-400 text-lg leading-relaxed mb-6">
-                                We target the metrics that Google cares about: LCP (Loading), INP (Interactivity), and CLS (Visual Stability).
-                                We optimize images, deliver critical CSS, and defer non-essential scripts.
+                                We optimize the exact metrics that dictate your organic search ranking and user bounce rate. By passing Google's Core Web Vitals, you lower your Customer Acquisition Cost (CAC) and capture more leads.
                             </p>
                         </div>
                         <div className="flex-1 order-1 md:order-2">
@@ -137,10 +136,9 @@ export default function PerformanceAuditClient() {
                             <BundleSizeGraphic />
                         </div>
                         <div className="flex-1">
-                            <h4 className="text-3xl font-bold mb-4">Bundle Size Reduction</h4>
+                            <h4 className="text-3xl font-bold mb-4">Codebase Streamlining</h4>
                             <p className="text-gray-400 text-lg leading-relaxed mb-6">
-                                We analyze your webpack/Turbo bundle to find heavy dependencies.
-                                We implement tree-shaking and code-splitting so users only download the code they actually need for the current page.
+                                We surgically remove bloated code that is slowing down your users' devices. By delivering only exactly the code needed for the transaction, we guarantee a frictionless experience that keeps buyers engaged.
                             </p>
                         </div>
                     </div>
@@ -161,7 +159,7 @@ export default function PerformanceAuditClient() {
             {/* CTA */}
             <section className="py-24 text-center">
                 <Link href="/request-quote" className="px-12 py-5 bg-red-600 rounded-full text-xl font-bold hover:bg-red-500 transition-colors">
-                    Speed Up My Site
+                    Stop Bleeding Revenue
                 </Link>
             </section>
         </div>

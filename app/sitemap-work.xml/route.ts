@@ -1,30 +1,18 @@
 import { NextResponse } from 'next/server';
+import { CASE_STUDIES } from '../work/data';
 
 export async function GET() {
     const baseUrl = 'https://nextleveldigital.ca';
-    const pages = [
-        '',
-        '/about',
-        '/contact',
-        '/work',
-        '/request-quote',
-        '/services',
-        '/blog',
-        '/faq',
-        '/team/ivo',
-        '/team/julien',
-        '/thank-you'
-    ];
 
     const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  ${pages.map((path) => {
+  ${CASE_STUDIES.map((study) => {
         return `
   <url>
-    <loc>${baseUrl}${path}</loc>
+    <loc>${baseUrl}/work/${study.slug}</loc>
     <lastmod>${new Date().toISOString()}</lastmod>
-    <changefreq>${path === '' ? 'yearly' : 'monthly'}</changefreq>
-    <priority>${path === '' ? '1.0' : '0.8'}</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>`;
     }).join('')}
 </urlset>`;

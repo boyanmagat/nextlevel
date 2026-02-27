@@ -13,11 +13,11 @@ export default function Work() {
                 className="mb-20 text-center"
             >
                 <h1 className="text-6xl md:text-8xl font-black mb-6 tracking-tighter">
-                    SELECTED <br /> <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-600">WORK</span>.
+                    STRATEGIC <br /> <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-600">CASE STUDIES</span>.
                 </h1>
                 <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-                    A collection of high-performance digital experiences.
-                    <br />Built with Next.js, Sanity, and a lot of caffeine.
+                    A collection of high-performance digital revenue engines.
+                    <br />Engineered for scale, speed, and maximum commercial impact.
                 </p>
             </motion.div>
 
@@ -27,9 +27,9 @@ export default function Work() {
                         client: "Clash of Tech",
                         slug: "wordpress-vs-nextjs",
                         title: "CLASH OF TECH.",
-                        role: "Technical Audit",
-                        desc: "A head-to-head performance showdown between WordPress and Next.js, analyzed through a modern architectural lens.",
-                        tags: ["WordPress", "Next.js", "Performance"],
+                        role: "Technical Strategy & Audit",
+                        desc: "A commercial performance analysis contrasting traditional WordPress architectures against modern Next.js implementations, focusing on the impact to loading speeds and conversion rates.",
+                        tags: ["Technical Strategy", "Performance Audit", "Conversion Optimization"],
                         color: "from-pink-500 to-indigo-900",
                         image: "/work/clash_hero.png"
                     }

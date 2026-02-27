@@ -50,10 +50,10 @@ export default function NextJsClient() {
             <section className="py-16 px-4 bg-blue-900/10 border-y border-blue-500/20">
                 <div className="max-w-4xl mx-auto text-center">
                     <h2 className="text-sm font-bold text-blue-400 tracking-widest uppercase mb-4">New to Next.js?</h2>
-                    <h3 className="text-3xl font-bold mb-6">It's React, but <span className="text-white">Professional</span>.</h3>
+                    <h3 className="text-3xl font-bold mb-6">It's React, but <span className="text-white">Built for Business</span>.</h3>
                     <p className="text-gray-400 leading-relaxed text-lg">
-                        Imagine if your website was pre-printed before the user asked for it, instead of being drawn from scratch every time they clicked.
-                        That's Next.js. It handles the heavy lifting on our global servers so your users get instant interactions, better SEO, and longer battery life on their phones.
+                        Instead of your website loading slowly piece-by-piece, Next.js pre-builds your platform so it loads instantly the moment a customer clicks.
+                        This eliminates the loading screens that cause buyers to bounce, dramatically improves your Google rankings, and secures your platform against enterprise-level traffic spikes.
                     </p>
                 </div>
             </section>
@@ -134,18 +134,18 @@ export default function NextJsClient() {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         {[
                             {
-                                title: "App Router Natives",
-                                desc: "We abandoned the `pages` directory years ago. We build exclusively with the modern App Router for nested layouts and streaming.",
+                                title: "Instant Conversions",
+                                desc: "We utilize modern routing and streaming to ensure your pages load instantly, eliminating the friction that causes users to abandon their shopping carts.",
                                 icon: "⚡"
                             },
                             {
-                                title: "Server Actions",
-                                desc: "Forget API routes. We write type-safe functions that execute on the server and return data directly to your components.",
+                                title: "Bulletproof Security",
+                                desc: "By handling complex logic on the server rather than the browser, your proprietary data and customer information remain completely secure and out of reach.",
                                 icon: "🔒"
                             },
                             {
-                                title: "Edge Ready",
-                                desc: "Your users are everywhere. Your code should be too. We deploy to Vercel's Edge Network for sub-millisecond latency.",
+                                title: "Global Scale",
+                                desc: "Your customers are everywhere. We deploy your platform to edge networks, ensuring sub-millisecond load times whether your user is in New York or Tokyo.",
                                 icon: "🌍"
                             }
                         ].map((item, i) => (
@@ -202,9 +202,9 @@ export default function NextJsClient() {
                             <FormGraphic />
                         </div>
                         <div className="flex-1">
-                            <h4 className="text-3xl font-bold mb-4">Complex React Forms</h4>
+                            <h4 className="text-3xl font-bold mb-4">High-Fidelity Lead Forms</h4>
                             <p className="text-gray-400 text-lg leading-relaxed mb-6">
-                                Typeform is great, but sometimes you need real logic. Multi-step wizards, file uploads, conditional branching, and direct integration with your CRM (HubSpot, Salesforce).
+                                Off-the-shelf forms kill conversions. We build custom, multi-step wizards equipped with conditional logic that seamlessly route qualified leads directly into your HubSpot or Salesforce CRM.
                             </p>
                             <ul className="space-y-2">
                                 {["Zod Schema Validation", "Save Progress Locally", "GDPR Compliant"].map(item => (
@@ -219,11 +219,11 @@ export default function NextJsClient() {
                     {/* 3. Pure Code MVP */}
                     <div className="flex flex-col md:flex-row gap-12 items-center">
                         <div className="flex-1 order-2 md:order-1">
-                            <h4 className="text-3xl font-bold mb-4">Pure Code (No CMS) MVP</h4>
+                            <h4 className="text-3xl font-bold mb-4">Rapid Revenue MVPs</h4>
                             <p className="text-gray-400 text-lg leading-relaxed mb-6">
-                                Just starting out? You don't need a CMS yet. We build a "Pure Website" where content is hard-coded but structured.
+                                Validating a new business model? We build hyper-fast, hard-coded platforms to get you to market immediately.
                                 <br />
-                                <strong>The Benefit:</strong> Extremely fast to build, zero maintenance costs, hack-proof. When you're ready, we can plug in a CMS later without a rewrite.
+                                <strong>The Benefit:</strong> Launch weeks faster, eliminate maintenance costs, and capture your first customers. When you're ready to scale, we integrate a CMS seamlessly.
                             </p>
                         </div>
                         <div className="flex-1 order-1 md:order-2">
@@ -239,7 +239,7 @@ export default function NextJsClient() {
                         <div className="flex-1">
                             <h4 className="text-3xl font-bold mb-4">SaaS Dashboards</h4>
                             <p className="text-gray-400 text-lg leading-relaxed mb-6">
-                                Need to show data to your users? We build interactive, client-side dashboards using SWR or React Query. Real-time charts, data tables, and user management.
+                                Turn your data into a premium product. We build deeply interactive, real-time client dashboards that keep your subscribers engaged and reduce churn.
                             </p>
                         </div>
                     </div>
@@ -252,7 +252,7 @@ export default function NextJsClient() {
                     <div className="md:w-1/3">
                         <h2 className="text-4xl font-bold mb-6">How we help.</h2>
                         <p className="text-gray-400">
-                            Whether you're migrating from a legacy React app or building the next big SaaS, our engineering standards are non-negotiable.
+                            Whether you're migrating an aging application or building a new revenue channel, our engineering accelerates your timeline.
                         </p>
                     </div>
                     <div className="md:w-2/3 grid grid-cols-1 gap-4">
@@ -307,7 +307,7 @@ export default function NextJsClient() {
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
                 >
-                    <h2 className="text-4xl md:text-6xl font-bold mb-8">Stop fighting your framework.</h2>
+                    <h2 className="text-4xl md:text-6xl font-bold mb-8">Stop losing customers to slow platforms.</h2>
                     <Link href="/request-quote" className="inline-block px-12 py-5 bg-white text-black rounded-full text-xl font-bold hover:scale-105 transition-transform">
                         Book an Audit
                     </Link>

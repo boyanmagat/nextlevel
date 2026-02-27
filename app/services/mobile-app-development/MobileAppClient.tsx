@@ -24,7 +24,7 @@ export default function MobileAppClient() {
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600">ONE CODEBASE</span>
                     </motion.h1>
                     <p className="text-xl md:text-2xl text-gray-400 mb-12 max-w-2xl mx-auto font-light">
-                        We build iOS and Android apps using React Native. Get 95% code sharing, native performance, and half the development cost.
+                        We build high-performance iOS and Android apps that literally put your brand in your customers' pockets, increasing retention and maximizing lifetime value (LTV).
                     </p>
                 </div>
             </section>
@@ -42,33 +42,33 @@ export default function MobileAppClient() {
                             Is this the right fit for you?
                         </motion.h2>
                         <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-                            React Native is the technology of choice for everyone from startups to the Fortune 500 (Facebook, Microsoft, Shopify).
+                            A dedicated mobile app is the ultimate retention tool, allowing you to bypass algorithms and reach your most loyal customers directly.
                         </p>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         {[
                             {
-                                title: "Startups",
-                                desc: "You need to launch on both iOS and Android simultaneously to maximize your reach, but you only have budget for one team.",
+                                title: "High-Growth Startups",
+                                desc: "You need to capture maximum top-of-funnel market share. We deploy to both iOS and Android simultaneously, slashing your time-to-market in half.",
                                 icon: "🚀",
                                 gradient: "from-cyan-500/20 to-blue-500/20"
                             },
                             {
-                                title: "E-Commerce",
-                                desc: "You have a Shopify store and want a dedicated mobile app to increase customer retention and push notifications.",
+                                title: "E-Commerce Brands",
+                                desc: "You want to drive repeat purchases. A native app enables push notifications, directly increasing retention and lifetime value.",
                                 icon: "🛍️",
                                 gradient: "from-purple-500/20 to-pink-500/20"
                             },
                             {
-                                title: "SaaS Platforms",
-                                desc: "You have a web app and want to offer a companion mobile app for users on the go.",
+                                title: "B2B SaaS Platforms",
+                                desc: "You need to increase subscriber stickiness. A companion mobile app ensures your product is integrated directly into their daily workflow.",
                                 icon: "📱",
                                 gradient: "from-blue-500/20 to-indigo-500/20"
                             },
                             {
-                                title: "Internal Tools",
-                                desc: "Your field workforce needs a custom app to track inventory, scan QR codes, or manage logistics.",
+                                title: "Enterprise Operations",
+                                desc: "You need a secure, custom application for your field workforce to track inventory, scan hardware, and synchronize operations globally.",
                                 icon: "🏭",
                                 gradient: "from-slate-500/20 to-gray-500/20"
                             }
@@ -103,10 +103,9 @@ export default function MobileAppClient() {
                     {/* 1. Cross Platform */}
                     <div className="flex flex-col md:flex-row gap-12 items-center">
                         <div className="flex-1 order-2 md:order-1">
-                            <h4 className="text-3xl font-bold mb-4">Write Once. Run Everywhere.</h4>
+                            <h4 className="text-3xl font-bold mb-4">Halve the Development Cost</h4>
                             <p className="text-gray-400 text-lg leading-relaxed mb-6">
-                                We write your business logic in TypeScript once. It runs natively on iOS and Android.
-                                Updates are faster, testing is easier, and your product remains consistent across all devices.
+                                Why pay for two separate engineering teams? We utilize React Native to write your business logic once, deploying a native-feeling application to both iOS and Android simultaneously. Faster updates, easier testing, and significantly lower overhead.
                             </p>
                         </div>
                         <div className="flex-1 order-1 md:order-2">
@@ -120,10 +119,9 @@ export default function MobileAppClient() {
                             <NativeModuleGraphic />
                         </div>
                         <div className="flex-1">
-                            <h4 className="text-3xl font-bold mb-4">Full Hardware Access</h4>
+                            <h4 className="text-3xl font-bold mb-4">Deep Device Integration</h4>
                             <p className="text-gray-400 text-lg leading-relaxed mb-6">
-                                Need to access the Camera? GPS? FaceID? Bluetooth? React Native bridges directly to the native device APIs.
-                                There is zero compromise on functionality compared to Swift or Kotlin.
+                                Deliver premium, secure experiences that web apps simply cannot match. We fully integrate with FaceID for secure enterprise logins, GPS for logistics, and push notifications to drive direct engagement—with zero compromise on performance.
                             </p>
                         </div>
                     </div>
@@ -144,7 +142,7 @@ export default function MobileAppClient() {
             {/* CTA */}
             <section className="py-24 text-center">
                 <Link href="/request-quote" className="px-12 py-5 bg-cyan-600 rounded-full text-xl font-bold hover:bg-cyan-500 transition-colors">
-                    Build Your App
+                    Capture Mobile Market Share
                 </Link>
             </section>
         </div>

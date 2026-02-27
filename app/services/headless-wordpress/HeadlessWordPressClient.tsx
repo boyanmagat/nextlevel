@@ -24,7 +24,7 @@ export default function HeadlessWordPressClient() {
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-500">REINVENTED</span>
                     </motion.h1>
                     <p className="text-xl md:text-2xl text-gray-400 mb-12 max-w-2xl mx-auto font-light">
-                        Keep the admin dashboard you love. Ditch the slow, insecure frontend. We promote WordPress from a monolith to a high-performance Content API.
+                        Keep the WordPress interface your team loves, while we transform your frontend into a blazing-fast, highly secure engine that drives enterprise-level conversions.
                     </p>
                 </div>
             </section>
@@ -35,10 +35,10 @@ export default function HeadlessWordPressClient() {
                     <h2 className="text-sm font-bold text-blue-400 tracking-widest uppercase mb-4">Why Headless WordPress?</h2>
                     <h3 className="text-3xl font-bold mb-6">The best of both worlds.</h3>
                     <p className="text-gray-400 leading-relaxed text-lg">
-                        You don't have to retrain your marketing team. They can keep using WP Admin, Yoast SEO, and ACF.
-                        Meanwhile, we stick a Ferrari engine (Next.js) on the frontend.
+                        You don't have to retrain your marketing team. They can safely keep using WP Admin, Yoast SEO, and ACF.
+                        Meanwhile, we attach a modern rendering engine (Next.js) to the front.
                         <br /><br />
-                        <strong>Result:</strong> A site that loads in 0.8s, never gets hacked, and scales infinitely.
+                        <strong>Result:</strong> A frictionless customer experience with instant load times that maximize sales, enterprise-grade security, and architecture that scales for major traffic events without crashing.
                     </p>
                 </div>
             </section>
@@ -63,26 +63,26 @@ export default function HeadlessWordPressClient() {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         {[
                             {
-                                title: "Publishers & Media",
-                                desc: "You have 10,000+ posts and a team of 20 editors who refuse to learn a new CMS.",
+                                title: "Media Empires",
+                                desc: "You possess thousands of articles and require your editorial team to maintain their current workflow without interrupting publishing.",
                                 icon: "📰",
                                 gradient: "from-blue-500/20 to-indigo-500/20"
                             },
                             {
-                                title: "Marketing Sites",
-                                desc: "You need a site that scores 100/100 on Core Web Vitals to boost your ad quality score and SEO.",
+                                title: "Growth Marketing",
+                                desc: "You need perfect Core Web Vitals to slash your customer acquisition costs (CAC) and dominate organic search.",
                                 icon: "📈",
                                 gradient: "from-cyan-500/20 to-teal-500/20"
                             },
                             {
-                                title: "Plugin Victims",
-                                desc: "Your current site is held together by 45 plugins and crashes whenever you update one.",
+                                title: "Legacy Rescues",
+                                desc: "Your current build is suffocating under heavy plugins, leading to slow load times and lost revenue during critical sales periods.",
                                 icon: "🧟",
                                 gradient: "from-red-500/20 to-orange-500/20"
                             },
                             {
                                 title: "Enterprise Security",
-                                desc: "You can't afford another SQL injection vulnerability. Headless completely hides your WP Admin from the public web.",
+                                desc: "You cannot risk a data breach or downtime. A headless architecture physically separates your database from the public, virtually eliminating hack vectors.",
                                 icon: "🛡️",
                                 gradient: "from-purple-500/20 to-violet-500/20"
                             }
@@ -117,11 +117,10 @@ export default function HeadlessWordPressClient() {
                     {/* 1. WP Admin */}
                     <div className="flex flex-col md:flex-row gap-12 items-center">
                         <div className="flex-1 order-2 md:order-1">
-                            <h4 className="text-3xl font-bold mb-4">Keep the Admin. Lose the Lag.</h4>
+                            <h4 className="text-3xl font-bold mb-4">Zero Retraining, Maximum Output</h4>
                             <p className="text-gray-400 text-lg leading-relaxed mb-6">
-                                We use <strong>WPGraphQL</strong> to turn your WordPress install into a robust API.
-                                Your editors log into the same familiar dashboard. They hit "Publish".
-                                Our servers catch the data and build a static, lightning-fast React page.
+                                We utilize <strong>WPGraphQL</strong> to turn your WordPress install into a robust data provider.
+                                Your editors log into the exact same familiar dashboard. When they hit "Publish", our decoupled architecture automatically renders a high-performance, conversion-optimized page—instantly.
                             </p>
                         </div>
                         <div className="flex-1 order-1 md:order-2">
@@ -135,10 +134,10 @@ export default function HeadlessWordPressClient() {
                             <DatabaseGraphic />
                         </div>
                         <div className="flex-1">
-                            <h4 className="text-3xl font-bold mb-4">Direct Database Optimization</h4>
+                            <h4 className="text-3xl font-bold mb-4">Sub-Millisecond Data Delivery</h4>
                             <p className="text-gray-400 text-lg leading-relaxed mb-6">
-                                Standard WordPress queries are slow. We implement custom caching layers using Redis and streamline your database queries.
-                                We often see query times drop from 1.5s to 50ms.
+                                Standard WordPress queries are notoriously slow and cost you buyers. We implement custom edge-caching layers to streamline how your data is delivered.
+                                This means no more spinning wheels at checkout and immediate content loading for your users.
                             </p>
                         </div>
                     </div>
@@ -159,7 +158,7 @@ export default function HeadlessWordPressClient() {
             {/* CTA */}
             <section className="py-24 text-center">
                 <Link href="/request-quote" className="px-12 py-5 bg-blue-600 rounded-full text-xl font-bold hover:bg-blue-500 transition-colors">
-                    Upgrade to Headless WP
+                    Accelerate Your WordPress
                 </Link>
             </section>
         </div>

@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "framer-motion";
 import {
     Zap,
@@ -204,9 +205,16 @@ export default function WpvNextJs() {
                 <div className="max-w-6xl mx-auto px-4">
                     <div className="text-center mb-20 max-w-3xl mx-auto">
                         <h2 className="text-4xl md:text-6xl font-black mb-8 tracking-tight">The Engine Room.</h2>
-                        <p className="text-xl text-gray-300 font-light leading-relaxed italic border-l-2 border-white/10 pl-8">
+                        <p className="text-xl text-gray-300 font-light leading-relaxed italic border-l-2 border-white/10 pl-8 mb-12">
                             "If we compare PHP and Node.js, we can see that Node.js is much faster and more efficient than PHP."
                         </p>
+
+                        {/* Mid-Page CTA */}
+                        <div className="inline-block p-1 rounded-full bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500">
+                            <Link href="/request-quote" className="block px-8 py-4 bg-black hover:bg-zinc-900 rounded-full text-white font-bold transition-colors">
+                                Get a Free Architecture Audit
+                            </Link>
+                        </div>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -285,7 +293,7 @@ export default function WpvNextJs() {
                         <div className="space-y-12 text-lg md:text-xl text-gray-300 leading-relaxed relative z-10">
                             <div className="border-l-4 border-pink-500 pl-8 bg-white/5 py-8 rounded-r-3xl">
                                 <p className="max-w-3xl">
-                                    For the purpose of this case study, I built a Next.js site which is a complete copy of my WordPress site. It uses the same design, content, and structure. It is a Headless WordPress architecture.
+                                    For the purpose of this case study, I built a Next.js site which is a complete copy of my WordPress site. It uses the same design, content, and structure. It is a <Link href="/services/headless-wordpress" className="text-pink-500 hover:text-pink-400 font-bold underline decoration-pink-500/30 underline-offset-4">Headless WordPress</Link> architecture.
                                 </p>
                             </div>
 
@@ -428,6 +436,7 @@ export default function WpvNextJs() {
                             </div>
                             <div className="mt-8 p-4 text-gray-400 text-center text-sm">
                                 On high-performance desktop connections, the gap narrows—but the architecture footprint remains visible.
+                                <br />Want to see how this impacts your specific metrics? <Link href="/services/performance-audit" className="text-pink-500 hover:text-pink-400 font-bold underline decoration-pink-500/30 underline-offset-4">Read about our Performance Audits.</Link>
                             </div>
                         </div>
                     </div>
@@ -461,10 +470,10 @@ export default function WpvNextJs() {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section >
 
             {/* --- THE ANALOGY --- */}
-            <section className="py-48 bg-zinc-950 overflow-hidden relative">
+            < section className="py-48 bg-zinc-950 overflow-hidden relative" >
                 <div className="max-w-5xl mx-auto px-4 text-center">
                     <h2 className="text-4xl md:text-7xl font-black mb-24 tracking-tighter">THE LIFESTYLE.</h2>
 
@@ -621,6 +630,39 @@ export default function WpvNextJs() {
                                 <li>• Complex interactivity & scale</li>
                             </ul>
                         </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* --- CTA SECTION --- */}
+            <section className="py-24 px-4 bg-gradient-to-b from-black to-zinc-950 text-center border-t border-white/5 relative overflow-hidden">
+                <div className="absolute inset-0 z-0 bg-pink-500/5 blur-[120px] rounded-full w-96 h-96 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
+
+                <div className="max-w-3xl mx-auto space-y-8 relative z-10">
+                    <h2 className="text-3xl md:text-5xl font-black tracking-tight">Ready to switch lanes?</h2>
+                    <p className="text-xl text-gray-400 font-light leading-relaxed">
+                        Stop managing infrastructure blockages and start building high-performance digital experiences. Let's discuss how <Link href="/services/nextjs" className="text-pink-500 hover:text-pink-400 transition-colors underline decoration-pink-500/30 underline-offset-4 font-bold">Next.js Development</Link> or a custom <Link href="/services/headless-wordpress" className="text-blue-400 hover:text-blue-300 transition-colors underline decoration-blue-400/30 underline-offset-4 font-bold">Headless WordPress</Link> engine can accelerate your business online.
+                    </p>
+                    <div className="pt-8 flex flex-col sm:flex-row items-center justify-center gap-6">
+                        <Link
+                            href="/request-quote"
+                            className="w-full sm:w-auto inline-flex items-center justify-center px-10 py-5 text-sm font-bold tracking-widest uppercase rounded-full bg-white text-black hover:bg-gray-200 transition-all shadow-[0_0_40px_rgba(255,255,255,0.1)] hover:shadow-[0_0_60px_rgba(255,255,255,0.3)] hover:scale-105"
+                        >
+                            Book Your Audit
+                        </Link>
+                        <Link
+                            href="/work"
+                            className="text-sm font-bold uppercase tracking-widest text-gray-500 hover:text-white transition-colors flex items-center gap-2 group"
+                        >
+                            Back to Archive
+                            <motion.span
+                                animate={{ x: [0, 5, 0] }}
+                                transition={{ repeat: Infinity, duration: 2 }}
+                                className="group-hover:text-pink-500"
+                            >
+                                →
+                            </motion.span>
+                        </Link>
                     </div>
                 </div>
             </section>

@@ -35,8 +35,7 @@ export default function Home() {
             transition={{ duration: 1, delay: 0.6 }}
             className="text-xl md:text-2xl text-gray-300 mb-12 max-w-2xl mx-auto font-light"
           >
-            We craft digital experiences that defy expectations.
-            Headless architecture meets limitless creativity.
+            Stop losing sales to slow WooCommerce checkouts and inflexible platforms. We build blazing-fast, high-converting digital experiences that drive real revenue and scale your business seamlessly.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -94,23 +93,23 @@ export default function Home() {
           viewport={{ once: true }}
           className="text-4xl md:text-6xl font-bold mb-16 leading-tight"
         >
-          We don't just write code. <br />
-          We architect <span className="text-purple-400">futures</span>.
+          Stop fighting your tech stack. <br />
+          We build platforms that <span className="text-purple-400">drive growth</span>.
         </motion.h3>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {[
             {
               title: "High-Performance Websites",
-              desc: "The best of both worlds. We architect blazing fast headless sites using Next.js & Sanity for complete control, or Headless WordPress for those who prefer a familiar CMS. SEO-ready and built to scale."
+              desc: "Is your current platform holding back your sales? We build blazing-fast headless commerce and marketing sites that drastically reduce bounce rates, boost SEO, and increase your conversion rates."
             },
             {
               title: "Bespoke Software",
-              desc: "When off-the-shelf integration isn't enough. We engineer custom SaaS platforms, internal tools, and mobile apps tailored to your unique business logic. Automate workflows and own your data."
+              desc: "Tired of patching together generic plugins? We engineer custom platforms and internal tools tailored to your unique business logic. Automate your workflows, own your data, and save your team hundreds of hours."
             },
             {
               title: "Interactive Design Systems",
-              desc: "Consistency meets creativity. We build scalable Design Systems and UI kits that ensure your brand looks premium across every touchpoint. From Figma to code, we ensure pixel-perfect execution."
+              desc: "First impressions equal revenue. We design premium, scalable interfaces that build trust from the first click, ensuring your brand stands out and your customers enjoy a frictionless journey."
             }
           ].map((item, i) => (
             <motion.div
@@ -151,7 +150,7 @@ export default function Home() {
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400 text-6xl md:text-8xl italic">VELOCITY.</span>
               </h2>
               <p className="text-xl text-gray-400 mb-12 leading-relaxed max-w-xl font-light">
-                We don't just use AI, we've re-engineered our entire development lifecycle around it. By integrating specialized LLMs and agentic workflows, we deliver superior quality at a fraction of the traditional timeline.
+                We've re-engineered our development lifecycle using AI. This means you get enterprise-grade digital platforms delivered weeks faster, significantly lowering your build costs without ever sacrificing quality.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-12">
@@ -295,14 +294,14 @@ export default function Home() {
             >
               <h2 className="text-5xl font-bold mb-8">The <span className="text-blue-500">Perfect</span> Stack.</h2>
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                We've bet our reputation on the "Next.js + Sanity" combo. It's the only architecture that satisfies both developers and marketing teams.
+                We've bet our reputation on the "Next.js + Sanity" combo. It's the only architecture that empowers your marketing team while delivering unmatched performance.
               </p>
               <ul className="space-y-6">
                 {[
-                  { title: "Next.js 16", desc: "Server Actions and PPR for instant interactions." },
-                  { title: "Sanity.io", desc: "Structured content that treats your data as an API." },
-                  { title: "Vercel", desc: "Edge network delivery at the speed of light." },
-                  { title: "TypeScript", desc: "Type safety for scalable, bug-free implementations." }
+                  { title: "Next.js 16", desc: "Lightning-fast load times that drastically reduce mobile bounce rates." },
+                  { title: "Sanity.io", desc: "An intuitive CMS that empowers marketing to publish instantly without developers." },
+                  { title: "Vercel", desc: "Edge network delivery ensuring 100% uptime during global traffic spikes." },
+                  { title: "TypeScript", desc: "Enterprise-grade reliability that minimizes bugs, crashes, and downtime." }
                 ].map((tech, i) => (
                   <motion.li
                     key={tech.title}
@@ -387,21 +386,21 @@ export default function Home() {
             {[
               {
                 title: "SaaS Platforms",
-                desc: "Multi-tenant architectures that scale to millions.",
+                desc: "Fast-to-market subscription products built for recurring revenue growth.",
                 icon: "🚀",
-                features: ["Auth & RBAC", "Subscription Billing", "Real-time Data"]
+                features: ["Secure User Management", "Automated Billing", "Real-time Analytics"]
               },
               {
                 title: "Internal Tools",
-                desc: "Dashboards that automate your business logic.",
+                desc: "Custom operations software designed to eliminate manual data entry and save hours of labor.",
                 icon: "⚡",
-                features: ["Admin Panels", "Workflow Automation", "Data Visualization"]
+                features: ["Process Automation", "Centralized Dashboards", "Data Visibility"]
               },
               {
                 title: "Mobile Native",
-                desc: "React Native apps that feel truly native.",
+                desc: "Engaging mobile experiences that put your brand directly into your customers' pockets.",
                 icon: "📱",
-                features: ["iOS & Android", "Offline First", "Push Notifications"]
+                features: ["Cross-Platform Reach", "Offline Capabilities", "Direct Engagement"]
               }
             ].map((item, i) => (
               <motion.div
@@ -557,25 +556,25 @@ export default function Home() {
                 {
                   step: "git init discovery",
                   title: "Blueprint",
-                  desc: "We map your goals to technical requirements. We don't start coding until we have a locked architecture.",
+                  desc: "We map your revenue goals to technical requirements. No coding starts until we have a strategy explicitly designed to convert.",
                   icon: "📄"
                 },
                 {
                   step: "git checkout -b build",
                   title: "Development",
-                  desc: "Rapid component development using our internal libraries. Components are isolated, tested, and pixel-perfect.",
+                  desc: "Rapid component development using our internal libraries. We focus on scalability and bullet-proof security from day one.",
                   icon: "🏗️"
                 },
                 {
                   step: "git commit -m 'launch'",
                   title: "Deployment",
-                  desc: "Automated CI/CD pipelines push to Vercel's edge network. Zero downtime, instant rollbacks, 100% uptime.",
+                  desc: "Seamless global deployment via Edge networks. Your site goes live on world-class infrastructure ensuring 100% uptime.",
                   icon: "🚀"
                 },
                 {
                   step: "git push origin growth",
                   title: "Scale",
-                  desc: "Performance monitoring and iterative A/B testing. We use data to drive design decisions post-launch.",
+                  desc: "Post-launch optimization. We monitor live performance and leverage A/B testing data to continually improve your ROI.",
                   icon: "📈"
                 }
               ].map((phase, i) => (
@@ -629,12 +628,12 @@ export default function Home() {
               viewport={{ once: true }}
             >
               <h2 className="text-pink-500 font-bold tracking-widest uppercase mb-4 text-sm">Mastery</h2>
-              <h3 className="text-4xl md:text-5xl font-bold mb-6">Pixel Perfect <br /> Execution.</h3>
+              <h3 className="text-4xl md:text-5xl font-bold mb-6">Premium Brand <br /> Execution.</h3>
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                We don't rely on guesswork. Our team is certified in the <span className="text-white font-bold">Epic Web "Pixel Perfect Figma to Tailwind"</span> workflow.
+                We translate your brand vision into reality. Our certified design-to-code workflow ensures your digital presence looks premium and identical to the vision across every device.
               </p>
               <ul className="space-y-4 mb-8">
-                {["1:1 Design to Code Accuracy", "Advanced Tailwind Architecture", "Responsive Precision"].map((item) => (
+                {["1:1 Design to Code Accuracy", "Enterprise Brand Consistency", "Responsive Precision"].map((item) => (
                   <li key={item} className="flex items-center text-gray-400">
                     <span className="w-1.5 h-1.5 bg-pink-500 rounded-full mr-3"></span>
                     {item}
@@ -737,7 +736,7 @@ export default function Home() {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-5xl md:text-7xl font-bold mb-8">Ready to disrupt?</h2>
+          <h2 className="text-5xl md:text-7xl font-bold mb-8">Ready to accelerate your growth?</h2>
           <Link href="/request-quote" className="inline-block px-12 py-5 bg-gradient-to-r from-pink-500 to-purple-600 rounded-full text-xl font-bold hover:shadow-lg hover:shadow-purple-500/50 transition-all hover:scale-105 active:scale-95">
             Launch Project
           </Link>

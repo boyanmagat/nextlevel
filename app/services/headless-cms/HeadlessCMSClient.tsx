@@ -24,7 +24,7 @@ export default function HeadlessCMSClient() {
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-orange-500">UNCHAINED</span>
                     </motion.h1>
                     <p className="text-xl md:text-2xl text-gray-400 mb-12 max-w-2xl mx-auto font-light">
-                        Stop letting your CMS dictate your design. We decouple your data from your display using Sanity.io.
+                        Stop letting your CMS dictate your design or throttle your speed. We empower your marketing team to manage content effortlessly while delivering lightning-fast digital experiences.
                     </p>
                 </div>
             </section>
@@ -33,25 +33,21 @@ export default function HeadlessCMSClient() {
             <section className="py-16 px-4 bg-pink-900/10 border-y border-pink-500/20">
                 <div className="max-w-4xl mx-auto text-center mb-16">
                     <h2 className="text-sm font-bold text-pink-400 tracking-widest uppercase mb-4">New to Headless CMS?</h2>
-                    <h3 className="text-3xl font-bold mb-6">The "Headless" Metaphor.</h3>
+                    <h3 className="text-3xl font-bold mb-6">The "Headless" Advantage.</h3>
                     <p className="text-gray-400 leading-relaxed text-lg">
-                        Traditional websites have the "head" (the front-end design) glued to the "body" (the database).
-                        If you want to redesign the site, you have to rebuild everything.
+                        Traditional websites lock your content and code together. This makes redesigns painful, site speeds sluggish, and security updates a constant headache.
                         <br /><br />
-                        <strong>We chop the head off.</strong> Your content lives in a separate, secure vault.
-                        We can build a Website, an App, or a Storefront that all pull from that same vault. Change your design without touching your data.
+                        <strong>We decouple your content.</strong> Your data lives in a secure, centralized vault. We can push that content instantly to your website, mobile app, or retail kiosks—allowing your marketing team to scale without ever waiting on IT.
                     </p>
                 </div>
 
                 <div className="max-w-4xl mx-auto text-center border-t border-pink-500/20 pt-16">
                     <h2 className="text-sm font-bold text-orange-400 tracking-widest uppercase mb-4">New to Sanity?</h2>
-                    <h3 className="text-3xl font-bold mb-6">Not just a CMS. A Content Lake.</h3>
+                    <h3 className="text-3xl font-bold mb-6">The Ultimate Marketing Engine.</h3>
                     <p className="text-gray-400 leading-relaxed text-lg">
-                        Most tools treat content as "Pages". Sanity treats content as "Data".
-                        This means your product descriptions, team bios, and legal text exist as structured objects—not blobs of HTML.
+                        Most platforms force your team to manage content page-by-page. Sanity creates a centralized "Content Lake" for your entire business.
                         <br /><br />
-                        <strong>The Result:</strong> You can push that same content to your Next.js website, your iOS app, and even your in-store kiosks.
-                        Plus, the "Sanity Studio" offers real-time collaboration, just like Google Docs for your content team.
+                        <strong>The Result:</strong> Total omnichannel control. Update a product price or campaign banner once, and it instantly syncs across your website, iOS app, and sales channels. Add in real-time collaboration (like Google Docs), and your marketing velocity will skyrocket.
                     </p>
                 </div>
             </section>
@@ -130,11 +126,11 @@ export default function HeadlessCMSClient() {
                     {/* 1. Content Apps */}
                     <div className="flex flex-col md:flex-row gap-12 items-center">
                         <div className="flex-1 order-2 md:order-1">
-                            <h4 className="text-3xl font-bold mb-4">Multi-Platform Content Apps</h4>
+                            <h4 className="text-3xl font-bold mb-4">Omnichannel Content Distribution</h4>
                             <p className="text-gray-400 text-lg leading-relaxed mb-6">
-                                You have a website, an iOS app, and a newsletter. Do you copy-paste your content three times?
+                                Stop paying your team to copy-paste the same blog post into three different platforms.
                                 <br />
-                                <strong>The Fix:</strong> We build a "Content App" in Sanity. You write once. We distribute it via API to every platform instantly.
+                                <strong>The Fix:</strong> We build a centralized content hub in Sanity. Your team writes a campaign once, and we automatically publish it to your website, app, and newsletters simultaneously.
                             </p>
                         </div>
                         <div className="flex-1 order-1 md:order-2">
@@ -148,10 +144,10 @@ export default function HeadlessCMSClient() {
                             <MigrationGraphic />
                         </div>
                         <div className="flex-1">
-                            <h4 className="text-3xl font-bold mb-4">Migrating from WordPress</h4>
+                            <h4 className="text-3xl font-bold mb-4">Seamless Legacy Migration</h4>
                             <p className="text-gray-400 text-lg leading-relaxed mb-6">
-                                Tired of plugin conflicts and "Error establishing a database connection"?
-                                We write scripts to export all your existing WP posts, authors, and images directly into Sanity. Zero data loss.
+                                Tired of dealing with broken plugins, server crashes, and security vulnerabilities that cost you sales?
+                                We guarantee a zero-data-loss migration. We seamlessly export years of your legacy WordPress data into a modern, secure, and lightning-fast Sanity architecture.
                             </p>
                         </div>
                     </div>
@@ -159,11 +155,11 @@ export default function HeadlessCMSClient() {
                     {/* 3. Visual Editing */}
                     <div className="flex flex-col md:flex-row gap-12 items-center">
                         <div className="flex-1 order-2 md:order-1">
-                            <h4 className="text-3xl font-bold mb-4">Click-to-Edit Visual Builder</h4>
+                            <h4 className="text-3xl font-bold mb-4">Empower Your Marketing Team</h4>
                             <p className="text-gray-400 text-lg leading-relaxed mb-6">
-                                Marketing teams fear Headless because they lose the "Page Builder". Not with us.
+                                The biggest fear of upgrading your tech stack is losing your intuitive visual page builder. Not with our setup.
                                 <br />
-                                We implement <strong>Sanity Presentation Mode</strong> (Overlays). You browse your live website, click any text or image, and edit it right there.
+                                We integrate native visual editing. Your marketing team simply browses the live website, clicks on any image or copy, and edits it directly on the page—no developer required.
                             </p>
                             <ul className="space-y-2">
                                 {["Drag & Drop Page Sections", "Live Real-Time Updates", "Device Preview (Mobile/Desktop)"].map(item => (
@@ -197,7 +193,7 @@ export default function HeadlessCMSClient() {
                     <div className="flex-1">
                         <h2 className="text-4xl font-bold mb-6">Why Sanity?</h2>
                         <p className="text-gray-400 mb-6 text-lg">
-                            Traditional CMSs (Contentful, Strapi) charge for API calls and limit your schema. Sanity gives us a fully programmable GROQ API and unlimited flexibility.
+                            Legacy platforms trap your data and charge exorbitant hidden fees as you scale. Sanity gives your business ultimate ownership, complete structural flexibility, and an editing experience your team will actually love using.
                         </p>
                         <ul className="space-y-4">
                             {["Real-time Collaboration", "Image Pipeline & Hotspots", "Plugin Ecosystem"].map(feat => (
@@ -235,7 +231,7 @@ export default function HeadlessCMSClient() {
             {/* CTA */}
             <section className="py-24 text-center">
                 <Link href="/request-quote" className="px-12 py-5 bg-pink-600 rounded-full text-xl font-bold hover:bg-pink-500 transition-colors">
-                    Migrate to Headless
+                    Accelerate Your Content Workflow
                 </Link>
             </section>
         </div>

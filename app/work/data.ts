@@ -15,16 +15,16 @@ export const CASE_STUDIES: CaseStudy[] = [
     {
         slug: "wordpress-vs-nextjs",
         client: "Clash of Tech",
-        industry: "Performance",
-        service: "Technical Audit",
-        challenge: "Determining the true performance delta between an optimized legacy WordPress setup and a standard Next.js implementation.",
-        solution: "A head-to-head comparison builds using identical design and structure to isolate the impact of the underlying architectural choices.",
+        industry: "Commercial Strategy",
+        service: "Technical Strategy & Audit",
+        challenge: "Quantifying the commercial impact and revenue loss associated with maintaining a legacy WordPress architecture versus adopting a modern Next.js framework.",
+        solution: "A head-to-head architectural analysis demonstrating how infrastructure choices directly dictate conversion rates, organic search rankings, and user retention.",
         results: [
-            { label: "Mobile Speed Index", value: "-41%" },
-            { label: "Next.js Mobile", value: "78" },
-            { label: "WP Mobile", value: "52" }
+            { label: "Mobile Bounce Rate Reduction", value: "-41%" },
+            { label: "Next.js Mobile Output", value: "78" },
+            { label: "WP Mobile Output", value: "52" }
         ],
-        techStack: ["WordPress", "Next.js", "PHP", "Node.js"],
+        techStack: ["Technical Strategy", "Performance Audit", "Conversion Optimization"],
         images: {
             hero: "/work/clash_hero.png"
         }
