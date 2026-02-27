@@ -15,6 +15,10 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "NextLevelDigital | Next.js & Sanity Agency",
   description: "We build high-performance headless websites with Next.js and Sanity.io. Next Level Digital.",
+  robots: {
+    index: false,
+    follow: false,
+  },
 };
 
 import Navbar from "@/components/Navbar";
