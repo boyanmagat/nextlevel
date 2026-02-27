@@ -709,7 +709,7 @@ export default function Home() {
               <h2 className="text-pink-500 font-bold tracking-widest uppercase mb-4 text-sm">Mastery</h2>
               <h3 className="text-4xl md:text-5xl font-bold mb-6">Premium Brand <br /> Execution.</h3>
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                We translate your brand vision into reality. Our certified design-to-code workflow ensures your digital presence looks premium and identical to the vision across every device.
+                We translate your brand vision into reality. Our professional design-to-code workflow ensures your digital presence looks premium and identical to the vision across every device.
               </p>
               <ul className="space-y-4 mb-8">
                 {["1:1 Design to Code Accuracy", "Enterprise Brand Consistency", "Responsive Precision"].map((item) => (
