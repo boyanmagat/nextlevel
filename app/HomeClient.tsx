@@ -447,31 +447,92 @@ export default function Home() {
             ))}
           </div>
 
-          {/* Code Snippet Visual */}
+          {/* NEW: Dashboard Prototype Visual */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mt-16 bg-gray-900 rounded-xl overflow-hidden border border-white/10 font-mono text-sm shadow-2xl"
+            className="mt-16 relative bg-[#0a0a0a] rounded-2xl overflow-hidden border border-white/10 shadow-[0_20px_60px_-15px_rgba(59,130,246,0.3)] p-4 md:p-6"
           >
-            <div className="bg-white/5 px-4 py-2 border-b border-white/5 flex items-center gap-2">
-              <div className="w-3 h-3 rounded-full bg-red-500"></div>
-              <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
-              <div className="w-3 h-3 rounded-full bg-green-500"></div>
-              <div className="ml-4 text-gray-500">middleware.ts</div>
+            {/* Minimal App Chrome */}
+            <div className="flex items-center gap-2 mb-6 border-b border-white/10 pb-4">
+              <div className="w-3 h-3 rounded-full bg-red-500/80"></div>
+              <div className="w-3 h-3 rounded-full bg-yellow-500/80"></div>
+              <div className="w-3 h-3 rounded-full bg-green-500/80"></div>
+              <div className="ml-4 h-2.5 w-32 bg-white/10 rounded-full"></div>
             </div>
-            <div className="p-6 text-gray-300 overflow-x-auto">
-              <pre>
-                <code>
-                  <span className="text-pink-500">export default</span> <span className="text-blue-400">async function</span> <span className="text-yellow-300">middleware</span>(req) {"{"}
-                  {"\n  "}<span className="text-purple-400">const</span> session = <span className="text-blue-400">await</span> getSession(req);
-                  {"\n  "}<span className="text-pink-500">if</span> (!session.isEnterprise) <span className="text-pink-500">return</span> redirect(<span className="text-green-400">"/upgrade"</span>);
-                  {"\n  "}<span className="text-gray-500">// Enterprise logic verified</span>
-                  {"\n  "}<span className="text-pink-500">return</span> NextResponse.next();
-                  {"\n"}{"}"}
-                </code>
-              </pre>
+
+            <div className="flex gap-6 h-[250px] md:h-[350px]">
+              {/* Sidebar */}
+              <div className="w-1/4 hidden md:flex flex-col gap-4 border-r border-white/5 pr-6">
+                <div className="h-10 w-full bg-white/5 rounded-lg mb-4"></div>
+                <div className="h-4 w-3/4 bg-white/5 rounded-full"></div>
+                <div className="h-4 w-2/3 bg-white/5 rounded-full"></div>
+                <div className="h-4 w-1/2 bg-white/10 rounded-full mb-auto relative overflow-hidden">
+                  <motion.div animate={{ x: ["-100%", "200%"] }} transition={{ duration: 2, repeat: Infinity, ease: "linear" }} className="absolute inset-y-0 w-1/2 bg-gradient-to-r from-transparent via-white/20 to-transparent"></motion.div>
+                </div>
+                <div className="h-24 w-full bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-xl border border-blue-500/20 mt-auto flex items-end p-4">
+                  <div className="h-3 w-1/2 bg-blue-400/50 rounded-full"></div>
+                </div>
+              </div>
+
+              {/* Main Content Area */}
+              <div className="flex-1 flex flex-col gap-6">
+                {/* Top Nav/Stats */}
+                <div className="flex gap-4 h-24">
+                  <div className="flex-1 bg-white/5 rounded-xl border border-white/5 flex flex-col justify-center p-4 relative overflow-hidden">
+                    <div className="h-3 w-16 bg-gray-600 rounded-full mb-3"></div>
+                    <div className="h-6 w-24 bg-blue-400 rounded-full"></div>
+                    <div className="absolute right-[-10px] bottom-[-10px] w-16 h-16 bg-blue-500/10 rounded-full blur-xl"></div>
+                  </div>
+                  <div className="flex-1 bg-white/5 rounded-xl border border-white/5 flex flex-col justify-center p-4 relative overflow-hidden">
+                    <div className="h-3 w-16 bg-gray-600 rounded-full mb-3"></div>
+                    <div className="h-6 w-20 bg-emerald-400 rounded-full mb-1"></div>
+                    <div className="absolute right-[-10px] bottom-[-10px] w-16 h-16 bg-emerald-500/10 rounded-full blur-xl"></div>
+                  </div>
+                  <div className="flex-1 bg-white/5 rounded-xl border border-white/5 flex flex-col justify-center p-4 hidden sm:flex relative overflow-hidden">
+                    <div className="h-3 w-16 bg-gray-600 rounded-full mb-3"></div>
+                    <div className="h-6 w-28 bg-purple-400 rounded-full"></div>
+                    <div className="absolute right-[-10px] bottom-[-10px] w-16 h-16 bg-purple-500/10 rounded-full blur-xl"></div>
+                  </div>
+                </div>
+
+                {/* Main Graph Area */}
+                <div className="flex-1 bg-white/5 rounded-xl border border-white/5 flex items-end p-6 gap-2 md:gap-4 relative overflow-hidden">
+                  {/* Background grid */}
+                  <div className="absolute inset-0 opacity-10" style={{ backgroundImage: "linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px)", backgroundSize: "20px 20px" }}></div>
+
+                  {/* Animated Chart Bars */}
+                  {[30, 50, 45, 80, 60, 95, 75].map((height, i) => (
+                    <motion.div
+                      key={i}
+                      initial={{ height: 0 }}
+                      whileInView={{ height: `${height}%` }}
+                      transition={{ duration: 1, delay: i * 0.1, type: "spring", bounce: 0.3 }}
+                      className="flex-1 bg-gradient-to-t from-blue-600 to-purple-400 rounded-t-sm relative z-10 opacity-80 hover:opacity-100 transition-opacity"
+                    ></motion.div>
+                  ))}
+                </div>
+              </div>
             </div>
+
+            {/* Floating Operations Glass Card */}
+            <motion.div
+              animate={{ y: [0, -10, 0] }}
+              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-black/70 backdrop-blur-xl border border-white/20 p-5 md:p-6 rounded-2xl shadow-[0_0_50px_rgba(0,0,0,0.8)] flex items-center gap-4 z-20"
+            >
+              <div className="w-12 h-12 rounded-full border border-emerald-500/50 flex items-center justify-center bg-emerald-500/10 text-emerald-400">
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+              </div>
+              <div>
+                <div className="text-white font-bold tracking-widest text-sm uppercase mb-1">Custom Platform</div>
+                <div className="text-emerald-400 text-xs font-mono flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                  Systems Operational
+                </div>
+              </div>
+            </motion.div>
           </motion.div>
         </div>
       </section >
