@@ -211,70 +211,80 @@ export default function Home() {
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
-                className="w-full relative aspect-square md:aspect-[4/3] bg-gray-900/50 rounded-[2.5rem] border border-white/10 p-8 md:p-12 overflow-hidden flex flex-col justify-between"
+                className="w-full relative bg-gray-900/50 rounded-[2.5rem] border border-white/10 p-8 md:p-10 overflow-hidden flex flex-col"
               >
-                <div className="absolute inset-0 bg-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
 
-                <div className="flex justify-between items-start relative z-10">
+                <div className="flex justify-between items-start relative z-10 mb-10">
                   <div>
-                    <div className="text-xs font-mono text-gray-500 uppercase tracking-widest mb-1">Metrics_Output</div>
-                    <div className="text-2xl font-bold">Efficiency Delta</div>
+                    <div className="text-xs font-mono text-gray-500 uppercase tracking-widest mb-1">Workflow_Comparison</div>
+                    <div className="text-2xl font-bold">The Efficiency Delta</div>
+                    <p className="text-sm text-gray-400 mt-2">Visualizing how AI acceleration shrinks the standard development lifecycle.</p>
                   </div>
-                  <div className="px-3 py-1 rounded-full bg-blue-500/20 border border-blue-500/30 text-blue-400 text-[10px] font-mono animate-pulse">
-                    LIVE_SYNC
-                  </div>
-                </div>
-
-                <div className="flex-1 flex items-end gap-6 md:gap-12 pb-12 pt-20">
-                  {/* Traditional Bar */}
-                  <div className="flex-1 flex flex-col items-center gap-4 h-full justify-end group/bar">
-                    <motion.div
-                      initial={{ height: 0 }}
-                      whileInView={{ height: "60%" }}
-                      transition={{ duration: 1, delay: 0.5 }}
-                      viewport={{ once: true }}
-                      className="w-full max-w-[60px] bg-gray-800 rounded-t-xl group-hover:bg-gray-700 transition-colors relative"
-                    >
-                      <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-full pb-2 text-[10px] text-gray-500 font-mono">10 Weeks</div>
-                    </motion.div>
-                    <div className="text-[10px] font-bold text-gray-600 uppercase tracking-widest text-center">Standard <br /> Agency</div>
-                  </div>
-
-                  {/* AI-Optimized Bar */}
-                  <div className="flex-1 flex flex-col items-center gap-4 h-full justify-end group/bar">
-                    <motion.div
-                      initial={{ height: 0 }}
-                      whileInView={{ height: "42%" }}
-                      transition={{ duration: 1, delay: 0.8 }}
-                      viewport={{ once: true }}
-                      className="w-full max-w-[60px] bg-gradient-to-t from-blue-600 to-blue-400 rounded-t-xl shadow-[0_0_30px_rgba(59,130,246,0.3)] relative"
-                    >
-                      <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-full pb-2 text-[10px] text-blue-400 font-bold font-mono">7 Weeks</div>
-                    </motion.div>
-                    <div className="text-[10px] font-bold text-blue-400 uppercase tracking-widest text-center italic">AI-Engine <br /> (Us)</div>
-                  </div>
-
-                  {/* Quality Bar */}
-                  <div className="flex-1 flex flex-col items-center gap-4 h-full justify-end group/bar">
-                    <motion.div
-                      initial={{ height: 0 }}
-                      whileInView={{ height: "90%" }}
-                      transition={{ duration: 1, delay: 1.1 }}
-                      viewport={{ once: true }}
-                      className="w-full max-w-[60px] bg-gradient-to-t from-emerald-600 to-emerald-400 rounded-t-xl shadow-[0_0_30px_rgba(16,185,129,0.3)] relative"
-                    >
-                      <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-full pb-2 text-[10px] text-emerald-400 font-bold font-mono">98%</div>
-                    </motion.div>
-                    <div className="text-[10px] font-bold text-emerald-400 uppercase tracking-widest text-center">Testing <br /> Coverage</div>
+                  <div className="px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-[10px] font-mono animate-pulse shrink-0">
+                    REAL_TIME_ROI
                   </div>
                 </div>
 
-                <div className="pt-8 border-t border-white/5 flex gap-4 overflow-x-auto no-scrollbar relative z-10">
-                  {["Automation", "Deep Analysis", "Agentic QA", "Synthetic Data"].map(tag => (
-                    <span key={tag} className="text-[10px] font-mono text-gray-500 border border-white/10 px-3 py-1 rounded-full whitespace-nowrap">
-                      {tag}
-                    </span>
-                  ))}
+                <div className="space-y-10 relative z-10">
+                  {/* Traditional Timeline */}
+                  <div>
+                    <div className="flex justify-between items-end mb-3">
+                      <div className="flex items-center gap-3">
+                        <div className="w-2 h-2 rounded-full bg-gray-600"></div>
+                        <h4 className="text-sm font-bold text-gray-400 uppercase tracking-widest">Standard Agency</h4>
+                      </div>
+                      <span className="text-xs text-gray-500 font-mono">10-12 Weeks</span>
+                    </div>
+                    <div className="h-8 w-full flex rounded overflow-hidden opacity-40 grayscale sepia-[0.2]">
+                      <div className="h-full bg-zinc-800 w-[20%] border-r border-black flex items-center justify-center text-[9px] text-gray-400 font-mono">Discovery</div>
+                      <div className="h-full bg-zinc-700 w-[50%] border-r border-black flex items-center justify-center text-[9px] text-gray-300 font-mono">Manual Coding & Integration</div>
+                      <div className="h-full bg-zinc-800 w-[30%] flex items-center justify-center text-[9px] text-gray-400 font-mono">QA & Revisions</div>
+                    </div>
+                  </div>
+
+                  {/* AI Timeline */}
+                  <div>
+                    <div className="flex justify-between items-end mb-3">
+                      <div className="flex items-center gap-3">
+                        <div className="w-2 h-2 rounded-full bg-blue-500 shadow-[0_0_10px_rgba(59,130,246,0.8)]"></div>
+                        <h4 className="text-sm font-bold text-white uppercase tracking-widest">NextLevel AI</h4>
+                      </div>
+                      <span className="text-xs text-blue-400 font-mono font-bold">4-6 Weeks</span>
+                    </div>
+                    <motion.div
+                      initial={{ width: "0%" }}
+                      whileInView={{ width: "45%" }}
+                      transition={{ duration: 1.5, ease: "easeOut", delay: 0.2 }}
+                      viewport={{ once: true }}
+                      className="h-12 flex rounded overflow-hidden border border-white/10 shadow-[0_0_30px_rgba(59,130,246,0.15)] relative"
+                    >
+                      <div className="h-full bg-blue-900/60 w-[20%] border-r border-black/50 flex flex-col items-center justify-center gap-1">
+                        <span className="text-[10px] text-blue-200 font-bold whitespace-nowrap px-2 pb-[1px]">Architecture</span>
+                      </div>
+                      <div className="h-full bg-purple-900/60 w-[60%] border-r border-black/50 flex flex-col items-center justify-center gap-1 relative overflow-hidden">
+                        <motion.div animate={{ x: ["-100%", "200%"] }} transition={{ duration: 2, repeat: Infinity, ease: "linear" }} className="absolute inset-0 w-1/4 bg-gradient-to-r from-transparent via-white/10 to-transparent"></motion.div>
+                        <span className="text-[10px] text-purple-200 font-bold whitespace-nowrap px-2 pb-[1px]">AI-Assisted Engine</span>
+                      </div>
+                      <div className="h-full bg-emerald-900/60 w-[20%] flex flex-col items-center justify-center gap-1">
+                        <span className="text-[10px] text-emerald-200 font-bold whitespace-nowrap px-2 pb-[1px]">Auto-QA</span>
+                      </div>
+                    </motion.div>
+
+                    {/* Stats Breakdown */}
+                    <div className="mt-6 grid grid-cols-2 gap-4">
+                      <div className="p-4 bg-black/40 rounded-xl border border-white/5 backdrop-blur-sm">
+                        <div className="text-blue-400 text-xl font-black mb-1">-60%</div>
+                        <div className="text-[10px] text-gray-400 font-mono uppercase tracking-widest">Time to Market</div>
+                        <p className="text-[10px] text-gray-500 mt-2 leading-tight">We build core features dramatically faster.</p>
+                      </div>
+                      <div className="p-4 bg-black/40 rounded-xl border border-white/5 backdrop-blur-sm">
+                        <div className="text-emerald-400 text-xl font-black mb-1">-40%</div>
+                        <div className="text-[10px] text-gray-400 font-mono uppercase tracking-widest">Dev Costs</div>
+                        <p className="text-[10px] text-gray-500 mt-2 leading-tight">These efficiency gains are passed to you.</p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </motion.div>
             </div>
