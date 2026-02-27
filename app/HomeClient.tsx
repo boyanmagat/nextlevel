@@ -167,10 +167,15 @@ export default function Home() {
               </div>
 
               <div className="flex items-center gap-6">
-                <div className="flex -space-x-4">
-                  {[1, 2, 3].map(i => (
-                    <div key={i} className="w-10 h-10 rounded-full border-2 border-black bg-gray-800 flex items-center justify-center text-[10px] font-bold">AI</div>
-                  ))}
+                <div className="relative pointer-events-none select-none flex-shrink-0">
+                  <div
+                    className="w-12 h-12 rounded-full border-2 border-pink-500 bg-black/40 backdrop-blur-md flex items-center justify-center z-10 relative shadow-[0_0_15px_rgba(236,72,153,0.3)]"
+                  >
+                    <span className="text-sm font-black text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-500">
+                      AI
+                    </span>
+                  </div>
+                  <div className="absolute inset-0 bg-pink-500/20 rounded-full blur-xl scale-150"></div>
                 </div>
                 <p className="text-sm text-gray-400 italic font-mono">
                   &gt; development_engine --optimized --ai-boost
@@ -215,7 +220,7 @@ export default function Home() {
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
 
-                <div className="flex justify-between items-start relative z-10 mb-10">
+                <div className="flex justify-between items-start relative z-10 mb-3">
                   <div>
                     <div className="text-xs font-mono text-gray-500 uppercase tracking-widest mb-1">Workflow_Comparison</div>
                     <div className="text-2xl font-bold">The Efficiency Delta</div>
@@ -226,62 +231,65 @@ export default function Home() {
                   </div>
                 </div>
 
-                <div className="space-y-10 relative z-10">
-                  {/* Traditional Timeline */}
-                  <div>
-                    <div className="flex justify-between items-end mb-3">
-                      <div className="flex items-center gap-3">
-                        <div className="w-2 h-2 rounded-full bg-gray-600"></div>
-                        <h4 className="text-sm font-bold text-gray-400 uppercase tracking-widest">Standard Agency</h4>
-                      </div>
-                      <span className="text-xs text-gray-500 font-mono">10-12 Weeks</span>
-                    </div>
-                    <div className="h-8 w-full flex rounded overflow-hidden opacity-40 grayscale sepia-[0.2]">
-                      <div className="h-full bg-zinc-800 w-[20%] border-r border-black flex items-center justify-center text-[9px] text-gray-400 font-mono">Discovery</div>
-                      <div className="h-full bg-zinc-700 w-[50%] border-r border-black flex items-center justify-center text-[9px] text-gray-300 font-mono">Manual Coding & Integration</div>
-                      <div className="h-full bg-zinc-800 w-[30%] flex items-center justify-center text-[9px] text-gray-400 font-mono">QA & Revisions</div>
-                    </div>
-                  </div>
+                <div className="flex-1 flex flex-col relative z-10 mt-6">
+                  {/* Chart Container */}
+                  <div className="w-full h-[350px] md:h-[450px] flex items-end justify-between px-2 md:px-12 relative">
 
-                  {/* AI Timeline */}
-                  <div>
-                    <div className="flex justify-between items-end mb-3">
-                      <div className="flex items-center gap-3">
-                        <div className="w-2 h-2 rounded-full bg-blue-500 shadow-[0_0_10px_rgba(59,130,246,0.8)]"></div>
-                        <h4 className="text-sm font-bold text-white uppercase tracking-widest">NextLevel AI</h4>
-                      </div>
-                      <span className="text-xs text-blue-400 font-mono font-bold">4-6 Weeks</span>
+                    {/* Background Grid */}
+                    <div className="absolute inset-0 flex flex-col justify-between pointer-events-none opacity-20 pb-8">
+                      <div className="w-full h-px bg-white/20"></div>
+                      <div className="w-full h-px bg-white/20"></div>
+                      <div className="w-full h-px bg-white/20"></div>
+                      <div className="w-full h-px bg-white/20"></div>
                     </div>
-                    <motion.div
-                      initial={{ width: "0%" }}
-                      whileInView={{ width: "45%" }}
-                      transition={{ duration: 1.5, ease: "easeOut", delay: 0.2 }}
-                      viewport={{ once: true }}
-                      className="h-12 flex rounded overflow-hidden border border-white/10 shadow-[0_0_30px_rgba(59,130,246,0.15)] relative"
-                    >
-                      <div className="h-full bg-blue-900/60 w-[20%] border-r border-black/50 flex flex-col items-center justify-center gap-1">
-                        <span className="text-[10px] text-blue-200 font-bold whitespace-nowrap px-2 pb-[1px]">Architecture</span>
-                      </div>
-                      <div className="h-full bg-purple-900/60 w-[60%] border-r border-black/50 flex flex-col items-center justify-center gap-1 relative overflow-hidden">
-                        <motion.div animate={{ x: ["-100%", "200%"] }} transition={{ duration: 2, repeat: Infinity, ease: "linear" }} className="absolute inset-0 w-1/4 bg-gradient-to-r from-transparent via-white/10 to-transparent"></motion.div>
-                        <span className="text-[10px] text-purple-200 font-bold whitespace-nowrap px-2 pb-[1px]">AI-Assisted Engine</span>
-                      </div>
-                      <div className="h-full bg-emerald-900/60 w-[20%] flex flex-col items-center justify-center gap-1">
-                        <span className="text-[10px] text-emerald-200 font-bold whitespace-nowrap px-2 pb-[1px]">Auto-QA</span>
-                      </div>
-                    </motion.div>
 
-                    {/* Stats Breakdown */}
-                    <div className="mt-6 grid grid-cols-2 gap-4">
-                      <div className="p-4 bg-black/40 rounded-xl border border-white/5 backdrop-blur-sm">
-                        <div className="text-blue-400 text-xl font-black mb-1">-60%</div>
-                        <div className="text-[10px] text-gray-400 font-mono uppercase tracking-widest">Time to Market</div>
-                        <p className="text-[10px] text-gray-500 mt-2 leading-tight">We build core features dramatically faster.</p>
+                    {/* Traditional Agency Stack - Left */}
+                    <div className="flex flex-col items-center h-full w-[48%] max-w-[150px] relative z-10 justify-end pb-2">
+                      <span className="text-xl md:text-2xl text-gray-400 font-mono mb-4 font-bold select-none whitespace-nowrap">10-12 Weeks</span>
+                      <motion.div
+                        initial={{ height: "0%" }}
+                        whileInView={{ height: "100%" }}
+                        transition={{ duration: 1.5, ease: "easeOut" }}
+                        viewport={{ once: true }}
+                        className="w-full flex flex-col rounded-t-xl overflow-hidden opacity-50 grayscale sepia-[0.2]"
+                      >
+                        <div className="w-full h-[25%] bg-zinc-800 border-b border-black flex items-center justify-center p-4 text-center">
+                          <span className="text-base md:text-xs text-gray-300 font-bold leading-tight uppercase tracking-wider">QA &<br />Revisions</span>
+                        </div>
+                        <div className="w-full h-[55%] bg-zinc-700 border-b border-black flex items-center justify-center p-4 text-center">
+                          <span className="text-base md:text-xs text-white font-bold leading-tight uppercase tracking-wider">Manual<br />Coding</span>
+                        </div>
+                        <div className="w-full h-[20%] bg-zinc-800 flex items-center justify-center p-4 text-center">
+                          <span className="text-base md:text-xs text-gray-300 font-bold leading-tight uppercase tracking-wider">Discovery</span>
+                        </div>
+                      </motion.div>
+                      <div className="text-base md:text-lg font-bold text-gray-400 uppercase tracking-widest text-center mt-6 whitespace-nowrap">
+                        Standard<br />Agency
                       </div>
-                      <div className="p-4 bg-black/40 rounded-xl border border-white/5 backdrop-blur-sm">
-                        <div className="text-emerald-400 text-xl font-black mb-1">-40%</div>
-                        <div className="text-[10px] text-gray-400 font-mono uppercase tracking-widest">Dev Costs</div>
-                        <p className="text-[10px] text-gray-500 mt-2 leading-tight">These efficiency gains are passed to you.</p>
+                    </div>
+
+                    {/* NextLevel AI Stack - Right */}
+                    <div className="flex flex-col items-center h-full w-[48%] max-w-[150px] relative z-10 justify-end pb-2">
+                      <span className="text-xl md:text-2xl text-blue-400 font-bold font-mono mb-4 select-none whitespace-nowrap">4-6 Weeks</span>
+                      <motion.div
+                        initial={{ height: "0%" }}
+                        whileInView={{ height: "40%" }}
+                        transition={{ duration: 1.5, ease: "easeOut", delay: 0.2 }}
+                        viewport={{ once: true }}
+                        className="w-full flex flex-col rounded-t-xl overflow-hidden border border-white/10 shadow-[0_0_30px_rgba(59,130,246,0.15)] relative"
+                      >
+                        <div className="w-full h-[20%] bg-emerald-900/60 border-b border-black/50 flex items-center justify-center p-4 text-center">
+                          <span className="text-base md:text-xs text-emerald-200 font-black leading-tight uppercase tracking-wider">Auto-QA</span>
+                        </div>
+                        <div className="w-full h-[60%] bg-purple-900/60 border-b border-black/50 flex items-center justify-center p-4 text-center relative overflow-hidden">
+                          <span className="text-base md:text-xs text-purple-200 font-black leading-tight uppercase tracking-wider">AI Engine</span>
+                        </div>
+                        <div className="w-full h-[20%] bg-blue-900/60 flex items-center justify-center p-4 text-center">
+                          <span className="text-base md:text-xs text-blue-200 font-black leading-tight uppercase tracking-wider">Architecture</span>
+                        </div>
+                      </motion.div>
+                      <div className="text-base md:text-lg font-bold text-white uppercase tracking-widest text-center mt-6 flex flex-col items-center justify-center whitespace-nowrap">
+                        NextLevel<br />AI
                       </div>
                     </div>
                   </div>
@@ -367,10 +375,10 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section >
 
       {/* NEW: Custom Software / Bespoke Solutions */}
-      <section className="py-24 bg-white/5 border-y border-white/10">
+      < section className="py-24 bg-white/5 border-y border-white/10" >
         <div className="max-w-7xl mx-auto px-4 md:px-8">
           <div className="text-center mb-16">
             <motion.h2
@@ -466,14 +474,14 @@ export default function Home() {
             </div>
           </motion.div>
         </div>
-      </section>
+      </section >
 
       {/* NEW: Performance Showcase */}
-      <section className="relative py-32 overflow-hidden bg-[#030303] border-y border-white/5">
+      < section className="relative py-32 overflow-hidden bg-[#030303] border-y border-white/5" >
         {/* Subtle Background Detail */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        < div className="absolute inset-0 overflow-hidden pointer-events-none" >
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-pink-500/5 rounded-full blur-[120px]"></div>
-        </div>
+        </div >
 
         <div className="relative px-4 max-w-7xl mx-auto">
           <motion.div
@@ -543,10 +551,10 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </section>
+      </section >
 
       {/* NEW: Process Section (Git Pipeline) */}
-      <section className="py-32 bg-black border-t border-white/5">
+      < section className="py-32 bg-black border-t border-white/5" >
         <div className="px-4 md:px-8 max-w-5xl mx-auto">
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
@@ -624,10 +632,10 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section >
 
       {/* NEW: Mastery / Certification */}
-      <section className="py-24 px-4 md:px-8 max-w-7xl mx-auto">
+      < section className="py-24 px-4 md:px-8 max-w-7xl mx-auto" >
         <div className="relative rounded-3xl overflow-hidden bg-gradient-to-br from-gray-900 to-black border border-white/10 p-8 md:p-16">
           <div className="absolute top-0 right-0 w-64 h-64 bg-purple-600/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
 
@@ -677,14 +685,14 @@ export default function Home() {
           </div>
         </div>
 
-      </section>
+      </section >
 
 
 
 
 
       {/* NEW: Team Section */}
-      <section className="py-24 px-4 md:px-8 max-w-5xl mx-auto border-t border-white/10 w-full">
+      < section className="py-24 px-4 md:px-8 max-w-5xl mx-auto border-t border-white/10 w-full" >
         <h2 className="text-4xl font-bold mb-12">The Minds.</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 w-full">
           {[
@@ -721,10 +729,10 @@ export default function Home() {
             </motion.div>
           ))}
         </div>
-      </section>
+      </section >
 
       {/* Visual Statement */}
-      <section className="h-[60vh] md:h-[80vh] bg-gradient-to-br from-purple-900 via-black to-black flex items-center justify-center relative overflow-hidden">
+      < section className="h-[60vh] md:h-[80vh] bg-gradient-to-br from-purple-900 via-black to-black flex items-center justify-center relative overflow-hidden" >
         <div className="absolute inset-0 bg-gray-900 opacity-50 mix-blend-overlay"></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-pink-900/20 via-black to-black"></div>
         <motion.h2
@@ -736,10 +744,10 @@ export default function Home() {
         >
           MAKE IT <br /> REAL
         </motion.h2>
-      </section>
+      </section >
 
       {/* CTA */}
-      <section className="py-32 text-center px-4">
+      < section className="py-32 text-center px-4" >
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -751,7 +759,7 @@ export default function Home() {
             Launch Project
           </Link>
         </motion.div>
-      </section>
+      </section >
     </div >
   );
 }
