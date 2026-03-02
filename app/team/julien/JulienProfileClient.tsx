@@ -158,27 +158,21 @@ export default function JulienProfileClient() {
                                 <h3 className="text-white font-bold mb-4 flex items-center gap-3">
                                     <span className="text-xs px-3 py-1 rounded-full border border-white/20 text-gray-400 font-mono tracking-widest">v1.0 • ORIGIN</span>
                                 </h3>
-                                <p>
-                                    Julien's journey began with a clear vision: <strong className="text-white">building scalable organizations</strong> caused by an obsession with efficiency and growth. He saw businesses not just as structures, but as living engines needing constant tuning.
-                                </p>
+                                <p>Julien brings over 16 years of experience in digital marketing, having held a variety of roles within agencies, most recently as Director of Operations. His broad background gives him a strong understanding of both strategy and execution, allowing him to quickly identify the factors that influence a company’s performance and growth.</p>
                             </motion.div>
 
                             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }} viewport={{ once: true }}>
                                 <h3 className="text-white font-bold mb-4 flex items-center gap-3">
                                     <span className="text-xs px-3 py-1 rounded-full border border-white/20 text-gray-400 font-mono tracking-widest">v2.0 • EXPANSION</span>
                                 </h3>
-                                <p>
-                                    After <strong className="text-white">years of leading high-performance teams</strong>, he mastered the art of turning chaotic startups into structured powerhouses. He learned that true growth isn't just about revenue—it's about culture, strategy, and execution alignment.
-                                </p>
+                                <p>He specializes in solving complex challenges related to operations, profitability, and online performance. Julien focuses on developing practical solutions — whether simple or highly customized — that address root problems without creating unnecessary complexity. His work is driven by a clear objective: improving the client’s bottom line through revenue growth, cost reduction, or better conversion performance.</p>
                             </motion.div>
 
                             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} viewport={{ once: true }}>
                                 <h3 className="text-white font-bold mb-4 flex items-center gap-3">
                                     <span className="text-xs px-3 py-1 rounded-full border border-white/20 text-gray-400 font-mono tracking-widest">v3.0 • LEADERSHIP</span>
                                 </h3>
-                                <p>
-                                    Today, Julien steers the ship as our <strong className="text-white">Managing Director</strong>. He bridges the gap between creative ambition and business reality, ensuring that every innovative idea has a solid foundation to scale globally.
-                                </p>
+                                <p>Known for his calm, direct, confident, and approachable style, Julien works effectively with organizations across industries and stages of growth. He is particularly motivated by challenges others consider too difficult or too costly to pursue, believing that meaningful results often come from tackling problems others avoid. Outside of work, Julien has played soccer his entire life and values the teamwork and discipline the sport represents</p>
                             </motion.div>
                         </div>
 
@@ -257,15 +251,14 @@ export default function JulienProfileClient() {
             </section>
 
             {/* Lifestyle Gallery */}
-            <section className="py-32 px-4 overflow-hidden">
+            {/* <section className="py-32 px-4 overflow-hidden">
                 <div className="max-w-7xl mx-auto">
                     <div className="flex flex-col md:flex-row items-end justify-between mb-16 gap-8">
                         <div>
                             <h3 className="text-4xl md:text-5xl font-bold mb-4">Life in Full Color.</h3>
                             <p className="text-gray-400 max-w-md">Exploring the world through a lens of curiosity, capturing moments that inspire the next big idea.</p>
                         </div>
-                        <div className="flex gap-4">
-                            {/* Decorative tags */}
+                        <div className="flex gap-4">                            
                             <span className="px-4 py-2 rounded-full border border-white/10 text-sm hover:bg-white/10 transition-colors cursor-default">📷 Photography</span>
                             <span className="px-4 py-2 rounded-full border border-white/10 text-sm hover:bg-white/10 transition-colors cursor-default">🎨 Art</span>
                             <span className="px-4 py-2 rounded-full border border-white/10 text-sm hover:bg-white/10 transition-colors cursor-default">🌎 Culture</span>
@@ -297,7 +290,7 @@ export default function JulienProfileClient() {
                         ))}
                     </div>
                 </div>
-            </section>
+            </section> */}
 
             {/* Footer Link */}
             <section className="py-24 text-center">
