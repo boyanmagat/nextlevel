@@ -24,6 +24,7 @@ export const metadata: Metadata = {
 
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import CookieBanner from "@/components/CookieBanner";
 
 export default function RootLayout({
   children,
@@ -33,6 +34,23 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <head>
+        {/* Google Consent Mode Default */}
+        <Script id="google-consent-mode-init" strategy="beforeInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            
+            gtag('consent', 'default', {
+              'ad_storage': 'denied',
+              'analytics_storage': 'denied',
+              'ad_user_data': 'denied',
+              'ad_personalization': 'denied',
+              'wait_for_update': 500
+            });
+            gtag('set', 'ads_data_redaction', true);
+          `}
+        </Script>
+
         {/* Google Tag Manager */}
         <Script id="google-tag-manager" strategy="afterInteractive">
           {`
@@ -93,6 +111,7 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
+        <CookieBanner />
       </body>
     </html>
   );
